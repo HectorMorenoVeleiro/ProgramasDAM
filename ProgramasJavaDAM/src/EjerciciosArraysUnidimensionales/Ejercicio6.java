@@ -1,5 +1,7 @@
 package EjerciciosArraysUnidimensionales;
 
+import EjerciciosCuentaPropia.AjustesProgramas;
+
 public class Ejercicio6 {
     /*
      * Escribe un programa que lea 15 números por teclado y que los almacene en un
@@ -10,5 +12,19 @@ public class Ejercicio6 {
      */
     public static void main(String[] args) {
         System.out.println("hola chicos");
+        int[] arrayPorTeclado = new int[15];
+        int numeroGuardado = 0;
+        for (int i : arrayPorTeclado) {
+            arrayPorTeclado[i] = AjustesProgramas.enterIntegerPorScanner("introduce el numero --> ");
+        }
+        for (int i = 0; i < arrayPorTeclado.length; i++) {
+            if (i == 1)
+                arrayPorTeclado[i + 1] = arrayPorTeclado[i];
+            else
+                arrayPorTeclado[i] = numeroGuardado;
+            numeroGuardado = arrayPorTeclado[i];
+
+        }
+
     }
 }
