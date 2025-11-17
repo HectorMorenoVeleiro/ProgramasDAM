@@ -27,8 +27,8 @@ def media3(x: float, y: float, z: float) -> float:
     return (x + y + z) / 3
 
 
-x = 3
-y = 8
-z = -1
+x = float(input("introduce el primer numero -> "))
+y = float(input("introduce el segundo numero -> "))
+z = float(input("introduce el primer numero -> "))
 
-print("media(", (x), ", ", (y), ", ", (z), ") == ", media3(x, y, z))
+print("media(", (x), ",", (y), ",", (z), ") == ", media3(x, y, z))
