@@ -31,6 +31,8 @@ public class ProgresionGeometrica {
         long n = ultimo - primer + 1;
         long suma = (n * (primer + ultimo)) / 2;
 
+        System.out.println(suma);
+
         // System.out.println("la suma de tu sucesion es " + (long) (suma));
     }
 }
