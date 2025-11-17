@@ -1,5 +1,0 @@
-package dos;
-
-public enum Meses {
-    ENERO, FEBRERO, MARZO, ABRIL, MAYO, JUNIO, AGOSTO, SEPTIEMBRE, OCTUBRE, NOVIEMBRE, DICIEMBRE;
-}
