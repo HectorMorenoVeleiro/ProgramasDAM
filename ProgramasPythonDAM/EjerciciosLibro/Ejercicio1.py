@@ -27,6 +27,8 @@ def media3(x: float, y: float, z: float) -> float:
     return (x + y + z) / 3
 
 
-for i in range(1, 6):
-    contador = 0
-    contador = contador + 1
+x = 3
+y = 8
+z = -1
+
+print("media(", (x), ", ", (y), ", ", (z), ") == ", media3(x, y, z))
