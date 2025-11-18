@@ -15,6 +15,9 @@ public class Ejercicio7 {
         for (int i : valores1Al20) {
             valores1Al20[i] = (int) (Math.random() * 20 + 1);
         }
-
+        int valor1 = AjustesProgramas.enterIntegerPorScanner("introduce numero 1 -> ");
+        int valor2 = AjustesProgramas.enterIntegerPorScanner("introduce numero 2 -> ");
+        System.out.println(valor1 + ", " + valor2);
+        // no entiendo que hay que hacer
     }
 }
