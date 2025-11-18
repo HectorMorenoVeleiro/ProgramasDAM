@@ -25,4 +25,5 @@ A = TypeVar("A")
 
 
 def rota1(a: List[A]) -> List[A]:
-    return []
+    for i in range(1): 
+        return List[] 
