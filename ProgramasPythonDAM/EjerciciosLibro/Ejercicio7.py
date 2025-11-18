@@ -8,23 +8,21 @@
 # ----------------------------------------------------------------------
 
 from math import pi
-from typing import TypeVar
+from typing import List, TypeVar
 from hypothesis import given
 from hypothesis import strategies as st
 
 A = TypeVar("A")
 
-
-# Ejercicio 2. Definir la función
-# sumaMonedas : (int, int, int, int, int) -> int
-# tal que sumaMonedas(a, b, c, d, e) es la suma de los euros
-# correspondientes a a monedas de 1 euro, b de 2 euros, c de 5 euros, d
-# 10 euros y e de 20 euros. Por ejemplo,
-# sumaMonedas(0, 0, 0, 0, 1) == 20
-# sumaMonedas(0, 0, 8, 0, 3) == 100
-# sumaMonedas(1, 1, 1, 1, 1) == 38
+# ---------------------------------------------------------------------
+# Ejercicio 7. Definir la función
+# rota1 : (List[A]) -> List[A]
+# tal que rota1(xs) es la lista obtenida poniendo el primer elemento de
+# xs al final de la lista. Por ejemplo,
+# rota1([3, 2, 5, 7]) == [2, 5, 7, 3]
+# rota1(['a', 'b', 'c']) == ['b', 'c', 'a']
 # ---------------------------------------------------------------------
 
 
-def sumaMonedas(a: int, b: int, c: int, d: int, e: int) -> int:
-    return 1 * a + 2 * b + 5 * c + 10 * d + 20 * e
+def rota1(a: List[A]) -> List[A]:
+    return []
