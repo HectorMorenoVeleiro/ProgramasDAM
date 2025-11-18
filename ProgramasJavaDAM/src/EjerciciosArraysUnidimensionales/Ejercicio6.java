@@ -1,5 +1,7 @@
 package EjerciciosArraysUnidimensionales;
 
+import EjerciciosCuentaPropia.AjustesProgramas;
+
 public class Ejercicio6 {
     /*
      * Escribe un programa que lea 15 números por teclado y que los almacene en un
@@ -9,6 +11,24 @@ public class Ejercicio6 {
      * muestra el contenido del array.
      */
     public static void main(String[] args) {
-        System.out.println("hola chicos");
+        int[] arrayPorTeclado = new int[15];
+        for (int i : arrayPorTeclado) {
+            arrayPorTeclado[i] = AjustesProgramas.enterIntegerPorScanner("introduce un numero + -> ");
+        }
+        int numLargeArray = arrayPorTeclado[arrayPorTeclado.length];
+        for (int i = arrayPorTeclado.length; i > 0; i++) {
+            arrayPorTeclado[i] = arrayPorTeclado[i - 1];
+        }
+        arrayPorTeclado[0] = numLargeArray;
+        for (int i : arrayPorTeclado) {
+            System.out.println(arrayPorTeclado[i]);
+        }
     }
 }
+/*
+ * Vale, esta es la correccion, mi razonamiento era mas o menos correcto, pero
+ * falle en ciertos detallitos que no habia tenido en cuenta sobre como funciona
+ * un array dentro de un bucle, y tuve que haber sacado atributos definidos
+ * fuera del for en vez de implementarlo dentro cuando era innecesario, intente
+ * automatizar demasiado cuando no lo precisaba el programa.
+ */
