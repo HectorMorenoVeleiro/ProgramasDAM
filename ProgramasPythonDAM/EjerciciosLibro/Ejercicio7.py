@@ -28,3 +28,9 @@ def rota1a(xs: list[A]) -> list[A]:
     if xs == []:
         return []
     return xs[1:] + [xs[0]]
+
+
+# ---------------------------------------------------------------------
+# vale trabajar con listas en python es bastante mas lioso de
+# lo que me imaginaba
+# ---------------------------------------------------------------------
