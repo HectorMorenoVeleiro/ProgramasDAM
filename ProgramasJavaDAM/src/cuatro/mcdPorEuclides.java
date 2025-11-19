@@ -24,4 +24,11 @@ public class mcdPorEuclides {
         else
             return calcularMcdNumero(numero2, numero1 % numero2);
     }
+
+    /*
+     * public static void main(String[] args) {
+     * mcdPorEuclides minComMul1 = new mcdPorEuclides(156, 120);
+     * System.out.println(minComMul1.calcularMcdNumero());
+     * }
+     */
 }
