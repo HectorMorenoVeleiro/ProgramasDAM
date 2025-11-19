@@ -25,10 +25,15 @@ public class mcdPorEuclides {
             return calcularMcdNumero(numero2, numero1 % numero2);
     }
 
+    public int calcularMcmNumero() {
+        return Math.abs(this.numero1 * this.numero2) / (calcularMcdNumero(this.numero1, this.numero2));
+    }
+
     /*
      * public static void main(String[] args) {
      * mcdPorEuclides minComMul1 = new mcdPorEuclides(156, 120);
      * System.out.println(minComMul1.calcularMcdNumero());
+     * System.out.println(minComMul1.calcularMcmNumero());
      * }
      */
 }
