@@ -34,3 +34,11 @@ def rota1a(xs: list[A]) -> list[A]:
 # vale trabajar con listas en python es bastante mas lioso de
 # lo que me imaginaba
 # ---------------------------------------------------------------------
+
+
+class comerComida:
+    a: int = 3
+    b: int = 4
+
+    def hacerComida(self) -> int:
+        return self.a + self.b
