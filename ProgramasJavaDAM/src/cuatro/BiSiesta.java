@@ -11,7 +11,7 @@ public class BiSiesta {
     }
 
     public boolean esBisiesto() {
-        if (this.año % 4 == 0)
+        if (this.año % 4 == 0 || this.año % 100 == 0 && this.año % 400 == 0)
             return true;
         return false;
     }
