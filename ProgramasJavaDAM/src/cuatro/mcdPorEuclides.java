@@ -21,9 +21,7 @@ public class mcdPorEuclides {
     public int calcularMcdNumero(int numero1, int numero2) {
         if (numero2 == 0)
             return numero1;
-        else {
-            int resto = numero1 % numero2;
-            return calcularMcdNumero(numero2, resto);
-        }
+        else
+            return calcularMcdNumero(numero2, numero1 % numero2);
     }
 }
