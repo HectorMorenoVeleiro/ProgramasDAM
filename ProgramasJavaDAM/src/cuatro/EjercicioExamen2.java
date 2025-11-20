@@ -4,7 +4,6 @@ public class EjercicioExamen2 {
 
     // atributos
     private double nota;
-
     private final String[] recorridoNota = { "SUSPENSO", "SUFICIENTE", "BIEN", "NOTABLE", "SOBRESALIENTE" };
 
     // método constructor
