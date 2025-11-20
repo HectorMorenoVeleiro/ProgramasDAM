@@ -24,7 +24,6 @@ public class Ejercicio6 {
             System.out.println(arrayPorTeclado[i]);
         }
         System.out.println("hola chicos");
-        int[] arrayPorTeclado = new int[15];
         int numeroGuardado = 0;
         for (int i : arrayPorTeclado) {
             arrayPorTeclado[i] = AjustesProgramas.enterIntegerPorScanner("introduce el numero --> ");
