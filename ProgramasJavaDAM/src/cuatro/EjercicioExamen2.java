@@ -28,4 +28,8 @@ public class EjercicioExamen2 {
         return "Fantasmón";
     }
 
+    public static void main(String[] args) {
+        EjercicioExamen2 nota = new EjercicioExamen2(6);
+        System.out.println(nota.comprobarCalificacion());
+    }
 }
