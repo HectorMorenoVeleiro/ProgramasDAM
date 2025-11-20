@@ -13,7 +13,7 @@ public class EjercicioExamen2 {
     }
 
     public String comprobarCalificacion() {
-        while (nota < 0.0 || nota > 10.0) {
+        while (nota > 0 || nota < 10) {
             if (nota >= 9)
                 return recorridoNota[4];
             else if (nota >= 7)
