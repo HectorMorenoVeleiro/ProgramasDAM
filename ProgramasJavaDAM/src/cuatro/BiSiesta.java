@@ -15,6 +15,6 @@ public class BiSiesta {
 
     // métoco para calcular si esBisiesto
     public boolean esBisiesto() {
-        return this.año % 4 == 0 || (this.año % 400 == 0 && this.año % 100 == 0);
+        return this.año % 4 == 0 || (this.año % 400 == 0 && this.año % 100 != 0);
     }
 }
