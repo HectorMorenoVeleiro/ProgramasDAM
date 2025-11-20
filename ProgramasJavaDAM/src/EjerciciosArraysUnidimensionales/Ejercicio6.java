@@ -23,6 +23,19 @@ public class Ejercicio6 {
         for (int i : arrayPorTeclado) {
             System.out.println(arrayPorTeclado[i]);
         }
+        System.out.println("hola chicos");
+        int numeroGuardado = 0;
+        for (int i : arrayPorTeclado) {
+            arrayPorTeclado[i] = AjustesProgramas.enterIntegerPorScanner("introduce el numero --> ");
+        }
+        for (int i = 0; i < arrayPorTeclado.length; i++) {
+            if (i == 1)
+                arrayPorTeclado[i + 1] = arrayPorTeclado[i];
+            else
+                arrayPorTeclado[i] = numeroGuardado;
+            numeroGuardado = arrayPorTeclado[i];
+
+        }
     }
 }
 /*
