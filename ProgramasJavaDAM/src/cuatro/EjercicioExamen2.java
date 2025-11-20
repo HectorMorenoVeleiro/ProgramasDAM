@@ -11,6 +11,7 @@ public class EjercicioExamen2 {
         this.nota = nota;
     }
 
+    // método para comprobar que nota ha sacado el cazurro del alumno
     public String comprobarCalificacion() {
         while (nota > 0 || nota < 10) {
             if (nota >= 9)
@@ -27,6 +28,7 @@ public class EjercicioExamen2 {
         return "Fantasmón";
     }
 
+    // método que comprueba la clasecilla
     public static void main(String[] args) {
         EjercicioExamen2 nota = new EjercicioExamen2(6);
         System.out.println(nota.comprobarCalificacion());
