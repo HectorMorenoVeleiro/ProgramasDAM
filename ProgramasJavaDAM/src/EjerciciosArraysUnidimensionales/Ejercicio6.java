@@ -34,7 +34,6 @@ public class Ejercicio6 {
             else
                 arrayPorTeclado[i] = numeroGuardado;
             numeroGuardado = arrayPorTeclado[i];
-
         }
     }
 }
