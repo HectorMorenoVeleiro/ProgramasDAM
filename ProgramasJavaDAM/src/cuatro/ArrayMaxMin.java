@@ -1,5 +1,7 @@
 package cuatro;
 
+import java.util.Arrays;
+
 public class ArrayMaxMin {
 
     public static void main(String[] args) {
@@ -7,6 +9,8 @@ public class ArrayMaxMin {
 
         int max = Integer.MIN_VALUE;
         int min = Integer.MAX_VALUE;
+
+        System.out.println(Arrays.toString(datos));
 
         for (Integer entero : datos) {
             if (entero > max)
