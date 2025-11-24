@@ -44,7 +44,5 @@ public class ArrayMaxMin {
             System.out.println("El valor Maximo es: " + maximo.getAsInt());
             System.out.println("El valor Maximo es: " + minimo.getAsInt());
         }
-
     }
-
 }
