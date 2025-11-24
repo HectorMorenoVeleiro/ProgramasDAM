@@ -36,9 +36,9 @@ def rota1a(xs: list[A]) -> list[A]:
 # ---------------------------------------------------------------------
 
 
-class comerComida:
-    a: int = 3
-    b: int = 4
+a: int = 3
+b: int = 4
 
-    def hacerComida(self) -> int:
-        return self.a + self.b
+
+def hacerComida(self) -> int:
+    return self.a + self.b
