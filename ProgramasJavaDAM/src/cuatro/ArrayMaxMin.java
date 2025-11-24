@@ -6,8 +6,8 @@ public class ArrayMaxMin {
         int[] datos = { 1, 2, 3, 3, 4, 4, 5, 2 };
         int largo = datos.length;
 
-        int max = 0;
-        int min = 0;
+        int max = Integer.MIN_VALUE;
+        int min = Integer.MAX_VALUE;
 
         for (Integer entero : datos) {
 
