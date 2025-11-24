@@ -17,13 +17,13 @@ public class BuscarNumeroArray {
             numero = Integer.parseInt(sc.nextLine());
         } while (numero < 0 || numero > 1000);
 
-        boolean esta = false;
+        boolean estaEnArray = false;
         for (Integer pillo : datos) {
             if (pillo == numero)
-                esta = true;
+                estaEnArray = true;
         }
 
-        System.out.println(esta);
+        System.out.println("el numero " + numero + " esta en el array???" + estaEnArray);
         sc.close();
     }
 }
