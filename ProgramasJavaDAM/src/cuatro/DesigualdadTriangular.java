@@ -7,9 +7,9 @@ public class DesigualdadTriangular {
     double ladoC;
 
     DesigualdadTriangular() {
-        ladoA = 0;
-        ladoB = 0;
-        ladoC = 0;
+        this.ladoA = 0;
+        this.ladoB = 0;
+        this.ladoC = 0;
     }
 
     DesigualdadTriangular(double ladoA, double ladoB, double ladoC) {
