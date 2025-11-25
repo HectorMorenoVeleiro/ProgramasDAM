@@ -81,12 +81,29 @@ public class Persona {
         this.añoNacimiento = añoNacimiento;
     }
 
+    public String getPaisNacimiento() {
+        return paisNacimiento;
+    }
+
+    public void setPaisNacimiento(String paisNacimiento) {
+        this.paisNacimiento = paisNacimiento;
+    }
+
+    public char getGenero() {
+        return genero;
+    }
+
+    public void setGenero(char genero) {
+        this.genero = genero;
+    }
+
     // Método que imprime en pantalla los datos de una persona
     void imprimir() {
-        System.out.println("Nombre = " + nombre);
-        System.out.println("Apellidos = " + apellidos);
-        System.out.println("Número de documento de identidad = " + númeroDocumentoIdentidad);
-        System.out.println("Año de nacimiento = " + añoNacimiento);
-        System.out.println();
+        System.out.println("Nombre = " + this.nombre);
+        System.out.println("Apellidos = " + this.apellidos);
+        System.out.println("Número de documento de identidad = " + this.númeroDocumentoIdentidad);
+        System.out.println("Año de nacimiento = " + this.añoNacimiento);
+        System.out.println("Pais de nacimiento = " + this.paisNacimiento);
+        System.out.println("Género = " + this.genero);
     }
 }
