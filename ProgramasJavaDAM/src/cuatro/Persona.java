@@ -46,12 +46,12 @@ public class Persona {
     // ToString
     @Override
     public String toString() {
-        return "Persona [nombre=" + nombre + ", apellidos=" + apellidos + ", númeroDocumentoIdentidad="
-                + númeroDocumentoIdentidad + ", añoNacimiento=" + añoNacimiento + "]";
+        return "Persona [nombre=" + nombre + ", apellidos=" + apellidos + ", paisNacimiento=" + paisNacimiento
+                + ", genero=" + genero + ", númeroDocumentoIdentidad=" + númeroDocumentoIdentidad + ", añoNacimiento="
+                + añoNacimiento + "]";
     }
 
     // Getters y setters
-
     public String getNombre() {
         return nombre;
     }
@@ -102,11 +102,11 @@ public class Persona {
 
     // Método que imprime en pantalla los datos de una persona
     void imprimir() {
-        System.out.println("Nombre = " + this.nombre);
-        System.out.println("Apellidos = " + this.apellidos);
-        System.out.println("Número de documento de identidad = " + this.númeroDocumentoIdentidad);
-        System.out.println("Año de nacimiento = " + this.añoNacimiento);
-        System.out.println("Pais de nacimiento = " + this.paisNacimiento);
-        System.out.println("Género = " + this.genero);
+        System.out.println("Nombre = " + getNombre());
+        System.out.println("Apellidos = " + getApellidos());
+        System.out.println("Número de documento de identidad = " + getNúmeroDocumentoIdentidad());
+        System.out.println("Año de nacimiento = " + getAñoNacimiento());
+        System.out.println("Pais de nacimiento = " + getPaisNacimiento());
+        System.out.println("Género = " + getGenero());
     }
 }
