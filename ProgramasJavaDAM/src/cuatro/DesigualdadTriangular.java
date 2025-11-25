@@ -19,6 +19,7 @@ public class DesigualdadTriangular {
     }
 
     public boolean isTriangle() {
-        return (this.ladoA <= (this.ladoB + this.ladoC) && this.ladoC <= (this.ladoA + this.ladoB));
+        return (this.ladoA <= (this.ladoB + this.ladoC) && this.ladoC <= (this.ladoA + this.ladoB)
+                && this.ladoB <= (this.ladoA + this.ladoC));
     }
 }
