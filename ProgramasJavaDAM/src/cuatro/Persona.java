@@ -21,7 +21,6 @@ public class Persona {
      * @param añoNacimiento            Parámetro que define el año de nacimiento
      *                                 de la persona
      */
-
     Persona(String nombre, String apellidos, String númeroDocumentoIdentidad, int añoNacimiento) {
         this.nombre = nombre;
         this.apellidos = apellidos;
@@ -29,6 +28,11 @@ public class Persona {
         this.añoNacimiento = añoNacimiento;
     }
 
+    // Constructor vacío
+    public Persona() {
+    }
+
+    // Constructor con todos los parámetros
     Persona(String nombre, String apellidos, String númeroDocumentoIdentidad, int añoNacimiento, String paisNacimiento,
             char genero) {
         this.nombre = nombre;
