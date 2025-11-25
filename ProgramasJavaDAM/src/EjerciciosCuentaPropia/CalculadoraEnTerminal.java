@@ -65,7 +65,7 @@ public class CalculadoraEnTerminal {
         // Exit Default.
     }
 
-    public static void operacionSuma() { // // Introduce two numbers to operate with them (add).
+    public static void operacionSuma() { // Introduce two numbers to operate with them (add).
         numero1 = introduceNumero("primer", "sumar");
         numero2 = introduceNumero("segundo", "sumar");
         System.out.println("\nLa suma de " + numero1 + " + " + numero2 + " da: " + (numero1 + numero2));
