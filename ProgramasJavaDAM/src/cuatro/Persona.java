@@ -43,11 +43,14 @@ public class Persona {
         this.genero = genero;
     }
 
+    // ToString
     @Override
     public String toString() {
         return "Persona [nombre=" + nombre + ", apellidos=" + apellidos + ", númeroDocumentoIdentidad="
                 + númeroDocumentoIdentidad + ", añoNacimiento=" + añoNacimiento + "]";
     }
+
+    // Getters y setters
 
     public String getNombre() {
         return nombre;
