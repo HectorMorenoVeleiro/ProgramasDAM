@@ -12,14 +12,17 @@ public class Ejercicio5 {
         while (true) {
 
             System.out.println("""
-                        Que quieres hacer ?
 
-                        1. La maquina adivina tu numero
+                            Que quieres hacer ?
 
-                        2. Adivinas el numero de la maquina
+                            1. La maquina adivina tu numero
 
-                        3. Salir
-                    __________________________________________""");
+                            2. Adivinas el numero de la maquina
+
+                            3. Salir
+                        __________________________________________
+
+                    """);
 
             int decision = Integer.parseInt(sc.nextLine());
 
