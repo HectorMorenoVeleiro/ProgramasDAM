@@ -34,6 +34,11 @@ public class Ejercicio5 {
         int numeroGenerado = (int) (Math.random() * 1000 + 1);
         int numeroPersona = 0;
         int intentos = 0;
+
+        System.out.println(
+                "AL PRESIONAR ENTER, TENDRAS 5 INTENTOS PARA ADIVINAR UN NUMERO GENERADO AUTOMATICAMENTE ENTRE 1000 Y 0");
+        sc.nextLine();
+
         while (intentos < 5) {
             System.out.println("introduce un numero para ser adivinado");
             numeroPersona = Integer.parseInt(sc.nextLine());
