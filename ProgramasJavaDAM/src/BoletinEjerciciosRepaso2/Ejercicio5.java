@@ -9,9 +9,9 @@ public class Ejercicio5 {
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        System.out.println("que quieres haer ? 1/2");
-        int decision = Integer.parseInt(sc.nextLine());
         while (true) {
+            System.out.println("que quieres haer ? 1/2");
+            int decision = Integer.parseInt(sc.nextLine());
             if (decision == 1) {
                 System.out.println("introduce el numero a adivinar");
                 int numeroAdivinar = Integer.parseInt(sc.nextLine());
@@ -35,7 +35,8 @@ public class Ejercicio5 {
                 }
                 System.out.println("acertaste");
                 break;
-            } else if (decision == 2) {
+            }
+            if (decision == 2) {
                 int numeroGenerado = (int) (Math.random() * 1000 + 1);
                 int numeroPersona = 0;
                 while (numeroGenerado != numeroPersona) {
