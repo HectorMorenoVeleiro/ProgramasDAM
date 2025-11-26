@@ -47,8 +47,7 @@ public class Ejercicio5 {
                         System.out.println("el numero es menor");
                 }
                 break;
-            } else
-                continue;
+            }
         }
         sc.close();
     }
