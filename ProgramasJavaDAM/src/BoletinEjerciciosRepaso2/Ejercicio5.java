@@ -15,7 +15,7 @@ public class Ejercicio5 {
             if (decision == 1) {
                 System.out.println("introduce el numero a adivinar");
                 int numeroAdivinar = Integer.parseInt(sc.nextLine());
-                int limiteTop = 100;
+                int limiteTop = 1000;
                 int limiteBot = 0;
                 while (true) {
                     int numero = (int) ((Math.random() * (limiteTop - limiteBot) + limiteBot));
