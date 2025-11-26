@@ -8,6 +8,28 @@ public class Ejercicio5 {
     // con respecto a N. El proceso termina cuando el usuario acierta.
 
     public static void main(String[] args) {
+        EjercicioVersion1();
+    }
+
+    public static void EjercicioVersion1() {
+        Scanner sc = new Scanner(System.in);
+        int numeroGenerado = (int) (Math.random() * 1000 + 1);
+        int numeroPersona = 0;
+
+        while (numeroGenerado != numeroPersona) {
+            System.out.println("introduce un numero para ser adivinado");
+            numeroPersona = Integer.parseInt(sc.nextLine());
+
+            if (numeroPersona < numeroGenerado)
+                System.out.println("el numero es mayor");
+
+            else if (numeroPersona > numeroGenerado)
+                System.out.println("el numero es menor");
+        }
+        sc.close();
+    }
+
+    public static void EjercicioConUnaVuelta() {
         Scanner sc = new Scanner(System.in);
         while (true) {
 
