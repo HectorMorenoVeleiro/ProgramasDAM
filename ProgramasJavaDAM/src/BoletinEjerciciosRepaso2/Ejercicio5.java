@@ -29,6 +29,26 @@ public class Ejercicio5 {
         sc.close();
     }
 
+    public static void EjercicioVersion2() {
+        Scanner sc = new Scanner(System.in);
+        int numeroGenerado = (int) (Math.random() * 1000 + 1);
+        int numeroPersona = 0;
+        int intentos = 0;
+        while (intentos < 5) {
+            System.out.println("introduce un numero para ser adivinado");
+            numeroPersona = Integer.parseInt(sc.nextLine());
+
+            if (numeroPersona < numeroGenerado)
+                System.out.println("el numero es mayor");
+
+            else if (numeroPersona > numeroGenerado)
+                System.out.println("el numero es menor");
+            System.out.println("te quedan " + (5 - intentos) + " intentos");
+            intentos++;
+        }
+        sc.close();
+    }
+
     public static void EjercicioConUnaVuelta() {
         Scanner sc = new Scanner(System.in);
         while (true) {
