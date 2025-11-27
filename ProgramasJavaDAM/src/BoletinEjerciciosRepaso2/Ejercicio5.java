@@ -8,7 +8,7 @@ public class Ejercicio5 {
     // con respecto a N. El proceso termina cuando el usuario acierta.
 
     public static void main(String[] args) {
-        EjercicioVersion1();
+        EjercicioVersion2();
     }
 
     public static void EjercicioVersion1() {
@@ -17,7 +17,7 @@ public class Ejercicio5 {
         int numeroPersona = 0;
 
         while (numeroGenerado != numeroPersona) {
-            System.out.println("introduce un numero para ser adivinado");
+            System.out.println("introduce un numero adivinar");
             numeroPersona = Integer.parseInt(sc.nextLine());
 
             if (numeroPersona < numeroGenerado)
@@ -31,26 +31,43 @@ public class Ejercicio5 {
 
     public static void EjercicioVersion2() {
         Scanner sc = new Scanner(System.in);
-        int numeroGenerado = (int) (Math.random() * 1000 + 1);
+        int numeroGenerado = (int) (Math.random() * 10 + 1);
         int numeroPersona = 0;
         int intentos = 0;
 
         System.out.println(
-                "AL PRESIONAR ENTER, TENDRAS 5 INTENTOS PARA ADIVINAR UN NUMERO GENERADO AUTOMATICAMENTE ENTRE 1000 Y 0");
+                "AL PRESIONAR ENTER, TENDRAS 10 INTENTOS PARA ADIVINAR UN NUMERO GENERADO AUTOMATICAMENTE ENTRE 1000 Y 0");
         sc.nextLine();
 
-        while (intentos < 5) {
-            System.out.println("introduce un numero para ser adivinado");
+        do {
+            System.out.println("introduce un numero adivinar");
             numeroPersona = Integer.parseInt(sc.nextLine());
 
             if (numeroPersona < numeroGenerado)
                 System.out.println("el numero es mayor");
 
             else if (numeroPersona > numeroGenerado)
+
                 System.out.println("el numero es menor");
-            System.out.println("te quedan " + (5 - intentos) + " intentos");
+
+            if (numeroGenerado != numeroPersona)
+                System.out.println("te quedan " + ((9) - intentos) + " intentos");
+
             intentos++;
-        }
+
+            if (numeroGenerado == numeroPersona)
+                break;
+
+        } while (intentos <= 10);
+
+        if (numeroGenerado == numeroPersona)
+
+            System.out.println("chachi, acertaste");
+
+        else if (numeroGenerado != numeroPersona)
+
+            System.out.println("cachis, fallaste");
+
         sc.close();
     }
 
