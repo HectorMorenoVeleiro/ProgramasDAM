@@ -19,6 +19,8 @@
 
 ### Python ###
 
-[libro de python](https://raw.githubusercontent.com/jaalonso/Ejercicios-Python/main/libro/Ejercicios-Python.pdf) de ejercicios resueltos para practicar
+[libro de python 1](https://raw.githubusercontent.com/jaalonso/Ejercicios-Python/main/libro/Ejercicios-Python.pdf) de ejercicios resueltos para practicar
+
+[libro de python 2](https://es.scribd.com/document/832616152/100-ejercicios-resueltos-en-python) de ejercicios resueltos para practicar
 
 ---

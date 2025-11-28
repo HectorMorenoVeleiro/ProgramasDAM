@@ -15,32 +15,15 @@ from hypothesis import strategies as st
 A = TypeVar("A")
 
 # ---------------------------------------------------------------------
-# Ejercicio 7. Definir la función
-# rota1 : (List[A]) -> List[A]
-# tal que rota1(xs) es la lista obtenida poniendo el primer elemento de
-# xs al final de la lista. Por ejemplo,
-# rota1([3, 2, 5, 7]) == [2, 5, 7, 3]
-# rota1(['a', 'b', 'c']) == ['b', 'c', 'a']
+# Ejercicio 8. Definir la función
+# rota : (int, List[A]) -> List[A]
+# tal que rota(n, xs) es la lista obtenida poniendo los n primeros
+# elementos de xs al final de la lista. Por ejemplo,
+# rota(1, [3, 2, 5, 7]) == [2, 5, 7, 3]
+# rota(2, [3, 2, 5, 7]) == [5, 7, 3, 2]
+# rota(3, [3, 2, 5, 7]) == [7, 3, 2, 5]
 # ---------------------------------------------------------------------
 
 
-def rota1a(xs: list[A]) -> list[A]:
-    if xs == []:
-        return []
-    return xs[1:] + [xs[0]]
-
-
-# ---------------------------------------------------------------------
-# vale trabajar con listas en python es bastante mas lioso de
-# lo que me imaginaba
-# ---------------------------------------------------------------------
-
-# Ejemplo
-
-
-class comerComida:
-    a: int = 3
-    b: int = 4
-
-    def hacerComida(self) -> int:
-        return self.a + self.b
+def rota(n: int, lista: list[A]) -> list[A]:
+    return lista[n:] + lista[:n]
