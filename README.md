@@ -9,7 +9,7 @@
 | Se estudia en clase    | No se estudia en clase (cuenta propia)    | No se estudia en clase      (cuenta propia) |
 | Sirve para multiples plataformas    | Sirve para automatización, IAs, etc | Muy útiles para videojuegos, etc (aún tengo que ponerme) |
 
-## LIBROS PARA ESTUDIAR ##
+## Libros para estudiar ##
 
 - Conjunto de libros para estudiar en casa
 
