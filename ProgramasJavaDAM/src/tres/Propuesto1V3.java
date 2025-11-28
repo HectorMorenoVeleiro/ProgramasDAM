@@ -1,6 +1,6 @@
 package tres;
 
-import EjerciciosCuentaPropia.AjustesProgramas;
+import ejercicioscuentapropia.AjustesProgramas;
 
 public class Propuesto1V3 {
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package EjerciciosNumerosAleatorios;
+package ejerciciosnumerosaleatorios;
 
 public class Ejercicio1 {
     // Escribe un programa que muestre la tirada de tres dados. Se debe mostrar

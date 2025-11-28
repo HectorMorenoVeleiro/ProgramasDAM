@@ -3,7 +3,7 @@ package tres;
 import java.util.HashMap;
 import java.util.Map;
 
-import EjerciciosCuentaPropia.AjustesProgramas;
+import ejercicioscuentapropia.AjustesProgramas;
 
 public class Resuelto7 {
     // Escribe programa que cuente por pantalla del 1 al 10 en ingles.

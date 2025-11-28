@@ -1,4 +1,4 @@
-package EjerciciosCuentaPropia;
+package ejercicioscuentapropia;
 
 import java.util.Scanner;
 

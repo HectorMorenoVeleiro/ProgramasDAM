@@ -1,4 +1,4 @@
-package EjerciciosNumerosAleatorios;
+package ejerciciosnumerosaleatorios;
 
 public class Ejercicio10 {
     // Realiza un programa que pinte por pantalla diez líneas formadas por

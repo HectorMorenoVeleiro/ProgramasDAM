@@ -1,6 +1,6 @@
 package tres;
 
-import EjerciciosCuentaPropia.AjustesProgramas;
+import ejercicioscuentapropia.AjustesProgramas;
 
 public class Propuesto1 {
     // REALIZA UN PROGRAMA CON 3 VARIABLES DE TIPO ENTERO A, B, C. EL PROGRAMA

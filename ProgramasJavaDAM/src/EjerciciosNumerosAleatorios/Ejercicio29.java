@@ -1,6 +1,6 @@
-package EjerciciosNumerosAleatorios;
+package ejerciciosnumerosaleatorios;
 
-import EjerciciosClase.AjustesProgramas;
+import ejerciciosclase.AjustesProgramas;
 
 public class Ejercicio29 {
     /*

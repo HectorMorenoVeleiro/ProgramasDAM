@@ -1,6 +1,6 @@
 package cuatro;
 
-import EjerciciosCuentaPropia.AjustesProgramas;
+import ejercicioscuentapropia.AjustesProgramas;
 
 public class Divisores {
 

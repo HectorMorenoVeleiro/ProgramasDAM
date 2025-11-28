@@ -1,6 +1,6 @@
 package tres;
 
-import EjerciciosClase.AjustesProgramas;
+import ejerciciosclase.AjustesProgramas;
 
 public class AritmeticaRec {
     // programa que muestre los 50 primeros pares

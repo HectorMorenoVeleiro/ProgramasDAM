@@ -1,4 +1,4 @@
-package EjerciciosCuentaPropia;
+package ejercicioscuentapropia;
 
 public class sumatorioNumeroMayorDeTres {
 

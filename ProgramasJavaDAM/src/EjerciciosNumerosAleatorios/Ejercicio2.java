@@ -1,4 +1,4 @@
-package EjerciciosNumerosAleatorios;
+package ejerciciosnumerosaleatorios;
 
 public class Ejercicio2 {
     // Realiza un programa que muestre al azar el nombre de una carta de la baraja

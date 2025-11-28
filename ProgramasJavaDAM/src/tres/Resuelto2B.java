@@ -1,6 +1,6 @@
 package tres;
 
-import EjerciciosCuentaPropia.AjustesProgramas;
+import ejercicioscuentapropia.AjustesProgramas;
 
 public class Resuelto2B {
     // Repite la piramide pidiendole al usuario el numero de filas

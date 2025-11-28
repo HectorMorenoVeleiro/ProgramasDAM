@@ -1,4 +1,4 @@
-package BoletinEjerciciosRepaso2;
+package boletinejerciciosrepaso2;
 
 public class Ejercicio9 {
     // Escribir todos los numeros del 100 al 0 de 7 en 7

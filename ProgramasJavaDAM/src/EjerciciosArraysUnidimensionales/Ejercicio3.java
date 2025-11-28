@@ -1,6 +1,6 @@
-package EjerciciosArraysUnidimensionales;
+package ejerciciosarraysunidimensionales;
 
-import EjerciciosClase.AjustesProgramas;
+import ejerciciosclase.AjustesProgramas;
 
 public class Ejercicio3 {
     /*

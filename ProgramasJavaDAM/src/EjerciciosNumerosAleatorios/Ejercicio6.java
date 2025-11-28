@@ -1,4 +1,4 @@
-package EjerciciosNumerosAleatorios;
+package ejerciciosnumerosaleatorios;
 
 import java.util.Scanner;
 

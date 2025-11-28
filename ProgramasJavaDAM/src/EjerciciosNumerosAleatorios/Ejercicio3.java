@@ -1,4 +1,4 @@
-package EjerciciosNumerosAleatorios;
+package ejerciciosnumerosaleatorios;
 
 public class Ejercicio3 {
     // Igual que el ejercicio anterior pero con la baraja española. Se utilizará la
