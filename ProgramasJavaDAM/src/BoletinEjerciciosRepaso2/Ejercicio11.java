@@ -7,7 +7,7 @@ public class Ejercicio11 {
     // impares
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        double numero = 0, productorio = 1;
+        long numero = 0, productorio = 1;
         for (int i = 1; i < 10; i++) {
             numero = 2 * i - 1;
             System.out.println(numero);
