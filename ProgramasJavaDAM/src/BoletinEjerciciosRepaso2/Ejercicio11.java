@@ -10,5 +10,4 @@ public class Ejercicio11 {
         System.out.println(numero);
         sc.close();
     }
-
 }
