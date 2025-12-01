@@ -11,9 +11,9 @@ public class Ejercicio7 {
         int numero = 1;
         int sumatorio = 0;
         int contador = 0;
-        while (numero != 0) {
+        while (numero > 0) {
             numero = Integer.parseInt(sc.nextLine());
-            sumatorio = sumatorio + numero;
+            sumatorio += numero;
             contador++;
         }
         System.out.println("la media es -> " + (sumatorio / contador));

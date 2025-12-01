@@ -2,19 +2,17 @@ package boletinejerciciosrepaso2;
 
 import java.util.Scanner;
 
-public class Ejercicio6 {
-    // Pedir numeros hasta que se teclee un 0, mostrar la suma de todos los numeros
-    // introducidos.
-
+public class Ejercicio10 {
+    // Pedir 15 numeros y escribir la suma total
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        int numero = 1;
+        int numero = 0;
         int sumatorio = 0;
-        while (numero != 0) {
+        for (int i = 0; i < 15; i++) {
             numero = Integer.parseInt(sc.nextLine());
             sumatorio += numero;
         }
-        System.out.println("la suma de los numeros es -> " + sumatorio);
+        System.out.println("la suma de los numeros es igual a -> " + sumatorio);
         sc.close();
     }
 
