@@ -7,9 +7,13 @@ public class Ejercicio11 {
     // impares
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
+        double numero = 0, productorio = 1;
         for (int i = 1; i < 10; i++) {
-            System.out.println(2 * i - 1);
+            numero = 2 * i - 1;
+            System.out.println(numero);
+            productorio *= numero;
         }
+        System.out.println("el producto de los impares es " + productorio);
         sc.close();
     }
 }
