@@ -7,17 +7,9 @@ public class Ejercicio11 {
     // impares
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        double numero = 0;
-        int index = 0;
-        double productorio = 1;
-        while (index < 10) {
-            numero = Double.parseDouble(sc.nextLine());
-            if (numero % 2 != 0) {
-                index++;
-                productorio *= numero;
-            }
+        for (int i = 1; i < 10; i++) {
+            System.out.println(2 * i - 1);
         }
-        System.out.println(productorio);
         sc.close();
     }
 }
