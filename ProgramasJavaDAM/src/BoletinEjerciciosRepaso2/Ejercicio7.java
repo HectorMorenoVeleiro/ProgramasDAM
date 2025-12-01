@@ -8,10 +8,10 @@ public class Ejercicio7 {
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        int numero = 1;
-        int sumatorio = 0;
+        double numero = 1;
+        double sumatorio = 0;
         int contador = 0;
-        while (numero > 0) {
+        while (numero >= 0) {
             numero = Integer.parseInt(sc.nextLine());
             sumatorio += numero;
             contador++;
