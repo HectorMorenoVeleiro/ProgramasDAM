@@ -10,14 +10,31 @@ public class Ejercicio7 {
      * primer valor por el segundo en la lista generada anteriormente. Los números
      * que se han cambiado deben aparecer entrecomillados.
      */
+
+    // iniciamos main
     public static void main(String[] args) {
+
+        // creamos array de 100 numeros
         int[] valores1Al20 = new int[100];
-        for (int i : valores1Al20) {
+
+        // bucle foreach para pasarle valores random del 1 al 20 por cada valor del
+        // array creado previamente
+        for (int i = 0; i < valores1Al20.length; i++)
             valores1Al20[i] = (int) (Math.random() * 20 + 1);
+
+        // pides 2 valores por teclado
+        int valorEnLista = AjustesProgramas.enterIntegerPorScanner("introduce numero 1 -> ");
+        int valorRemplazador = AjustesProgramas.enterIntegerPorScanner("introduce numero 2 -> ");
+        System.out.println(valorEnLista + ", " + valorRemplazador);
+
+        // bucle foreach para cambiar el valor que coincida con el primero que pasamos
+        // por Scanner por el segundo que pasamos por Scanner y mostrarlo entre comillas
+        for (int i = 0; i < valores1Al20.length; i++) {
+            if (valores1Al20[i] == valorEnLista) {
+                valores1Al20[i] = valorRemplazador;
+                System.out.print("\"" + valores1Al20[i] + "\" ");
+            } else
+                System.out.print(valores1Al20[i] + " ");
         }
-        int valor1 = AjustesProgramas.enterIntegerPorScanner("introduce numero 1 -> ");
-        int valor2 = AjustesProgramas.enterIntegerPorScanner("introduce numero 2 -> ");
-        System.out.println(valor1 + ", " + valor2);
-        // no entiendo que hay que hacer
     }
 }
