@@ -1,4 +1,4 @@
-package ejerciciosarraysunidimensionales;
+package ejerciciosarrayunidimensionales;
 
 public class Ejercicio2 {
     /*
