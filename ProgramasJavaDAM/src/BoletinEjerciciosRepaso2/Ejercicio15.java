@@ -14,22 +14,15 @@ public class Ejercicio15 {
         Scanner sc = new Scanner(System.in);
 
         // creamos variables
-        double[] edad = new double[5], alturas = new double[5];
-        int contador = 0;
+        double[] edad = { 16, 19, 20, 17, 22 };
+        double[] alturas = { 160, 172, 181, 175, 190 };
         int sumatorioEdad = 0, sumatorioAltura = 0, contAlumnMay18 = 0, contAlumnMay175 = 0;
 
         // bucle for para pasar valores a los arrays
         for (int i = 0; i < edad.length || i < alturas.length; i++) {
 
-            // pasamos los atribuos por Scanner
-            System.out.print("introduce una edad -> ");
-            edad[i] = Double.parseDouble(sc.nextLine());
-            System.out.print("introduce una altura -> ");
-            alturas[i] = Double.parseDouble(sc.nextLine());
-
             // incrementamos los contadores respecticamente
-            // (contador + 1) & (2 veces -> sumatorioN + N)
-            contador++;
+            // (2 veces -> sumatorioN + N)
             sumatorioAltura += alturas[i];
             sumatorioEdad += edad[i];
 
@@ -48,8 +41,8 @@ public class Ejercicio15 {
         } // cerramos bucle
 
         // mostramos medias por pantalla
-        System.out.println("la media de sus alturas es -> " + (sumatorioAltura / contador)
-                + "\nLa media de sus edades es -> " + (sumatorioEdad / contador));
+        System.out.println("la media de sus alturas es -> " + (sumatorioAltura / alturas.length)
+                + "\nLa media de sus edades es -> " + (sumatorioEdad / edad.length));
 
         // mostramos alumnos mayores de 18 o que miden mas de 175 cm por pantalla
         System.out.println("hay " + contAlumnMay18 + " alumnos mayores de 18\nHay " +

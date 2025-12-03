@@ -35,11 +35,10 @@ public class Ejercicio16 {
         } // fin bucle
 
         // creamos bucle para tabla de multiplicar (del 1 al 10 supongo)
-        for (int i = 0; i <= 10; i++) {
+        for (int i = 0; i <= 10; i++)
 
             // mostramos por pantalla la tabla de multiplicar del numero
             System.out.println("[" + numero1Al10 + " * " + i + "] = " + (i * numero1Al10));
-        }
 
         // cerramos Scanner
         sc.close();
