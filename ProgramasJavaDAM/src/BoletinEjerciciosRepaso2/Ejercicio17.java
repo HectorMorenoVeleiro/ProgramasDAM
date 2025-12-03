@@ -1,7 +1,5 @@
 package boletinejerciciosrepaso2;
 
-import static org.junit.Assert.assertThrows;
-
 import java.util.Scanner;
 
 public class Ejercicio17 {
@@ -13,13 +11,21 @@ public class Ejercicio17 {
     // creamos main
     public static void main(String[] args) {
 
-        // iniciamos Scanner
-        Scanner sc = new Scanner(System.in);
-
         // creamos atributos
-        int codigo;
-        double litros;
-        double precioL;
+        Linea[] factura = new Linea[5];
+
+        // le damos valor a los objetos
+        factura[0] = new Linea(101, 15.5, 2.50);
+        factura[1] = new Linea(100, 2, 5.15);
+        factura[2] = new Linea(101, 15.5, 2.50);
+        factura[3] = new Linea(101, 15.5, 2.50);
+        factura[4] = new Linea(101, 15.5, 2.50);
+
+        // le das valor a cada instancia del obj creado
+        for (int i = 0; i < factura.length; i++) {
+
+        }
+
     }
 
     // inner class
