@@ -11,19 +11,26 @@ public class Ejercicio17 {
     // creamos main
     public static void main(String[] args) {
 
-        // creamos atributos
         Linea[] factura = new Linea[5];
 
-        // le damos valor a los objetos
-        factura[0] = new Linea(101, 15.5, 2.50);
-        factura[1] = new Linea(100, 2, 5.15);
-        factura[2] = new Linea(101, 15.5, 2.50);
-        factura[3] = new Linea(101, 15.5, 2.50);
-        factura[4] = new Linea(101, 15.5, 2.50);
+        // mock de datos para crear las lineas
+        int[] CODIGOS = { 101, 102, 103, 104, 105 };
+        double[] LITROS = { 15.5, 2.0, 50.0, 3.2, 10.0 };
+        double[] PRECIOS = { 2.50, 10.00, 0.75, 5.00, 1.80 };
 
-        // le das valor a cada instancia del obj creado
         for (int i = 0; i < factura.length; i++) {
 
+            // 2. Instanciación dentro del bucle
+            Linea nuevaLinea = new Linea(
+                    CODIGOS[i], // Utiliza el i-ésimo código
+                    LITROS[i], // Utiliza el i-ésimo litro
+                    PRECIOS[i] // Utiliza el i-ésimo precio
+            );
+
+            // 3. Adición al array estático 'factura'
+            factura[i] = nuevaLinea;
+
+            System.out.println("Posición " + i + " creada: " + factura[i].toString());
         }
 
     }
