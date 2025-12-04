@@ -11,12 +11,16 @@ public class Ejercicio21 {
         double numero = 0;
 
         for (int i = 0; i < 10; i++) {
+            System.out.print("introduce el numero " + i + " de 10 -> ");
             numero = Double.parseDouble(sc.nextLine());
             if (numero < 0)
                 bandera = true;
         }
 
-        System.out.println("ha habido algun negativo ? -> " + bandera);
+        if (bandera)
+            System.out.println("Ha habido al menos uno negativo");
+        else
+            System.out.println("no hay numeros negativos");
 
         sc.close();
     }
