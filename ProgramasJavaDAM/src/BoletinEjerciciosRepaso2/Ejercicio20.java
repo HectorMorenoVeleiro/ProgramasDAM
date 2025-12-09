@@ -18,11 +18,7 @@ public class Ejercicio20 {
             System.out.println("introduce un sueldo");
             sueldos[i] = Double.parseDouble(sc.nextLine());
         }
-
-        System.out.println(Arrays.toString(sueldos));
-
-        for (double d : sueldos) {
-
-        }
+        sc.close();
     }
+
 }

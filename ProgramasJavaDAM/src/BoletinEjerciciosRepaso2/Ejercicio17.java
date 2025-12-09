@@ -20,16 +20,6 @@ public class Ejercicio17 {
 
         for (int i = 0; i < factura.length; i++) {
 
-            // 2. Instanciación dentro del bucle
-            Linea nuevaLinea = new Linea(
-                    CODIGOS[i], // Utiliza el i-ésimo código
-                    LITROS[i], // Utiliza el i-ésimo litro
-                    PRECIOS[i] // Utiliza el i-ésimo precio
-            );
-
-            // 3. Adición al array estático 'factura'
-            factura[i] = nuevaLinea;
-
             System.out.println("Posición " + i + " creada: " + factura[i].toString());
         }
 
