@@ -13,10 +13,12 @@ nota.
 Nota 2: Con el constructor podrás asignar directamente el nombre y
 el curso de la asignatura al crear el objeto. En cambio, el atributo
 nota, será el usuario quien lo introduzca mediante un método que
-controle que la nota tenga un valor entre 0 y 10.*/
+controle que la nota tenga un valor entre 0 y 10
+*/
 
-
-public static void main(String[] args) {
-	System.out.print();
+public class NotasAsignaturasFile {
+	public static void main(String[] args) {
+		System.out.println();
+	}
 
 }
