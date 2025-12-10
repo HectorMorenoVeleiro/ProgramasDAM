@@ -20,9 +20,6 @@ public class Ejercicio20 {
         }
 
         System.out.println(Arrays.toString(sueldos));
-
-        for (double d : sueldos) {
-
-        }
+        sc.close();
     }
 }
