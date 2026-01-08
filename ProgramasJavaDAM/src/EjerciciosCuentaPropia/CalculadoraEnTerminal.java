@@ -6,7 +6,7 @@ import java.util.Map;
 /*
  * "Calculadora" its a class which main function relies on doing
  * 4 different operations (add, subs, mul, div) without saving 
- * the answer that is given as a result, making use of a simple
+ * the answer that is given as a result, making use of a simpleddd
  * menu to choose between options.
  */
 

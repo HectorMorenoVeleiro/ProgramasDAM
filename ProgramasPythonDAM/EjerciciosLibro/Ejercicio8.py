@@ -25,5 +25,16 @@ A = TypeVar("A")
 # ---------------------------------------------------------------------
 
 
-def rota(n: int, lista: list[A]) -> list[A]:
-    return lista[n:] + lista[:n]
+def filtrar_pares(lista_numeros):
+    pares = []
+    for i in lista_numeros:
+        if i % 2 == 0:
+            pares.append(i)
+    return pares
+
+
+mis_numeros = {1, 2, 3, 4, 5, 6, 7, 8}
+
+solo_pares = filtrar_pares(mis_numeros)
+
+print(f"los pares son : {solo_pares}")
