@@ -43,6 +43,18 @@ public class Temperaturas {
         else
             System.out.println("!=");
 
+        System.out.println("temp1");
+        System.out.println(Arrays.toString(temperaturas1));
+        System.out.println(temperaturas1);
+
+        System.out.println("temp2");
+        System.out.println(Arrays.toString(temperaturas2));
+        System.out.println(temperaturas2);
+
+        System.out.println("temp3");
+        System.out.println(Arrays.toString(temperaturas3));
+        System.out.println(temperaturas3);
+
         sc.close();
     }
 
