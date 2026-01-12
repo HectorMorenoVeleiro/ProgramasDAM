@@ -1,7 +1,5 @@
 package boletinejerciciosrepaso2;
 
-import java.util.Scanner;
-
 public class Ejercicio17 {
     // Una empresa que se dedica a la venta de desinfectantes necesita un programa
     // para gestionar las facturas. En cada factura figura: el codigo del articulo,
@@ -22,6 +20,11 @@ public class Ejercicio17 {
 
             System.out.println("Posición " + i + " creada: " + factura[i].toString());
         }
+
+        System.out.print(CODIGOS[1]);
+        System.out.println(LITROS[1]);
+        System.out.println(PRECIOS[1]);
+        System.out.println();
 
     }
 
