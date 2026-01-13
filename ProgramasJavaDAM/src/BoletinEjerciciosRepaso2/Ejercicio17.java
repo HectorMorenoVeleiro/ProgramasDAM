@@ -7,29 +7,48 @@ public class Ejercicio17 {
     // Se pide de 5 facturas introducidas: Facturacion total,
 
     // creamos main
+    /**
+     * @param args
+     */
     public static void main(String[] args) {
+        // 1. Crear una instancia de Linea
+        // Datos: Código 101, 5.5 litros, precio 1.20 por litro
+        Linea factura = new Linea(101, 5.5, 1.20);
 
-        Linea[] factura = new Linea[5];
+        factura.setCodigo(0);
+        System.out.println(factura.getCodigo());
 
-        // mock de datos para crear las lineas
-        int[] CODIGOS = { 101, 102, 103, 104, 105 };
-        double[] LITROS = { 15.5, 2.0, 50.0, 3.2, 10.0 };
-        double[] PRECIOS = { 2.50, 10.00, 0.75, 5.00, 1.80 };
+        System.out.println("--- Prueba de Creación ---");
+        // 2. Comprobar si el subtotal se calculó en el constructor (5.5 * 1.20 = 6.6)
+        System.out.println(factura.toString());
 
-        for (int i = 0; i < factura.length; i++) {
-
-            System.out.println("Posición " + i + " creada: " + factura[i].toString());
+        if (factura.getSubtotal() == 6.6) {
+            System.out.println("Resultado: ✅ Subtotal inicial correcto.");
+        } else {
+            System.out.println("Resultado: ❌ Error en el cálculo inicial.");
         }
 
-        System.out.print(CODIGOS[1]);
-        System.out.println(LITROS[1]);
-        System.out.println(PRECIOS[1]);
-        System.out.println();
+        System.out.println("\n--- Prueba de Modificación ---");
+        // 3. Modificar valores y recalcular
+        factura.setLitros(10.0);
+        factura.setPrecioL(2.0);
 
+        // Llamamos al método manual de cálculo
+        double nuevoSubtotal = factura.calcularSubtotal();
+
+        System.out.println("Nuevos litros: " + factura.getLitros());
+        System.out.println("Nuevo precio: " + factura.getPrecioL());
+        System.out.println("Nuevo subtotal: " + nuevoSubtotal);
+
+        if (nuevoSubtotal == 20.0) {
+            System.out.println("Resultado: ✅ Recálculo correcto.");
+        } else {
+            System.out.println("Resultado: ❌ Error en el recálculo.");
+        }
     }
 
     // inner class
-    private class Linea {
+    private static class Linea {
 
         // Atributos
         int codigo;
