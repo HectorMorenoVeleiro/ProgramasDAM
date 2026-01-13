@@ -42,8 +42,33 @@ public class NotasAsignaturasFile {
 		return nota;
 	}
 
+	public String getNombreAlumno() {
+		return nombreAlumno;
+	}
+
+	public void setNombreAlumno(String nombreAlumno) {
+		this.nombreAlumno = nombreAlumno;
+	}
+
+	public String getCurso() {
+		return curso;
+	}
+
+	public void setCurso(String curso) {
+		this.curso = curso;
+	}
+
+	public int getNota() {
+		return nota;
+	}
+
+	public void setNota(int nota) {
+		this.nota = nota;
+	}
+
 	public static void main(String[] args) {
-		NotasAsignaturasFile[] notas;
+		NotasAsignaturasFile notas = new NotasAsignaturasFile(null, null, 0);
+		System.out.println(notas);
 
 	}
 
