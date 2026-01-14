@@ -29,7 +29,7 @@ public class Ejercicio11 {
 
         for (int i = 0; i < array.length; i++) {
             if (array[i] % 2 == 0 && array[i] % 3 == 0 && array[i] % 5 == 0 && array[i] % 7 == 0) {
-
+                arrayF[i] = array[i];
             }
         }
 
