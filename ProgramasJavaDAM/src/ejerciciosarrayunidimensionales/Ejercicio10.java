@@ -12,5 +12,10 @@ public class Ejercicio10 {
 
     public static void main(String[] args) {
 
+        int[] numerosEntAl = new int[20];
+
+        for (int i = 0; i < numerosEntAl.length; i++)
+            numerosEntAl[i] = (int) (Math.random() * 100);
+
     }
 }
