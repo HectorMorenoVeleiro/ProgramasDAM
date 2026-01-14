@@ -1,5 +1,7 @@
 package ejerciciosarrayunidimensionales;
 
+import java.util.Arrays;
+
 public class Ejercicio10 {
 
     /*
@@ -33,6 +35,9 @@ public class Ejercicio10 {
                 numerosParesArray.length + numerosImparesArray.length);
         System.arraycopy(numerosImparesArray, 0, resultado, numerosParesArray.length, numerosImparesArray.length);
 
-        System.out.println(resultado);
+        System.out.println(Arrays.toString(numerosEntAl));
+        System.out.println(Arrays.toString(resultado));
     }
 }
+
+// 5/10, lo hace pero malamente
