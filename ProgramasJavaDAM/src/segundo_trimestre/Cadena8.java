@@ -6,5 +6,10 @@ public class Cadena8 {
         String cad1 = "MAYKA MORENO";
         System.out.println(cad1.startsWith("JUAN"));
         System.out.println(cad1.startsWith("MAY"));
+
+        String cad2 = "MARIA AMPARO";
+        System.out.println(cad2.endsWith("paro"));
+        System.out.println(cad2.endsWith("PARO"));
+        System.out.println(cad2.endsWith("ARIA"));
     }
 }
