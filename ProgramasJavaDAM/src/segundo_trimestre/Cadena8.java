@@ -11,5 +11,8 @@ public class Cadena8 {
         System.out.println(cad2.endsWith("paro"));
         System.out.println(cad2.endsWith("PARO"));
         System.out.println(cad2.endsWith("ARIA"));
+
+        String cad3 = "AMPARO HEREDIA";
+        System.out.println(cad3.charAt(0) + " " + cad3.charAt(7));
     }
 }
