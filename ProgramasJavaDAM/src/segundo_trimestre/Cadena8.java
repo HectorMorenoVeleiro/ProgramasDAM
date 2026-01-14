@@ -1,5 +1,7 @@
 package segundo_trimestre;
 
+import java.util.Arrays;
+
 public class Cadena8 {
 
     public static void main(String[] args) {
@@ -14,5 +16,14 @@ public class Cadena8 {
 
         String cad3 = "AMPARO HEREDIA";
         System.out.println(cad3.charAt(0) + " " + cad3.charAt(7));
+
+        String cad4 = "EMMA MORENO";
+        System.out.println(cad4.indexOf('M'));
+        System.out.println(cad4.indexOf("MO"));
+
+        String cadLoro = "LORO FELIPE";
+        char array1[] = cadLoro.toCharArray();
+        // Crea una Array con los caracteres
+        System.out.println(Arrays.toString(array1));
     }
 }
