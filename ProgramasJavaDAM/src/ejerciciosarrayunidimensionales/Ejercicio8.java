@@ -48,7 +48,7 @@ public class Ejercicio8 {
 
             } // cerramos bucle j
 
-            // tabular al acabar cada iteración
+            // espaciar al acabar cada iteración
             System.out.println();
 
         } // cerramos bucle i
