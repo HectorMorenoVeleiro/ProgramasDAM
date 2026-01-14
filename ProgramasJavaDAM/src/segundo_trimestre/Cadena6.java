@@ -37,3 +37,5 @@ public class Cadena6 {
 
     }
 }
+
+// genuinamente me aburre mas toda esta mierda OMG
