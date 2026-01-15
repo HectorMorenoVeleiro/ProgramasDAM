@@ -17,5 +17,9 @@ public class Builder2 {
         StringBuffer nombre3 = new StringBuffer("RAUL JESUS TURRION");
         String turri = nombre3.substring(0, 4) + nombre3.substring(10);
         System.out.println("y sale: " + turri);
+
+        StringBuffer nombre4 = new StringBuffer("TURRION");
+        String cadena = nombre4.toString();
+        System.out.println(cadena);
     }
 }
