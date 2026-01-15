@@ -19,5 +19,13 @@ public class Cadenas9 {
         double edad4 = 6.5;
         str = String.valueOf(edad4);
         System.out.println(str);
+
+        // ----------------------------------------
+        // Como convertir una cadena a un número ->
+        // ----------------------------------------
+        // ----------> usar "Double.parseDouble(str);"
+
+        double numD = Double.parseDouble(str);
+        System.out.println("El numero recuperado de la cadena es: " + (2 * numD));
     }
 }
