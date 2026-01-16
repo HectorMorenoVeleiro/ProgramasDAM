@@ -13,7 +13,7 @@ public class ReversePalabras {
 
         StringBuilder reves = new StringBuilder();
         while (st.hasMoreTokens()) {
-            reves.append("" + st.nextToken());
+            reves.append(" " + st.nextToken());
             // Object object = (Object) st.nextElement();
         }
         String vuelta = reves.reverse().toString();
