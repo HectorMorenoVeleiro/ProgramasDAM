@@ -16,7 +16,8 @@ public class ReversePalabras {
             reves.append("" + st.nextToken());
             // Object object = (Object) st.nextElement();
         }
-        System.out.println(reves);
+        String vuelta = reves.reverse().toString();
+        System.out.println(vuelta);
         System.out.println(toques + "toques");
     }
 }
