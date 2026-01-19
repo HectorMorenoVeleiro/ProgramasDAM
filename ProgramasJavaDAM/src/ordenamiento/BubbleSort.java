@@ -23,5 +23,6 @@ public class BubbleSort {
         }
 
         System.out.println(String.valueOf(swap) + " " + Arrays.toString(datos));
+        System.out.println("hola pepe");
     }
 }
