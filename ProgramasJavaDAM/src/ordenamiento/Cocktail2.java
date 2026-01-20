@@ -1,8 +1,40 @@
 package ordenamiento;
 
+import java.util.Arrays;
 import java.util.Random;
 
 public class Cocktail2 {
+
+    public static float[] CocktailSortMethot(float[] numbers) {
+        boolean swapped = true;
+        int i = 0;
+        int j = numbers.length - 1;
+        while (i < j && swapped) {
+            swapped = false;
+            for (int k = i; k < j; k++) {
+                if (numbers[k] > numbers[k + 1]) {
+                    float temp = numbers[k];
+                    numbers[k] = numbers[k + 1];
+                    numbers[k + 1] = temp;
+                    swapped = true;
+                }
+            }
+            j--;
+            if (swapped) {
+                swapped = false;
+                for (int k = j; k > i; k--) {
+                    if (numbers[k] < numbers[k - 1]) {
+                        float temp = numbers[k];
+                        numbers[k] = numbers[k - 1];
+                        numbers[k - 1] = temp;
+                        swapped = true;
+                    }
+                }
+            }
+            i++;
+        }
+        return numbers;
+    }
 
     public static void main(String[] args) {
 
@@ -16,5 +48,10 @@ public class Cocktail2 {
             // multiplicamos por 10
             notas[i] = random.nextFloat() * 10;
         }
+
+        System.out.println(Arrays.toString(notas));
+
+        notas = CocktailSortMethot(notas);
+
     }
 }
