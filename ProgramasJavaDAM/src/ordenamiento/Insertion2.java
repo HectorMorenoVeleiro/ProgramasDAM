@@ -1,5 +1,6 @@
 package ordenamiento;
 
+import java.util.Arrays;
 import java.util.Random;
 
 public class Insertion2 {
@@ -43,5 +44,7 @@ public class Insertion2 {
                 nombresMezclados[i] = mujeres[indiceNombre];
 
         }
+
+        System.out.println(Arrays.toString(nombresMezclados));
     }
 }
