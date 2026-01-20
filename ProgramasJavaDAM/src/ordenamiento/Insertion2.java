@@ -5,6 +5,38 @@ import java.util.Random;
 
 public class Insertion2 {
 
+    public static String[] insertionSort(String[] numbers) {
+
+        // Iniciamos un fori del rango del array -->
+        for (int i = 0; i < numbers.length; i++) {
+
+            // Creamos la variable COPIA -->
+            String copyNumber = numbers[i];
+
+            // Creamos un index extra (j), del tamaño de i -->
+            int j = i;
+
+            // Bucle while para sustituir los numeros del array -->
+            while (j > 0 && copyNumber.compareTo(numbers[j - 1])/*
+                                                                 * El método compareTo se utiliza para comparar dos
+                                                                 * Strings dando un número mayor o menor que 0
+                                                                 */ < 0) {
+
+                // Sustitución
+                numbers[j] = numbers[j - 1];
+
+                // Proceso de regresión del index "j" a 0 -->
+                j--;
+            }
+
+            // devuelta al array de la variable COPIA -->
+            numbers[j] = copyNumber;
+        }
+
+        // Devolvemos el array ya ordenado -->
+        return numbers;
+    }
+
     public static void main(String[] args) {
 
         // Creamos el array de hombres -->
@@ -45,6 +77,13 @@ public class Insertion2 {
 
         }
 
+        // Mostramos el resultado -->
+        System.out.println(Arrays.toString(nombresMezclados));
+
+        // Ordenamos la cadena -->
+        nombresMezclados = insertionSort(nombresMezclados);
+
+        // Mostramos la cadena corregida -->
         System.out.println(Arrays.toString(nombresMezclados));
     }
 }
