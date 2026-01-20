@@ -5,7 +5,7 @@ import java.util.Random;
 
 public class Cocktail2 {
 
-    public static float[] CocktailSortMethot(float[] numbers) {
+    public static float[] cocktailSortMethot(float[] numbers) {
         boolean swapped = true;
         int i = 0;
         int j = numbers.length - 1;
@@ -51,7 +51,7 @@ public class Cocktail2 {
 
         System.out.println(Arrays.toString(notas));
 
-        notas = CocktailSortMethot(notas);
+        notas = cocktailSortMethot(notas);
 
     }
 }

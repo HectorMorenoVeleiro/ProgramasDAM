@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 public class CocktailSort {
 
-    public static int[] CocktailSortMethot(int[] numbers) {
+    public static int[] cocktailSortMethot(int[] numbers) {
         boolean swapped = true;
         int i = 0;
         int j = numbers.length - 1;
@@ -42,7 +42,7 @@ public class CocktailSort {
 
         System.out.println(Arrays.toString(datos));
 
-        System.out.println(Arrays.toString(CocktailSortMethot(datos)));
+        System.out.println(Arrays.toString(cocktailSortMethot(datos)));
 
     }
 

@@ -7,7 +7,8 @@ public class OrdenamientoExplicado {
      * 
      * - Qué es un método burbuja? Es aquel método que permite al usuario
      * recorrer una lista desordenada y ordenarla recorriendo de dos en dos las
-     * instancias de ese array y reordenandolas en el orden que mas le apeteca.
+     * instancias de ese array y reordenandolas en el orden que mas apeteca
+     * (generalmente de menor a mayor).
      * 
      */
 
@@ -17,8 +18,8 @@ public class OrdenamientoExplicado {
         // Creamos el valor auxiliar que usaremos mas adelante -->
         int aux = 0;
 
-        // Creamos un Fori que recorra el array desde el segundo
-        // del mismo (lo iniciamos a i = 1) -->
+        // Creamos un Fori que recorra el array desde la segunda
+        // instancia del mismo (lo iniciamos a i = 1) -->
         for (int i = 1; i < datos.length; i++) {
 
             // Creamos el segundo for (Forj) que recorra el array
@@ -47,8 +48,8 @@ public class OrdenamientoExplicado {
         // Creamos el valor auxiliar que usaremos mas adelante -->
         float aux = 0;
 
-        // Creamos un Fori que recorra el array desde el segundo
-        // del mismo (lo iniciamos a i = 1) -->
+        // Creamos un Fori que recorra el array desde la segunda
+        // instancia del mismo (lo iniciamos a i = 1) -->
         for (int i = 1; i < datos.length; i++) {
 
             // Creamos el segundo for (Forj) que recorra el array
