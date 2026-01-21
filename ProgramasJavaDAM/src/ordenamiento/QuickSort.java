@@ -5,7 +5,11 @@ import java.util.Arrays;
 public class QuickSort {
 
     public static void main(String[] args) {
-        int[] datos = { 2, 5, 0, 9, 3, 1, 8, 4, 7, 6, 2, 5, 9, 0, 3, 1, 4, 7, 8, 2 };
+        int[] datos = new int[1000000];
+
+        for (int i = 0; i < datos.length; i++) {
+            datos[i] = (int) (Math.random() + 1) * 10;
+        }
 
         System.out.println("datos desordenados: ");
         System.out.println(Arrays.toString(datos));
