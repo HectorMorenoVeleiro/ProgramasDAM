@@ -117,18 +117,15 @@ public class MergeSort2 {
         String[] hombres = { "Alejandro", "Carlos", "Javier", "Diego", "Pablo", "Sergio", "David", "Rubén", "Manuel",
                 "Adrián", "Iván", "Óscar", "Raúl", "Álvaro", "Mario", "Tomás", "Samuel", "Gonzalo", "Hugo", "Mateo",
                 "Bruno", "Nicolás", "Lucas", "Martín", "Rafael", "Fernando", "Jorge", "Luis", "Enrique", "Víctor",
-                "Jaime",
-                "Andrés", "Eduardo", "Iker", "Saúl", "Ángel", "Cristian", "Marcos", "Joel", "Sebastián", "Thiago",
-                "Gael",
-                "Adriel", "Damián", "Elías", "Max", "Leo", "Héctor" };
+                "Jaime", "Andrés", "Eduardo", "Iker", "Saúl", "Ángel", "Cristian", "Marcos", "Joel", "Sebastián",
+                "Thiago", "Gael", "Adriel", "Damián", "Elías", "Max", "Leo", "Héctor" };
 
         // Creamos el array de mujeres -->
         String[] mujeres = { "María", "Lucía", "Sofía", "Laura", "Elena", "Ana", "Carmen", "Paula", "Claudia", "Irene",
                 "Sara", "Marta", "Julia", "Noelia", "Natalia", "Alicia", "Beatriz", "Rocío", "Patricia", "Eva",
-                "Verónica",
-                "Daniela", "Andrea", "Marina", "Isabel", "Teresa", "Lidia", "Nerea", "Ariadna", "Silvia", "Lorena",
-                "Ainhoa", "Esther", "Alba", "Mónica", "Pilar", "Belén", "Helena", "Jimena", "Olga", "Amaya", "Carla",
-                "Manuela", "Violeta", "Luna", "Valeria", "Emma", "Clara" };
+                "Verónica", "Daniela", "Andrea", "Marina", "Isabel", "Teresa", "Lidia", "Nerea", "Ariadna", "Silvia",
+                "Lorena", "Ainhoa", "Esther", "Alba", "Mónica", "Pilar", "Belén", "Helena", "Jimena", "Olga", "Amaya",
+                "Carla", "Manuela", "Violeta", "Luna", "Valeria", "Emma", "Clara" };
 
         // Creamos el array de 100 posiciones -->
         String[] nombresMezclados = new String[100];
