@@ -1,14 +1,16 @@
 package ordenamiento;
 
 import java.util.Arrays;
+import java.util.Random;
 
 public class QuickSort {
 
     public static void main(String[] args) {
         int[] datos = new int[1000000];
+        Random random = new Random();
 
         for (int i = 0; i < datos.length; i++) {
-            datos[i] = (int) (Math.random() + 1) * 10;
+            datos[i] = random.nextInt(100);
         }
 
         System.out.println("datos desordenados: ");
