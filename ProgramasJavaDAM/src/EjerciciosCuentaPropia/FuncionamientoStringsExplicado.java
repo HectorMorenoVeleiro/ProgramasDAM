@@ -21,7 +21,7 @@ public class FuncionamientoStringsExplicado {
     public static void stringBuffer1() {
 
         /*
-         * El StringBuffer tiene diversos usos, además de diversas
+         * - El StringBuffer tiene diversos usos, además de diversas
          * formas de implementación al crear un objeto de esa clase.
          * Estas formas son -->
          * 
@@ -42,7 +42,7 @@ public class FuncionamientoStringsExplicado {
         // ---------------------------------------------------------
 
         /*
-         * Ahora pasaré a mostrar los usos que puede tener el
+         * - Ahora pasaré a mostrar los usos que puede tener el
          * StringBuffer en general -->
          * 
          */
@@ -90,7 +90,7 @@ public class FuncionamientoStringsExplicado {
     public static void stringBuffer2() {
 
         /*
-         * Ya sabemos como trabajar ligeramente con StringBuffer's,
+         * - Ya sabemos como trabajar ligeramente con StringBuffer's,
          * pero aun quedan muchas cosas por aprender, por ejemplo
          * como modificar las propias cadenas del String -->
          *
@@ -133,7 +133,7 @@ public class FuncionamientoStringsExplicado {
     public static void cadenas1() {
 
         /*
-         * Aquí trabajaremos con el uso de cadenas de caracteres en forma de
+         * - Aquí trabajaremos con el uso de cadenas de caracteres en forma de
          * Strings, para ver como manejarlos y las propiedades que tiene
          * también -->
          * 
@@ -157,7 +157,7 @@ public class FuncionamientoStringsExplicado {
         // -----------------------------------------------------------------
 
         /*
-         * Ahora vamos a mostrar como se pueden convertir estos caracteres a
+         * - Ahora vamos a mostrar como se pueden convertir estos caracteres a
          * objetos String para un uso mas interesante -->
          * 
          */
@@ -171,12 +171,96 @@ public class FuncionamientoStringsExplicado {
         String cadena2 = String.valueOf(nombre2);
         System.out.println(cadena2);
 
-        // By Looping&Adding
-        String cadena3 = ""; // Empty String
-        for (int i = 0; i < nombre3.length; i++) { // add Char from ArrayChar into String
+        // Crea un objeto String vacío y velo llenando con un fori
+        // y ve llenandolo con los caracteres del char de arriba
+        String cadena3 = "";
+        for (int i = 0; i < nombre3.length; i++)
             cadena3 += nombre3[i];
-        }
-        System.out.println(cadena3); // Show CharArray into String
+        System.out.println(cadena3);
+
+    }
+
+    public static void cadena2() {
+
+        /*
+         * - Ahora vamos a ver formas distintas de construir cadenas en java
+         * en base a arrays de caracteres (String en base a charArray).
+         * Es un proceso simple pero util para conocer -->
+         * 
+         */
+
+        // Primero los arrays de caracteres -->
+
+        // Array por caracteres -->
+        char[] letras = { 'h', 'o', 'l', 'a' };
+
+        // Array por ASCII -->
+        char[] bytes = { 74, 97, 118, 97 };
+
+        // Array por caracteres (mayor) -->
+        char[] datos = { 'a', 'b', 'c', 'd', 'e', 'f' };
+
+        // -----------------------------------------------------------------
+        // Luego los pasas a String por objeto, y los valores que les pasas
+        // por objeto -->
+
+        // Por letras -->
+        String saludo = new String(letras);
+
+        // Por bytes (char/ASCII) -->
+        String lenguaje = new String(bytes);
+
+        // Por tramo de cadena de caracteres -->
+        String subcadena = new String(datos, 2, 3);
+
+        // ------------------------------------------------------------------
+        // Ahora como es de esperar, se muestra el resultado por pantalla -->
+        System.out.println(saludo);
+        System.out.println(lenguaje);
+        System.out.println(subcadena);
+
+    }
+
+    public static void cadena3() {
+
+        /*
+         * - Acabamos de ver el proceso de cambiar un char[] a un String
+         * , así que es bueno saber también no solo que se puede hacer
+         * lo contrario, si no ver como es que se haría justamente
+         * 
+         */
+
+        // Primero que nada es importante crear los objetos String,
+        // ambos por cadena de caracteres entre comillas ("") -->
+        String cadena1 = "Hola";
+        String cadena2 = "Java";
+
+        // Lo convertimos a cadena de caracteres por su própio
+        // comando ya usable en Java (toCharArray) -->
+        char[] array1 = cadena1.toCharArray();
+        char[] array2 = cadena2.toCharArray();
+
+        // Verificación de aquello que queremos imprimir
+        System.out.println("Primer caracter de Array1 --> " + array1[0]); // 'H'
+        System.out.println("Segundo caracter de Array2 --> " + array2[array2.length - 1]);
+
+        // Y muestras ambos arrays enteros por pantalla para confirmar
+        // posiciones -->
+        System.out.println(Arrays.toString(array1));
+        System.out.println(Arrays.toString(array2));
+
+    }
+
+    public static void cadena4() {
+
+        /*
+         * - Ahora que ya sabemos como crear una cadena y como modificar
+         * y trabajar con ellas de forma muy simplista, vamos a
+         * intentar comprender un poco mas el funcionamiento de las mismas
+         * para que resulte mas útil comprender porque y como se usan
+         * y podamos simular ciertos contextos brevemente -->
+         * 
+         */
 
     }
 
