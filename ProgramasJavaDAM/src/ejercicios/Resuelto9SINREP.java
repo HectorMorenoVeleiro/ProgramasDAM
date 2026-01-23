@@ -16,6 +16,8 @@ public class Resuelto9SINREP {
         int totalNumeros = numeros.length;
         int index = 0;
 
+        numeros[0] = 1 + random.nextInt(99);
+
         do {
 
             int valor = 1 + random.nextInt(99);
