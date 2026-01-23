@@ -25,15 +25,17 @@ public class Resuelto9SINREP {
             for (int i = 0; i < numeros.length; i++) {
 
                 if (valor == numeros[i]) {
+
                     System.out.println("repe...");
                     break;
                 } else {
+
                     System.out.println("insertado...");
                     numeros[index] = valor;
                     index++;
                 }
-
             }
+
         } while (index < totalNumeros);
 
         // devolvemos el array -->
