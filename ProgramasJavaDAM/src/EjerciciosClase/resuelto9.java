@@ -12,22 +12,20 @@ public class resuelto9 {
 
         int[] numeros = {};
         Random random = new Random();
-
-        for (int i = 0; i < numeros.length; i++) {
+        for (int i = 0; i < numeros.length; i++)
             numeros[i] = 1 + random.nextInt(99);
-        }
 
         // método de ordenamiento en el que queramos
         Arrays.sort(numeros);
         System.out.println("array ordenado");
         System.out.println(Arrays.toString(numeros));
-
         System.out.println("TRAS ordenar dame el numero a buscar");
         int num = Integer.parseInt(sc.nextLine());
 
         // Llamamos al método busqueda binaria ??
-        Arrays.binarySearch(numeros, num);
-
+        int indice = Arrays.binarySearch(numeros, num);
+        if (indice != -1)
+            System.out.println("ValueFounded --> " + num + " in Index " + indice);
         sc.close();
 
     }
