@@ -12,8 +12,27 @@ public class Resuelto9SINREP {
 
         // iniciamos un for para darle valores random a cada
         // instancia del array -->
-        for (int i = 0; i < numeros.length; i++)
-            numeros[i] = 1 + random.nextInt(99);
+
+        int totalNumeros = numeros.length;
+        int index = 0;
+
+        do {
+
+            int valor = 1 + random.nextInt(99);
+
+            for (int i = 0; i < numeros.length; i++) {
+
+                if (valor == numeros[i]) {
+                    System.out.println("repe...");
+                    break;
+                } else {
+                    System.out.println("insertado...");
+                    numeros[index] = valor;
+                    index++;
+                }
+
+            }
+        } while (index < totalNumeros);
 
         // devolvemos el array -->
         return numeros;
