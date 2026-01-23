@@ -9,23 +9,25 @@ public class resuelto9 {
     public static void main(String[] args) {
 
         Scanner sc = new Scanner(System.in);
-
-        int[] numeros = {};
+        int numeros[] = new int[50];
         Random random = new Random();
-        for (int i = 0; i < numeros.length; i++)
-            numeros[i] = 1 + random.nextInt(99);
 
-        // método de ordenamiento en el que queramos
+        for (int i = 0; i < numeros.length; i++) {
+            numeros[i] = 1 + random.nextInt(99);
+        }
         Arrays.sort(numeros);
-        System.out.println("array ordenado");
+        System.out.println("Ordenado");
         System.out.println(Arrays.toString(numeros));
-        System.out.println("TRAS ordenar dame el numero a buscar");
+
+        System.out.println("numero a buscar");
         int num = Integer.parseInt(sc.nextLine());
 
-        // Llamamos al método busqueda binaria ??
         int indice = Arrays.binarySearch(numeros, num);
-        if (indice != -1)
-            System.out.println("ValueFounded --> " + num + " in Index " + indice);
+
+        if (indice >= 0) {
+            System.out.println("encontrado el valor " + num + " en la posición " + indice);
+        }
+
         sc.close();
 
     }
