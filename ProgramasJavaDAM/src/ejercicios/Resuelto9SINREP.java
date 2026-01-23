@@ -8,34 +8,36 @@ public class Resuelto9SINREP {
 
     public static int[] rellena(int numeros[]) {
 
+        // creamos un random obj de la libreria random -->
         Random random = new Random();
 
-        // iniciamos un for para darle valores random a cada
-        // instancia del array -->
-
+        // crear top y final -->
         int totalNumeros = numeros.length;
         int index = 0;
 
+        // esto es un valor aleatorio en la posicion 0 -->
         numeros[0] = 1 + random.nextInt(99);
 
+        // do while para añadir valores supongo (lo mirare luego i guess) -->
         do {
 
             int valor = 1 + random.nextInt(99);
+            boolean repetido = false; // a priori no esta repetido
 
             for (int i = 0; i < numeros.length; i++) {
 
                 if (valor == numeros[i]) {
-
                     System.out.println("repe...");
+                    repetido = true;
                     break;
-                } else {
-
-                    System.out.println("insertado...");
-                    numeros[index] = valor;
-                    index++;
                 }
             }
 
+            if (!repetido) {
+                System.out.println("insertado " + valor);
+                numeros[index] = valor; // en index el valor
+                index++;
+            }
         } while (index < totalNumeros);
 
         // devolvemos el array -->
