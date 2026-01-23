@@ -20,7 +20,7 @@ public class Resuelto9BinS {
 
         // muestras todas las variables
         System.out.println("min" + min + " a[min]" + a[min] + " max" + max +
-                " a[max]" + a[max] + " mitad" + mitad + " " + a[mitad]);
+                " a[max]" + a[max] + " mitad" + mitad + " --> " + a[mitad]);
 
         // si la que sea mayor que valor en su posicion,
         // es ese valor mismo -->
