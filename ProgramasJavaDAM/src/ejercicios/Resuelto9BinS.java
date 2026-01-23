@@ -1,0 +1,89 @@
+package ejercicios;
+
+import java.util.Arrays;
+import java.util.Random;
+import java.util.Scanner;
+
+public class Resuelto9BinS {
+
+    /* Improvisar método de busqueda binaria recursivo --> */
+    public static int buscaBin(int[] a, int valor, int min, int max) {
+
+        // salida -por defecto- del método cuando min = max -->
+        if (min == max) {
+            System.out.println("salida pq min = max");
+            return -1;
+        }
+
+        // crea variable mitad = la mitad del minimo y el maximo -->
+        int mitad = (min + max) / 2;
+
+        // muestras todas las variables
+        System.out.println("min" + min + " a[min]" + a[min] + " max" + max +
+                " a[max]" + a[max] + " mitad" + mitad + " " + a[mitad]);
+
+        // si la que sea mayor que valor en su posicion,
+        // es ese valor mismo -->
+        if (valor == a[mitad])
+            return mitad;
+        if (valor == a[min])
+            return min;
+        if (valor == a[max])
+            return max;
+
+        // si el valor es mayor que a en "mitad" -->
+        if (valor > a[mitad])
+            return buscaBin(a, valor, mitad + 1, max);
+        // si el valor no es mayor que a en "mitad" -->
+        else
+            return buscaBin(a, valor, min, mitad - 1);
+    }
+
+    // empezamos por crear un main para hacer el ejercico -->
+    public static void main(String[] args) {
+
+        // iniciamos un Scanner sc (para usarlo mas tarde) -->
+        Scanner sc = new Scanner(System.in);
+
+        // creamos la variable numeros (array) de 50 posiciones -->
+        int numeros[] = new int[50];
+
+        // creamos un valor obj Random -->
+        Random random = new Random();
+
+        // iniciamos un for para darle valores random a cada
+        // instancia del array -->
+        for (int i = 0; i < numeros.length; i++)
+            numeros[i] = 1 + random.nextInt(99);
+
+        /*
+         * el metodo de ordenamiento es el que queramos pero es obligatorio
+         * usar uno para realizar una busqeuda binaria -->
+         * 
+         */
+
+        // muestras el array por pantalla -->
+        Arrays.sort(numeros);
+        System.out.println("Ordenado");
+        System.out.println(Arrays.toString(numeros));
+
+        // preguntas que numero dentro del array quieres buscar -->
+        System.out.println("numero a buscar");
+
+        // lo pides por Scanner -->
+        int num = Integer.parseInt(sc.nextLine());
+
+        // buscas el numero y la posicion del numero (con el método recursivo) -->
+        int indice = buscaBin(numeros, num, 0, numeros.length - 1);
+
+        /// si el indice es mayor que 0 (esta en el array) muestras
+        // el numero y su posicion -->
+        if (indice >= 0)
+            System.out.println("encontrado el valor " + num +
+                    " en la posición " + indice);
+
+        // cerramos Scanner sc -->
+        sc.close();
+
+    }
+}
