@@ -22,7 +22,7 @@ public class Resuelto1 {
         System.out.println();
         System.out.println(Arrays.deepToString(matriz));
 
-        System.out.println("-- A sua Manguéira --");
+        System.out.println("-- A sua Mangueira --");
         for (int i = 0; i < matriz.length; i++)
             System.out.println(Arrays.toString(matriz[i]));
 
