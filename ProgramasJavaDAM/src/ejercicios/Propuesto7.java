@@ -1,5 +1,7 @@
 package ejercicios;
 
+import java.util.Random;
+
 public class Propuesto7 {
 
     /*
@@ -11,6 +13,15 @@ public class Propuesto7 {
 
     public static void main(String[] args) {
 
-        // genera dos arrays de 100 posiciones entre -->
+        // genera dos arrays de 100 posiciones entre 1 y
+        // variable valor -->
+        int[] uno = new int[70];
+        int[] otro = new int[60];
+
+        // generamos aleatoriamente UNO -->
+        Random random = new Random();
+        for (int i = 0; i < uno.length; i++) {
+            uno[i] = random.nextInt();
+        }
     }
 }
