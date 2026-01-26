@@ -1,5 +1,6 @@
 package ejercicios;
 
+import java.util.Arrays;
 import java.util.Random;
 
 public class Propuesto2 {
@@ -44,14 +45,22 @@ public class Propuesto2 {
 
     public static void main(String[] args) {
 
+        // introduces las variables (arrays de ints) de
+        // 100 valores -->
         int[] original = new int[100];
         int[] ordenado = new int[100];
 
         // generados aleatoriamente -->
         Random random = new Random();
         for (int i = 0; i < original.length; i++) {
-            numeros[j] = numeros[j - 1];
+            original[i] = random.nextInt(99);
         }
+
+        System.out.println(Arrays.toString(original));
+
+        ordenado = insertionSort(original);
+
+        System.out.println(Arrays.toString(ordenado));
     }
 
 }
