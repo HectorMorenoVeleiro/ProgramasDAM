@@ -2,7 +2,6 @@ package ejercicios;
 
 import java.util.Arrays;
 import java.util.Random;
-import java.util.Scanner;
 
 public class Propuesto1 {
 
@@ -12,6 +11,25 @@ public class Propuesto1 {
      * ordene y no de mas pasadas de las necesarias -->
      * 
      */
+
+    public static int[] ordenar(int numeros[]) {
+
+        int aux;
+
+        for (int i = 0; i < numeros.length; i++) {
+            for (int j = 0; j < numeros.length; j++) {
+
+                if (numeros[j] > numeros[j + 1]) {
+
+                    aux = numeros[j + 1];
+                    numeros[j + 1] = numeros[j];
+                    numeros[j] = aux;
+                }
+            }
+        }
+
+        return numeros;
+    }
 
     public static void main(String[] args) {
 
@@ -28,6 +46,7 @@ public class Propuesto1 {
 
         // en vez de ordenar por buble ordenamos
         // por patilla -->
+        numeros = ordenar(numeros);
 
         // array ordenado -->
         System.out.println("array ordenado :");
