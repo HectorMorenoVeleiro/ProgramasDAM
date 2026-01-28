@@ -40,12 +40,22 @@ public class Propuesto7 {
         return numbers;
     }
 
+    public static int[] fusionarYOrdenar(int[] a, int[] b) {
+
+        return c;
+    }
+
     public static int[] ordenaYJunta(int[] a, int[] b) {
+
         int[] c = new int[a.length + b.length];
+
         for (int i = 0; i < a.length; i++) {
+
             c[i] = a[i];
         }
+
         for (int j = a.length, k = 0; j < c.length; j++, k++) {
+
             c[j] = b[k];
         }
 
