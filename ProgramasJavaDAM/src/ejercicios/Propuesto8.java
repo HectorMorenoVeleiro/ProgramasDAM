@@ -23,10 +23,9 @@ public class Propuesto8 {
         int[] altos = new int[10];
 
         altos = Arrays.copyOfRange(aleatorios, 990, 999);
-        System.out.println("Los 10 mas altos son --> ");
+        System.out.println("Los 10 mas altos son --> " + altos);
         System.out.println(Arrays.toString(aleatorios));
 
-        
     }
 
 }
