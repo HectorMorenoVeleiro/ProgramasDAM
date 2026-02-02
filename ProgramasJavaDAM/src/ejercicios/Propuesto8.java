@@ -19,7 +19,7 @@ public class Propuesto8 {
         // opcion1 -->
         Arrays.sort(aleatorios);
 
-        // genero lista con 10 +altos -->
+        // genero lista con 10 + altos -->
         int[] altos = new int[10];
 
         altos = Arrays.copyOfRange(aleatorios, 990, 999);
