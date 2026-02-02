@@ -1,6 +1,7 @@
 package ejercicios;
 
 import java.util.Arrays;
+import java.util.Map;
 import java.util.Random;
 
 public class Propuesto9 {
@@ -32,8 +33,10 @@ public class Propuesto9 {
             total += i;
         }
 
-        System.out.println("máximo es -> " + max);
-        System.out.println("mínimo es -> " + min);
+        System.out.println("el máximo es -> " + max);
+        System.out.println("el mínimo es -> " + min);
         System.out.println("la media es -> " + (double) (total / aleatorios.length));
+
+        Map<k,v> cuenta = new Map<k, v>;
     }
 }
