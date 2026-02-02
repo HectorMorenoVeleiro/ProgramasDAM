@@ -58,8 +58,11 @@ public class Propuesto9 {
             System.out.print(pareja.getValue() + "\n");
         }
 
+        // cuenta.Mostrar (si es solo para mostrar ambos hacen lo mismo) -->
         System.out.println(cuenta.toString());
+        System.out.println(cuenta.entrySet());
 
+        // guardar el valor que mas se repite -->
         int moda = aleatorios[0];
         int repe = 0;
         for (Map.Entry<Integer, Integer> pareja : cuenta.entrySet()) {
@@ -68,6 +71,8 @@ public class Propuesto9 {
                 moda = pareja.getKey();
             }
         }
-        System.out.println(moda);
+
+        // mostramos la moda -->
+        System.out.println("la moda es: " + moda + " que se repite " + repe + " veces");
     }
 }
