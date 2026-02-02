@@ -38,10 +38,30 @@ public class Propuesto9 {
         System.out.println("el mínimo es -> " + min);
         System.out.println("la media es -> " + (double) (total / aleatorios.length));
 
+        // diccionario/mapa
         Map<Integer, Integer> cuenta = new HashMap<Integer, Integer>();
 
-        for (int i : aleatorios) {
+        // Está el mapa completo desde 10 hasta 80 SIN INICIALIZAR
+
+        for (int i : aleatorios)
+            cuenta.put(i, 0);
+
+        // ver Entero
+        for (Map.Entry pareja : cuenta.entrySet()) {
 
         }
+        // contar
+        for (int i : aleatorios) {
+            int valor = cuenta.get(i);
+            cuenta.put(i, valor);
+        }
+
+        // Mostrar mapa
+        for (Map.Entry pareja : cuenta.entrySet()) {
+            System.out.println(pareja.getKey() + "-->");
+            System.out.println(pareja.getValue());
+        }
+
+        System.out.println(cuenta.toString());
     }
 }
