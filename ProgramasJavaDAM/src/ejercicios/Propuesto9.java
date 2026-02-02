@@ -65,6 +65,7 @@ public class Propuesto9 {
         // guardar el valor que mas se repite -->
         int moda = aleatorios[0];
         int repe = 0;
+
         for (Map.Entry<Integer, Integer> pareja : cuenta.entrySet()) {
             if (pareja.getValue() > repe) {
                 repe = pareja.getValue();
