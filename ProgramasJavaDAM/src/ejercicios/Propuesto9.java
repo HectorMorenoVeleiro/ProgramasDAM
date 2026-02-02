@@ -46,22 +46,28 @@ public class Propuesto9 {
         for (int i : aleatorios)
             cuenta.put(i, 0);
 
-        // ver Entero
-        for (Map.Entry pareja : cuenta.entrySet()) {
-
-        }
         // contar
         for (int i : aleatorios) {
             int valor = cuenta.get(i);
-            cuenta.put(i, valor);
+            cuenta.put(i, valor + 1);
         }
 
         // Mostrar mapa
-        for (Map.Entry pareja : cuenta.entrySet()) {
-            System.out.println(pareja.getKey() + "-->");
-            System.out.println(pareja.getValue());
+        for (Map.Entry<Integer, Integer> pareja : cuenta.entrySet()) {
+            System.out.println(pareja.getKey() + "--> ");
+            System.out.print(pareja.getValue() + "\n");
         }
 
         System.out.println(cuenta.toString());
+
+        int moda = aleatorios[0];
+        int repe = 0;
+        for (Map.Entry<Integer, Integer> pareja : cuenta.entrySet()) {
+            if (pareja.getValue() > repe) {
+                repe = pareja.getValue();
+                moda = pareja.getKey();
+            }
+        }
+        System.out.println(moda);
     }
 }
