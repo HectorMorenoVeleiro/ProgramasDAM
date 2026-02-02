@@ -4,10 +4,10 @@ import java.util.Arrays;
 import java.util.Random;
 import java.util.Scanner;
 
-public class Resuelto9 {
+public class resuelto9 {
 
     // empezamos por crear un main para hacer el ejercico -->
-     public static void main(String[] args) {
+    public static void main(String[] args) {
 
         // iniciamos un Scanner sc (para usarlo mas tarde) -->
         Scanner sc = new Scanner(System.in);
