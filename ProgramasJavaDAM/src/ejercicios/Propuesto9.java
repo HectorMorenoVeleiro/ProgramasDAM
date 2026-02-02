@@ -1,6 +1,7 @@
 package ejercicios;
 
 import java.util.Arrays;
+import java.util.HashMap;
 import java.util.Map;
 import java.util.Random;
 
@@ -37,6 +38,10 @@ public class Propuesto9 {
         System.out.println("el mínimo es -> " + min);
         System.out.println("la media es -> " + (double) (total / aleatorios.length));
 
-        Map<k,v> cuenta = new Map<k, v>;
+        Map<Integer, Integer> cuenta = new HashMap<Integer, Integer>();
+
+        for (int i : aleatorios) {
+
+        }
     }
 }
