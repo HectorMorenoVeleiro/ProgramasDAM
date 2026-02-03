@@ -2,7 +2,6 @@ package mapas;
 
 import java.util.HashMap;
 import java.util.Map;
-import java.util.Map.Entry;
 
 public class Prueba1 {
 
