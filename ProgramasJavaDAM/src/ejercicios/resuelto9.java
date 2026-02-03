@@ -4,7 +4,7 @@ import java.util.Arrays;
 import java.util.Random;
 import java.util.Scanner;
 
-public class Resuelto9 {
+public class resuelto9 {
 
     // empezamos por crear un main para hacer el ejercico -->
     public static void main(String[] args) {

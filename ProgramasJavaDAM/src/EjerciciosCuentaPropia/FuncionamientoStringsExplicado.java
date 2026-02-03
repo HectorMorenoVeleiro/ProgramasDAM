@@ -262,6 +262,26 @@ public class FuncionamientoStringsExplicado {
          * 
          */
 
+        // primero creamos los Strings de forma distinta
+        // cada vez -->
+
+        // por parametro (cadena) -->
+        String cad1 = "Pepe";
+
+        // por objeto String new String -->
+        String cad2 = new String("Lionel");
+
+        // pasandole otro objeto al String -->
+        String cad3 = new String(cad2);
+
+        // haciendole lo mismo pero pasandole obj como
+        // parametro -->
+        String cad4 = cad2;
+
+        // Ahora lo muestras por pantalla -->
+        System.out.println(cad1 + "\n" + cad2 + "\n" +
+                cad3 + "\n" + cad4);
+
     }
 
 }

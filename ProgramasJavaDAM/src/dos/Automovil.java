@@ -1,7 +1,7 @@
 package dos;
 
 public class Automovil extends Object {
-	
+
 	final static int LIMITE_SUPERIOR = 120;
 	final static int LIMITE_INFERIOR = 0;
 
@@ -83,8 +83,6 @@ public class Automovil extends Object {
 		return "Automovil [marca=" + marca + ", color=" + color + ", velocidad=" + velocidad + "]";
 	}
 
-
-	
 }
 
 /*
