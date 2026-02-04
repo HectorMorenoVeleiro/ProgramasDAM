@@ -18,16 +18,17 @@ public class Prueba5 {
         map.put(537, "Añan Brito");
         map.put(605, "Esteban Quito");
 
-        System.out.println("HashMap no guarda el orden");
+        System.out.println("HashMap doesn't save order inside it");
         System.out.println(map.entrySet());
 
-        System.out.println("para verlo ordenado sin usar " +
-                "TREE puedo usar la api stream para hacer un recorrido...");
+        System.out.println("to see it oredered without using " +
+                "TREE I can use apiStream to make a stream...");
 
+        // inside an entrySet -->
         map.entrySet()
-                .stream()
-                .sorted(Map.Entry.comparingByKey())
-                .forEach(Entry -> System.out.println(Entry.getKey() + ": " + Entry.getValue()));
+                .stream() // makes a stream
+                .sorted(Map.Entry.comparingByKey()) // orderers it in ascending order
+                .forEach(Entry -> System.out.println(Entry.getKey() + ": " + Entry.getValue())); // shows it by forEach
 
     }
 }
