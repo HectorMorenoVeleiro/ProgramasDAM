@@ -75,5 +75,9 @@ public class Propuesto9 {
 
         // mostramos la moda -->
         System.out.println("la moda es: " + moda + " que se repite " + repe + " veces");
+
+
+
+
     }
 }
