@@ -8,6 +8,7 @@ public class Prueba4 {
         TreeMap<Integer, String> map = new TreeMap<>();
 
         {
+            // create instances TreeMap inside Map library (extended)
             map.put(924, "Amapalia Núñez");
             map.put(921, "Cindy Nero");
             map.put(700, "César Vázquez");
@@ -15,6 +16,7 @@ public class Prueba4 {
             map.put(537, "Añan Brito");
             map.put(605, "Esteban Quito");
 
+            // show in terminal
             for (Map.Entry<Integer, String> mapPar : map.entrySet()) {
                 System.out.println(mapPar.getKey() + " -> " + mapPar.getValue());
             }
