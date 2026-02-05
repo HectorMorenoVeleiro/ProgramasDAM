@@ -2,6 +2,9 @@ package mapas;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Random;
+
+import ejercicios.resuelto9;
 
 public class Propuesto2 {
 
@@ -33,10 +36,13 @@ public class Propuesto2 {
 
         System.out.println(mapDiccionario.keySet());
 
-        String[] palabras
-        // buscar palabra especifica
+        Random random = new Random();
+        String[] palabras = (String[]) mapDiccionario.keySet().toArray(new String[0]);
 
-        String buscar
+        // buscar palabra especifica
+        String buscar = palabras[random.nextInt(palabras.length)];
+
+        System.out.println("\nBusqueda de " + buscar + " : " + mapDiccionario.get(buscar));
 
     }
 }
