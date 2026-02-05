@@ -29,5 +29,7 @@ public class Prueba6 {
                 .sorted(Map.Entry.comparingByKey())
                 .forEach(Entry -> System.out.println(Entry.getKey() + ": " + Entry.getValue()));
 
+        // vale esto es same shit different name so i dont know wtf do think
+
     }
 }

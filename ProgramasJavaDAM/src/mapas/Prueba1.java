@@ -14,8 +14,7 @@ public class Prueba1 {
         HashMap<Integer, String> map = new HashMap<Integer, String>();
 
         map.put(924, "Amapalia Núñez");
-        if (map.containsKey(921))
-            map.put(921, "Cindy Nero");
+        map.put(921, "Cindy Nero");
         map.put(700, "César Vázquez");
         map.put(219, "Víctor Tilla");
         map.put(537, "Añan Brito");
