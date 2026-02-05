@@ -1,9 +1,11 @@
 package mapas;
 
+import java.util.HashMap;
+
 public class Propuesto1 {
 
     /*
-     * Ejercicio6
+     * Ejercicio 6 -->
      * Implementa el control de acces al area restringida de un programa. Se debe
      * pedir un nombre de usuario y una contraseña. Si el usuario introduce los
      * datos correctamente, el programa dira "Ha accedido al area restringida". El
@@ -14,6 +16,8 @@ public class Propuesto1 {
      */
 
     public static void main(String[] args) {
+
+        HashMap<String, String> mapRegistro = new HashMap<String, String>();
 
     }
 
