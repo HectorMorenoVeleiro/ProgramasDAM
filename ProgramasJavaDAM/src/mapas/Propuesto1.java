@@ -38,9 +38,9 @@ public class Propuesto1 {
         while (tryes < 3) { // while to count
 
             System.out.print("user's name -> "); // enter user
-            user = sc.nextLine();
+            user = sc.nextLine().trim();
             System.out.print("password's code -> "); // enter password
-            password = sc.nextLine();
+            password = sc.nextLine().trim();
 
             if (mapRegister.containsKey(user) && password.equals(mapRegister.get(user))) { // all right
                 System.out.println("You've joined Area 51 (the zone)");
