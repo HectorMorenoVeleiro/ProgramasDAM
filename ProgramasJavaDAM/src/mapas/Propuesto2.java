@@ -4,8 +4,6 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Random;
 
-import ejercicios.resuelto9;
-
 public class Propuesto2 {
 
     /*
