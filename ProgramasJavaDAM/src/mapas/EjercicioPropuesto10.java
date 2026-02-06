@@ -1,6 +1,8 @@
 package mapas;
 
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 import java.util.Random;
 
 public class EjercicioPropuesto10 {
@@ -22,6 +24,8 @@ public class EjercicioPropuesto10 {
 
         Arrays.sort(array);
         System.out.println(Arrays.toString(array));
+
+        List<Integer> faltantes = new ArrayList<Integer>();
 
     }
 }
