@@ -17,9 +17,8 @@ public class EjercicioPropuesto10 {
         Random random = new Random();
         int[] array = new int[100];
 
-        for (int i = 0; i < array.length; i++) {
+        for (int i = 0; i < array.length; i++)
             array[i] = 1 + random.nextInt(99);
-        }
 
         System.out.println(Arrays.toString(array));
     }
