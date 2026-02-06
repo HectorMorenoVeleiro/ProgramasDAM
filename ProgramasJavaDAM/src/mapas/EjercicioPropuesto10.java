@@ -28,11 +28,10 @@ public class EjercicioPropuesto10 {
         List<Integer> faltantes = new ArrayList<Integer>();
 
         for (Integer num : array) {
-            if (Arrays.binarySearch(array, num)) {
-                
-
+            if (!Arrays.binarySearch(array, num)) {
+                faltantes.add(num);
             }
-            
+
         }
     }
 }
