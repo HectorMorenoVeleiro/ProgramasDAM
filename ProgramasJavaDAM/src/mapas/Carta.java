@@ -43,6 +43,13 @@ public class Carta implements Comparable {
         this.palo = palo;
     }
 
+    // ESTE METODO PERMITIRA comparar dos objetos carta y ordenarlos segun el
+    // criterio de su interior
+    @Override
+    public int compareTo(Object o) {
+        return 0;
+    }
+
     @Override
     public String toString() {
         return "Carta [valor=" + valor + ", palo=" + palo + "]";
