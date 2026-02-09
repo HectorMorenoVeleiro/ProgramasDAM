@@ -22,7 +22,7 @@ public class Carta {
     // constructor -->
     Carta() {
         Random random = new Random();
-        this.valor = valores[random.nextInt(valores.length)].toString();
+        this.valor = valores[random.nextInt(valores.length)].name();
         this.palo = palos[random.nextInt(palos.length)].name();
     }
 
