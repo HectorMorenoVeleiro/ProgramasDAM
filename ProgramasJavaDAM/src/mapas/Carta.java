@@ -69,6 +69,12 @@ public class Carta implements Comparable<Object> {
             mano.add(carta);
         }
 
+        mano.sort((o1, o2) -> o1.compareTo(o2));
+
+        for (Carta carta : mano) {
+            System.out.println(carta);
+        }
+
         System.out.println("ve tu mano");
         System.out.println(mano);
     }
