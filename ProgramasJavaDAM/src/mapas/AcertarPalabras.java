@@ -2,12 +2,16 @@ package mapas;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Random;
+import java.util.Scanner;
 
 public class AcertarPalabras {
 
+    public static HashMap<String, String> mapDiccionario;
+
     public static HashMap<String, String> generaDiccionario() {
 
-        HashMap<String, String> mapDiccionario = new HashMap<>();
+        mapDiccionario = new HashMap<>();
 
         mapDiccionario.put("gato", "cat");
         mapDiccionario.put("perro", "dog");
@@ -30,5 +34,29 @@ public class AcertarPalabras {
 
     public static void main(String[] args) {
 
+        Scanner sc = new Scanner(System.in);
+
+        generaDiccionario();
+
+        System.out.println(mapDiccionario.keySet());
+
+        String[] palabras = mapDiccionario.keySet().toArray(new String[0]);
+
+        // contador de aciertos
+        int contador = 0;
+
+        for (int i = 0; i < palabras.length; i++) {
+            int indice = new Random().nextInt(palabras.length);
+            String palabra = palabras[indice];
+            System.out.println("traduce la siguiente palabra al ingles --> " + palabra);
+            String respuesta = sc.nextLine();
+            if (respuesta.equals(mapDiccionario.get(palabra))) {
+                contador++;
+            }
+        }
+        System.out.println("Has acertado : " + contador + " palabras");
+
+        sc.close();
     }
+
 }

@@ -40,7 +40,7 @@ public class Propuesto2 {
         // buscar palabra especifica
         String buscar = palabras[random.nextInt(palabras.length)];
 
-        System.out.println("\nBusqueda de " + buscar + " : " + mapDiccionario.get(buscar));
+        System.out.println("\nBusqueda de " + buscar + " : " + mapDiccionario.get(buscar) + " in " + indice);
 
     }
 }
