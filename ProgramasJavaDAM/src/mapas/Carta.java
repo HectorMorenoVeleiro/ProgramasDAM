@@ -1,5 +1,6 @@
 package mapas;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Random;
 
@@ -32,7 +33,10 @@ public class Carta {
     }
 
     public void setValor(String valor) {
-        this.valor = valor;
+        for (int i = 0; i < valores.length; i++) {
+            valor = valores[i].name();
+            this.valor = valor;
+        }
     }
 
     public String getPalo() {
@@ -40,13 +44,21 @@ public class Carta {
     }
 
     public void setPalo(String palo) {
-        this.palo = palo;
+        for (int i = 0; i < palos.length; i++) {
+            palo = palos[i].name();
+            this.palo = palo;
+        }
     }
 
     public static void main(String[] args) {
-        Carta car1 = new Carta();
 
-        System.out.println(car1.getValor() + " de " + car1.getPalo());
+        ArrayList<Carta> mano = new ArrayList<Carta>();
+
+        for (int i = 0; i < 5; i++) {
+            Carta carta = new Carta();
+            System.out.println(carta);
+            mano.add(carta);
+        }
     }
 
 }
