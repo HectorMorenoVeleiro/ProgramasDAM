@@ -44,14 +44,15 @@ public class Carta implements Comparable<Object> {
 
     // ESTE METODO PERMITIRA comparar dos objetos carta y ordenarlos segun el
     // criterio de su interior
-    @Override
-    public int compareTo(Object o) {
+    public int compareTo(Carta otra) {
         // la carta que llama a este metodo es this
         // la carta con la que comparo es o
         // quiero ordenar por palos
         // quiero ordenar por palos
-        Carta c = (Carta) o;
-        return (this.getPalo()).compareTo(c.getPalo());
+        int compPalo = this.palo.compareTo(otra.palo);
+        if (compPalo != 0)
+            return compPalo;
+        return this.valor.compareTo(otra.valor);
     }
 
     @Override
@@ -77,6 +78,12 @@ public class Carta implements Comparable<Object> {
 
         System.out.println("ve tu mano");
         System.out.println(mano);
+    }
+
+    @Override
+    public int compareTo(Object o) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'compareTo'");
     }
 
 }

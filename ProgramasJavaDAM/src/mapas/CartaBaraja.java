@@ -3,7 +3,7 @@ package mapas;
 import java.util.ArrayList;
 import java.util.Random;
 
-public class CartaBaraja implements Comparable<Object> {
+public class CartaBaraja implements Comparable<CartaBaraja> {
 
     public enum Valor {
         AS, DOS, TRES, CUATRO, CINCO, SEIS, SIETE, SOTA, CABALLO, REY
@@ -30,28 +30,21 @@ public class CartaBaraja implements Comparable<Object> {
         return valor;
     }
 
-    public void setValor(String valor) {
-        this.valor = valor;
-    }
-
     public String getPalo() {
         return palo;
     }
 
-    public void setPalo(String palo) {
-        this.palo = palo;
-    }
-
     // ESTE METODO PERMITIRA comparar dos objetos carta y ordenarlos segun el
     // criterio de su interior
-    @Override
-    public int compareTo(Object o) {
+    public int compareTo(CartaBaraja otra) {
         // la carta que llama a este metodo es this
         // la carta con la que comparo es o
         // quiero ordenar por palos
         // quiero ordenar por palos
-        Carta c = (Carta) o;
-        return (this.getPalo()).compareTo(c.getPalo());
+        int compPalo = this.palo.compareTo(otra.palo);
+        if (compPalo != 0)
+            return compPalo;
+        return this.valor.compareTo(otra.valor);
     }
 
     @Override
