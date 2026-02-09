@@ -36,7 +36,7 @@ public class Propuesto2 {
 
         Random random = new Random();
         String[] palabras = (String[]) mapDiccionario.keySet().toArray(new String[0]);
-
+        int indice = new Random().nextInt(99);
         // buscar palabra especifica
         String buscar = palabras[random.nextInt(palabras.length)];
 

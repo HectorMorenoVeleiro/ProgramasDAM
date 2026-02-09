@@ -27,11 +27,18 @@ public class EjercicioPropuesto10 {
 
         List<Integer> faltantes = new ArrayList<Integer>();
 
-        for (Integer num : array) {
-            if (!Arrays.binarySearch(array, num)) {
-                faltantes.add(num);
+        for (int i = 0; i < array.length; i++) {
+            if (!Arrays.binarySearch(array, i)) {
+                faltantes.add(i);
             }
-
         }
+    }
+
+    public static boolean busquedaNumero(int[] enteros, int numero) {
+        int indice = Arrays.binarySearch(enteros, numero);
+        if (indice >= 0) {
+            return true;
+        }
+        return false;
     }
 }
