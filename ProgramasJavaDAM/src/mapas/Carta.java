@@ -1,10 +1,9 @@
 package mapas;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Random;
 
-public class Carta implements Comparable {
+public class Carta implements Comparable<Object> {
 
     public enum Valor {
         AS, DOS, TRES, CUATRO, CINCO, SEIS, SIETE, SOTA, CABALLO, REY
@@ -47,7 +46,12 @@ public class Carta implements Comparable {
     // criterio de su interior
     @Override
     public int compareTo(Object o) {
-        return 0;
+        // la carta que llama a este metodo es this
+        // la carta con la que comparo es o
+        // quiero ordenar por palos
+        // quiero ordenar por palos
+        Carta c = (Carta) o;
+        return (this.getPalo()).compareTo(c.getPalo());
     }
 
     @Override
