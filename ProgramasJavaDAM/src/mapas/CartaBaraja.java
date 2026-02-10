@@ -49,27 +49,61 @@ public class CartaBaraja implements Comparable<CartaBaraja> {
 
     @Override
     public String toString() {
-        return "Carta [valor=" + valor + ", palo=" + palo + "]";
+        return this.valor + " de " + this.palo;
+    }
+
+    @Override
+    public int hashCode() {
+        final int prime = 31;
+        int result = 1;
+        result = prime * result + ((valor == null) ? 0 : valor.hashCode());
+        result = prime * result + ((palo == null) ? 0 : palo.hashCode());
+        return result;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj)
+            return true;
+        if (obj == null)
+            return false;
+        if (getClass() != obj.getClass())
+            return false;
+        CartaBaraja other = (CartaBaraja) obj;
+        if (this.valor == null) {
+            if (other.valor != null)
+                return false;
+        } else if (!this.valor.equals(other.valor))
+            return false;
+        if (this.palo == null) {
+            if (other.palo != null)
+                return false;
+        } else if (!this.palo.equals(other.palo))
+            return false;
+        return true;
     }
 
     public static void main(String[] args) {
 
-        ArrayList<Carta> mano = new ArrayList<Carta>();
+        ArrayList<CartaBaraja> mano = new ArrayList<CartaBaraja>();
 
         for (int i = 0; i < 5; i++) {
-            Carta carta = new Carta();
-            System.out.println(carta);
-            mano.add(carta);
+            CartaBaraja carta = new CartaBaraja();
+            if (!mano.contains(carta)) {
+                mano.add(carta);
+            }
         }
 
-        mano.sort((o1, o2) -> o1.compareTo(o2));
-
-        for (Carta carta : mano) {
+        for (CartaBaraja carta : mano) {
             System.out.println(carta);
         }
 
-        System.out.println("ve tu mano");
-        System.out.println(mano);
+        mano.sort(CartaBaraja::compareTo);
+        System.out.println("\n\tve tu mano\n");
+
+        for (CartaBaraja carta : mano) {
+            System.out.println(carta);
+        }
     }
 
 }
