@@ -87,7 +87,7 @@ public class CartaBaraja implements Comparable<CartaBaraja> {
 
         ArrayList<CartaBaraja> mano = new ArrayList<CartaBaraja>();
 
-        for (int i = 0; i < 5; i++) {
+        while (mano.size() < 5) {
             CartaBaraja carta = new CartaBaraja();
             if (!mano.contains(carta)) {
                 mano.add(carta);
@@ -105,5 +105,4 @@ public class CartaBaraja implements Comparable<CartaBaraja> {
             System.out.println(carta);
         }
     }
-
 }
