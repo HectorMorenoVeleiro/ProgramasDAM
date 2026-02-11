@@ -1,9 +1,27 @@
 package mapas;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.Random;
 
 public class CartaBaraja implements Comparable<CartaBaraja> {
+
+    public static HashMap<Valor, Integer> puntos = new HashMap<>();
+
+    public static void puntosCartas() {
+
+        puntos.put(Valor.DOS, 0);
+        puntos.put(Valor.TRES, 10);
+        puntos.put(Valor.CUATRO, 0);
+        puntos.put(Valor.CINCO, 0);
+        puntos.put(Valor.SEIS, 0);
+        puntos.put(Valor.SIETE, 0);
+        puntos.put(Valor.SOTA, 2);
+        puntos.put(Valor.CABALLO, 3);
+        puntos.put(Valor.REY, 4);
+        puntos.put(Valor.AS, 11);
+
+    }
 
     public enum Valor {
         AS, DOS, TRES, CUATRO, CINCO, SEIS, SIETE, SOTA, CABALLO, REY
