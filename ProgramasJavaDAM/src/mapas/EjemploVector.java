@@ -1,5 +1,6 @@
 package mapas;
 
+import java.util.ArrayList;
 import java.util.Vector;
 
 public class EjemploVector {
@@ -32,5 +33,23 @@ public class EjemploVector {
         System.out.println("Tamaño actual (elementos): " + listaSuper.size());
         System.out.println("Capacidad total del contenedor: " + listaSuper.capacity());
 
+        // como se pasa esto a una lista ->
+        // en listaSuper.size tienes el tamaño actual del vector (el tamaño)
+        // en listaSuper.capacity tienes el tamaño total (la capaidad)
+
+        // está en listaSuper
+        ArrayList<String> listaAArray = new ArrayList<>();
+
+        listaAArray.add("Leche");
+        listaAArray.add("Huevos");
+        listaAArray.add("Pan");
+        listaAArray.add("Cafe");
+
+        // insertar o eliminar
+        listaAArray.add(1, "Fruta");
+        listaAArray.remove("Huevos");
+
+        // recorrer
+        listaAArray.forEach(item -> System.out.println("producto " + item));
     }
 }
