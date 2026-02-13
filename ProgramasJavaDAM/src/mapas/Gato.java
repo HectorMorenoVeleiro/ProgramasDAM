@@ -1,8 +1,6 @@
 package mapas;
 
-import java.util.Collections;
-
-public class Gato {
+public class Gato implements Comparable {
 
     private String nombre;
     private String color;
@@ -72,6 +70,12 @@ public class Gato {
      * return true;
      * }
      */
+
+    @Override
+    public int compareTo(Object o) {
+        // TODO Auto-generated method stub
+        return 0;
+    }
 
     public boolean equals(Gato g) {
         return (this.nombre).equals(g.getNombre());
