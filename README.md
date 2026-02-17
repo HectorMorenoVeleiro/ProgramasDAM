@@ -4,10 +4,6 @@
 
 - La mayoria del código no está comentado, así que un dia de estos recuerda comentarlo
 
-|-----------|-----------|-----------|
-| Se estudia en clase    | No se estudia en clase (cuenta propia)    | No se estudia en clase      (cuenta propia) |
-| Sirve para multiples plataformas    | Sirve para automatización, IAs, etc | Muy útiles para videojuegos, etc (aún tengo que ponerme) || Java | Python | C++/C# |
-
 ## Libros para estudiar ##
 
 - Conjunto de libros para estudiar en casa

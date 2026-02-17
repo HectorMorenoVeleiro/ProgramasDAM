@@ -54,7 +54,7 @@ public class Propuesto9 {
 
         // Mostrar mapa
         for (Map.Entry<Integer, Integer> pareja : cuenta.entrySet()) {
-            System.out.println(pareja.getKey() + "--> ");
+            System.out.println(pareja.getKey() + " --> ");
             System.out.print(pareja.getValue() + "\n");
         }
 
