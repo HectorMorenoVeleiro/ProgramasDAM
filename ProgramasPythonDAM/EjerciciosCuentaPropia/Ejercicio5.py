@@ -11,4 +11,18 @@ def media_numbers():
     return (num1 + num2 + num3) / 3
 
 
-print(media_numbers())
+def media_n_numbers():
+
+    contador = 0
+    sumatorio = 0
+    numero = 1
+
+    while numero != 0:
+        numero = int(input("enter numero -> "))
+        sumatorio = sumatorio + numero
+        contador = contador + 1
+
+    print(f"la media es {sumatorio / (contador - 1)}")
+
+
+media_n_numbers()

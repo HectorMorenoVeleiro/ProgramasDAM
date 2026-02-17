@@ -6,7 +6,7 @@
 
 def pedir_numeros():
     num1 = float(input("introduce el primer numero por teclado -> "))
-    num2 = float(input("introduce el segundo numero por teclado -> "))
+    num2 = float(input("introduce el segundo{num1} numero por teclado -> "))
 
     # corrección :
     # --------------------------------------------------
