@@ -55,3 +55,7 @@ def divisionSegura2(x: float, y: float) -> float:
 # xor(False, True) == True
 # xor(False, False) == False
 # ---------------------------------------------------------------------
+
+
+def xor(booleano1: bool, booleano2: bool) -> bool:
+    return not (booleano1 == booleano2)
