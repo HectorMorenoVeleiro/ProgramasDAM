@@ -154,3 +154,24 @@ def intercambia(r: tuple[A, B]) -> tuple[B, A]:
 def intercambia2(p: tuple[A, B]) -> tuple[B, A]:
     (x, y) = p
     return (y, x)
+
+
+# ---------------------------------------------------------------------
+# Ejercicio 5. Definir la función
+# distancia : (tuple[float, float], tuple[float, float]) -> float
+# tal que distancia(p1, p2) es la distancia entre los puntos p1 y
+# p2. Por ejemplo,
+# distancia((1, 2), (4, 6)) == 5.0
+# Comprobar con Hypothesis que se verifica la propiedad triangular de
+# la distancia; es decir, dados tres puntos p1, p2 y p3, la distancia
+# de p1 a p3 es menor o igual que la suma de la distancia de p1 a p2 y
+# la de p2 a p3.
+# ---------------------------------------------------------------------
+
+
+def distancia(p1: tuple[float, float], p2: tuple[float, float]) -> float:
+    x1, y1 = p1
+    x2, y2 = p2
+    return sqrt(
+        (x2 - x1) ** 2 + (y2 - y1) ** 2
+    )  # lo de pedirme saber formulas que coño es
