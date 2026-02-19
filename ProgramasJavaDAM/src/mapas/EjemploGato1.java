@@ -1,8 +1,7 @@
 package mapas;
 
 import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
+// TODO: make this class so it has some type of sense
 
 public class EjemploGato1 {
 

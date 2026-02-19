@@ -1,6 +1,6 @@
 package mapas;
 
-public class Gato implements Comparable {
+public class Gato implements Comparable<Object> {
 
     private String nombre;
     private String color;

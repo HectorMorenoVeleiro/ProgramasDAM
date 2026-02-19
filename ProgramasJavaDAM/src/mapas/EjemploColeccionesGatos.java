@@ -1,7 +1,6 @@
 package mapas;
 
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.Collections;
 import java.util.List;
 
@@ -54,6 +53,8 @@ public class EjemploColeccionesGatos {
 
         // 9.unmodifiablelist
         List<Gato> listaBlindada = Collections.unmodifiableList(gateria);
+
+        System.out.println(listaBlindada.toString());
 
     }
 
