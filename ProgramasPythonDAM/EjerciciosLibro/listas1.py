@@ -216,4 +216,4 @@ def mediano(num1: int, num2: int, num3: int) -> int:
 
 
 def tresIguales(num1: int, num2: int, num3: int) -> bool:
-    return True if num1 == num2 == num3 else False
+    return num1 == num2 == num3
