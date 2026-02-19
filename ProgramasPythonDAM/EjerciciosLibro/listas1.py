@@ -107,3 +107,37 @@ def interior1(xs: list[A]) -> list[A]:
 # 2ª solución
 def interior2(xs: list[A]) -> list[A]:
     return xs[1:-1]
+
+
+# ---------------------------------------------------------------------
+# Definir la función
+# finales : (int, list[A]) -> list[A]
+# tal que finales(n, xs) es la lista formada por los n finales
+# elementos de xs. Por ejemplo,
+# finales(3, [2, 5, 4, 7, 9, 6]) == [7, 9, 6]
+# ---------------------------------------------------------------------
+
+
+def finales(num: int, lista: list[A]) -> list[A]:
+    return lista[
+        -num:
+    ]  # le falta mirar la posibilidad de que el numero o la lista sean 0(nulas)
+
+
+def finales1(n: int, xs: list[A]) -> list[A]:
+    if len(xs) <= n:
+        return xs
+    return xs[len(xs) - n :]
+
+
+# 2ª definición
+def finales2(n: int, xs: list[A]) -> list[A]:
+    if n == 0:
+        return []
+    return xs[-n:]
+
+
+# 3ª definición
+def finales3(n: int, xs: list[A]) -> list[A]:
+    ys = list(reversed(xs))
+    return list(reversed(ys[:n]))
