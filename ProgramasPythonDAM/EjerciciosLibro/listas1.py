@@ -217,3 +217,55 @@ def mediano(num1: int, num2: int, num3: int) -> int:
 
 def tresIguales(num1: int, num2: int, num3: int) -> bool:
     return num1 == num2 == num3
+
+
+# 1ª solución
+def tresIguales1(x: int, y: int, z: int) -> bool:
+    return x == y and y == z
+
+
+# 2ª solución
+def tresIguales2(x: int, y: int, z: int) -> bool:
+    return x == y == z
+
+
+# ---------------------------------------------------------------------
+# Ejercicio 17. Definir la función
+# tresDiferentes : (int, int, int) -> bool
+# tal que tresDiferentes(x, y, z) se verifica si los elementos x, y y z
+# son distintos. Por ejemplo,
+# tresDiferentes(3, 5, 2) == True
+# tresDiferentes(3, 5, 3) == False
+# ---------------------------------------------------------------------
+
+
+def tresDiferentes(num1: int, num2: int, num3: int) -> bool:
+    return num1 != num2 != num3 != num1
+
+
+def tresDiferentes_sol(x: int, y: int, z: int) -> bool:
+    return x != y and x != z and y != z
+
+
+# ---------------------------------------------------------------------
+# Ejercicio 18. Definir la función
+# cuatroIguales : (int, int, int, int) -> bool
+# tal que cuatroIguales(x,y,z,u) se verifica si los elementos x, y, z y
+# u son iguales. Por ejemplo,
+# cuatroIguales(5, 5, 5, 5) == True
+# cuatroIguales(5, 5, 4, 5) == False
+# ---------------------------------------------------------------------
+
+
+def cuatroIguales(num1: int, num2: int, num3: int, num4: int) -> bool:
+    return num1 == num2 == num3 == num4
+
+
+# 1ª solución
+def cuatroIguales1(x: int, y: int, z: int, u: int) -> bool:
+    return x == y and tresIguales1(y, z, u)
+
+
+# 2ª solución
+def cuatroIguales2(x: int, y: int, z: int, u: int) -> bool:
+    return x == y == z == u
