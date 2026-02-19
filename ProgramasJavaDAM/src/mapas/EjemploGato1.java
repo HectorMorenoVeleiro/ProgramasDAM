@@ -1,8 +1,7 @@
 package mapas;
 
 import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
+// TODO: make this class so it has some type of sense
 
 public class EjemploGato1 {
 
@@ -16,7 +15,8 @@ public class EjemploGato1 {
         gateria.add(new Gato("Ulises", "marrón", "persa"));
         gateria.add(new Gato("Adán", "negro", "angora"));
 
-        Collections.sort(gateria);
+        // ordena usando el metodo compareTo
+        // Collections.sort((gato1, gato2) -> gato1.compareTo(gato2));
 
         System.out.println("Datos de los gatos ordenados por nombre: ");
 
@@ -24,5 +24,4 @@ public class EjemploGato1 {
             System.out.print(gatoaux + "\n");
         }
     }
-
 }
