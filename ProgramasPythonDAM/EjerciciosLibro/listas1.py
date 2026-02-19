@@ -119,6 +119,8 @@ def interior2(xs: list[A]) -> list[A]:
 
 
 def finales(num: int, lista: list[A]) -> list[A]:
+    if num == 0 or num < len(lista) or lista == []:
+        return []
     return lista[
         -num:
     ]  # le falta mirar la posibilidad de que el numero o la lista sean 0(nulas)
@@ -141,3 +143,77 @@ def finales2(n: int, xs: list[A]) -> list[A]:
 def finales3(n: int, xs: list[A]) -> list[A]:
     ys = list(reversed(xs))
     return list(reversed(ys[:n]))
+
+
+# ---------------------------------------------------------------------
+# Ejercicio 13. Definir la función
+# segmento : (int, int, list[A]) -> list[A]
+# tal que segmento(m, n, xs) es la lista de los elementos de xs
+# comprendidos entre las posiciones m y n. Por ejemplo,
+# segmento(3, 4, [3, 4, 1, 2, 7, 9, 0]) == [1, 2]
+# segmento(3, 5, [3, 4, 1, 2, 7, 9, 0]) == [1, 2, 7]
+# segmento(5, 3, [3, 4, 1, 2, 7, 9, 0]) == []
+# ---------------------------------------------------------------------
+
+
+def segmento(num1: int, num2: int, lista: list[A]) -> list[A]:
+    return lista[(num1 - 1) : num2]
+
+
+# 1ª definición
+def segmento1(m: int, n: int, xs: list[A]) -> list[A]:
+    ys = xs[:n]
+    return ys[m - 1 :]
+
+
+# 2ª definición
+def segmento2(m: int, n: int, xs: list[A]) -> list[A]:
+    return xs[m - 1 : n]
+
+
+# ---------------------------------------------------------------------
+# Ejercicio 14. Definir la función
+# extremos : (int, list[A]) -> list[A]
+# tal que extremos(n, xs) es la lista formada por los n primeros
+# elementos de xs y los n finales elementos de xs. Por ejemplo,
+# extremos(3, [2, 6, 7, 1, 2, 4, 5, 8, 9, 2, 3]) == [2, 6, 7, 9, 2, 3]
+# ---------------------------------------------------------------------
+
+
+def extremos(num: int, lista: list[A]) -> list[A]:
+    return lista[:num] + lista[-num:]
+
+
+# solucion
+def extremos_sol(n: int, xs: list[A]) -> list[A]:
+    return xs[:n] + xs[-n:]
+
+
+# ---------------------------------------------------------------------
+# Ejercicio 15. Definir la función
+# mediano : (int, int, int) -> int
+# tal que mediano(x, y, z) es el número mediano de los tres números x, y
+# y z. Por ejemplo,
+# mediano(3, 2, 5) == 3
+# mediano(2, 4, 5) == 4
+# mediano(2, 6, 5) == 5
+# mediano(2, 6, 6) == 6
+# ---------------------------------------------------------------------
+
+
+def mediano(num1: int, num2: int, num3: int) -> int:
+    return (num1 + num2 + num3) - min([num1, num2, num3]) - max([num1, num2, num3])
+
+
+# ---------------------------------------------------------------------
+# Ejercicio 16. Definir la función
+# tresIguales : (int, int, int) -> bool
+# tal que tresIguales(x, y, z) se verifica si los elementos x, y y z son
+# iguales. Por ejemplo,
+# tresIguales(4, 4, 4) == True
+# tresIguales(4, 3, 4) == False
+# ---------------------------------------------------------------------
+
+
+def tresIguales(num1: int, num2: int, num3: int) -> bool:
+    return True if num1 == num2 == num3 else False
