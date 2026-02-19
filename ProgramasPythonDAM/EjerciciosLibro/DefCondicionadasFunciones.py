@@ -35,3 +35,23 @@ def divisionSegura2(x: float, y: float) -> float:
             return 9999.0
         case _:
             return x / y
+
+
+# ---------------------------------------------------------------------
+# Ejercicio 2. La disyunción excluyente de dos fórmulas se verifica si
+# una es verdadera y la otra es falsa. Su tabla de verdad es
+# x | y | xor x y
+# ------+-------+---------
+# True | True | False
+# True | False | True
+# False | True | True
+# False | False | False
+#
+# Definir la función
+# xor : (bool, bool) -> bool
+# tal que xor(x, y) es la disyunción excluyente de x e y. Por ejemplo,
+# xor(True, True) == False
+# xor(True, False) == True
+# xor(False, True) == True
+# xor(False, False) == False
+# ---------------------------------------------------------------------
