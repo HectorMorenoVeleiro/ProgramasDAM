@@ -58,4 +58,99 @@ def divisionSegura2(x: float, y: float) -> float:
 
 
 def xor(booleano1: bool, booleano2: bool) -> bool:
-    return not (booleano1 == booleano2)
+    return booleano1 != booleano2
+
+
+# 1ª solución
+def xor1(x, y):
+    match x, y:
+        case True, True:
+            return False
+        case True, False:
+            return True
+        case False, True:
+            return True
+        case False, False:
+            return False
+
+
+# 2ª solución
+def xor2(x: bool, y: bool) -> bool:
+    if x:
+        return not y
+    return y
+
+
+# 3ª solución
+def xor3(x: bool, y: bool) -> bool:
+    return (x or y) and not (x and y)
+
+
+# 4ª solución
+def xor4(x: bool, y: bool) -> bool:
+    return (x and not y) or (y and not x)
+
+
+# 5ª solución
+def xor5(x: bool, y: bool) -> bool:
+    return x != y
+
+
+# La comprobación está al final de la relación.
+# ---------------------------------------------------------------------
+# Ejercicio 3. Las dimensiones de los rectángulos puede representarse
+# por pares; por ejemplo, (5,3) representa a un rectángulo de base 5 y
+# altura 3.
+#
+# Definir la función
+# mayorRectangulo : (tuple[float, float], tuple[float, float])
+# -> tuple[float, float]
+# tal que mayorRectangulo(r1, r2) es el rectángulo de mayor área entre
+# r1 y r2. Por ejemplo,
+# mayorRectangulo((4, 6), (3, 7)) == (4, 6)
+# mayorRectangulo((4, 6), (3, 8)) == (4, 6)
+# mayorRectangulo((4, 6), (3, 9)) == (3, 9)
+# ---------------------------------------------------------------------
+
+
+def mayorRectangulo(
+    r1: tuple[float, float], r2: tuple[float, float]
+) -> tuple[float, float]:
+    base1, altura1 = r1
+    base2, altura2 = r2
+    if base1 * altura1 > base2 * altura2:
+        return r1
+    return r2
+
+
+def mayorRectangulo_sol(
+    r1: tuple[float, float], r2: tuple[float, float]
+) -> tuple[float, float]:
+    (a, b) = r1
+    (c, d) = r2
+    if a * b >= c * d:
+        return (a, b)
+    return (c, d)
+
+
+# ---------------------------------------------------------------------
+# Ejercicio 4. Definir la función
+# intercambia : (tuple[A, B]) -> tuple[B, A]
+# tal que intercambia(p) es el punto obtenido intercambiando las
+# coordenadas del punto p. Por ejemplo,
+# intercambia((2,5)) == (5,2)
+# intercambia((5,2)) == (2,5)
+#
+# Comprobar con Hypothesis que la función intercambia esidempotente; es
+# decir, si se aplica dos veces es lo mismo que no aplicarla ninguna.
+# ---------------------------------------------------------------------
+
+
+def intercambia(r: tuple[A, B]) -> tuple[B, A]:
+    (i, j) = r
+    return (j, i)
+
+
+def intercambia2(p: tuple[A, B]) -> tuple[B, A]:
+    (x, y) = p
+    return (y, x)
