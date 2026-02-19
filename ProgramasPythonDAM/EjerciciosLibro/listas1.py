@@ -83,3 +83,27 @@ def rango(lista: list[int]) -> list[int]:
 
 def es_palindromo(lista: list[A]) -> bool:
     return lista == list(reversed(lista))
+
+
+# ---------------------------------------------------------------------
+# Ejercicio 11. Definir la función
+# interior : (list[A]) -> list[A]
+# tal que interior(xs) es la lista obtenida eliminando los extremos de
+# la lista xs. Por ejemplo,
+# interior([2, 5, 3, 7, 3]) == [5, 3, 7]
+# ---------------------------------------------------------------------
+
+
+def interior(lista: list[A]) -> list[A]:
+    primero, *medio, ultimo = lista
+    return [*medio]
+
+
+# 1ª solución
+def interior1(xs: list[A]) -> list[A]:
+    return xs[1:][:-1]
+
+
+# 2ª solución
+def interior2(xs: list[A]) -> list[A]:
+    return xs[1:-1]
