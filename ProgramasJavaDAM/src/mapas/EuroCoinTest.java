@@ -13,14 +13,16 @@ public class EuroCoinTest {
         float prob = 0; // creas una probabilidad a 0
 
         for (int i = 0; i < 6; i++) { // for para crear cada moneda
+
             monedas.add(new EuroCoin());
             prob = random.nextFloat();
-            if (i != 0) // instruccion condicional que recoge uno de los dos valores previos del del
-                // array segun una probabilidad generada por un random
+
+            if (i != 0)
                 if (prob > 0.5)
                     monedas.get(i).setValor(monedas.get(i - 1).getValor());
                 else
                     monedas.get(i).setPosicion(monedas.get(i - 1).getPosicion());
+
         }
 
         for (EuroCoin moneda : monedas) // muestras el condenido del array monedas
