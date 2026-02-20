@@ -46,6 +46,7 @@ public class Ejercicio2 {
         System.out.println(adicion);
 
         int adition = numeros.stream().mapToInt(Integer::intValue).sum();
+        System.out.println(adition);
 
     }
 }

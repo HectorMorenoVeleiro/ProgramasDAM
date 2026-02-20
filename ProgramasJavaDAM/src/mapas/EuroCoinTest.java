@@ -16,13 +16,11 @@ public class EuroCoinTest {
 
             monedas.add(new EuroCoin());
             prob = random.nextFloat();
-
             if (i != 0)
                 if (prob > 0.5)
                     monedas.get(i).setValor(monedas.get(i - 1).getValor());
                 else
                     monedas.get(i).setPosicion(monedas.get(i - 1).getPosicion());
-
         }
 
         for (EuroCoin moneda : monedas) // muestras el condenido del array monedas
