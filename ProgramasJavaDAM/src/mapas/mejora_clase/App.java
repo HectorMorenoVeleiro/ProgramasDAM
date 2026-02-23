@@ -35,7 +35,7 @@ public class App {
                 break;
 
             if (!CATALOGO.containsKey(nombre)) {
-                System.out.println("❌ Producto no disponible.");
+                System.out.println("ERROR: Producto no disponible.");
                 continue;
             }
 
@@ -45,11 +45,11 @@ public class App {
             try {
                 cantidad = Float.parseFloat(sc.nextLine());
                 if (cantidad <= 0) {
-                    System.out.println("❌ La cantidad debe ser mayor que 0.");
+                    System.out.println("ERROR: La cantidad debe ser mayor que 0.");
                     continue;
                 }
             } catch (Exception e) {
-                System.out.println("❌ Cantidad inválida.");
+                System.out.println("ERROR: Cantidad inválida.");
                 continue;
             }
 
