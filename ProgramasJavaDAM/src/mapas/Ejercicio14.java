@@ -12,9 +12,11 @@ public class Ejercicio14 {
         Scanner sc = new Scanner(System.in);
         String producto = null;
 
+        System.out.println(compra);
         do {
             System.out.println("nombre producto: ");
             producto = sc.nextLine();
         } while (producto.equals("fin"));
+        sc.close();
     }
 }

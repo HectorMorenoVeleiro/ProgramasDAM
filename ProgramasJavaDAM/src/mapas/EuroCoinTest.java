@@ -29,6 +29,8 @@ public class EuroCoinTest {
         float total = 0f;
         double suma = 0;
 
+        System.out.printf("%f, %d", total, suma);
+
         for (int i = 0; i < 20; i++) {
             EuroCoin euro = monedas.get(i);
             System.out.println(euro);
