@@ -2,6 +2,7 @@ package mapas;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Map;
 import java.util.Random;
 import java.util.Scanner;
 
@@ -108,40 +109,58 @@ public class Ecologico {
         Scanner sc = new Scanner(System.in);
 
         // Listas para almacenar la compra
-        ArrayList<String> productosComprados = new ArrayList<>();
-        ArrayList<Float> cantidades = new ArrayList<>();
+        Map<String, Float> productosJuntos = new HashMap<String, Float>();
 
         System.out.println("Introduce productos y cantidades. Escribe 'fin' para terminar.");
 
         String producto = "a";
 
-        while (!producto.equals("fin")) {
-
+        while (true) {
             System.out.print("Producto: ");
-
             producto = sc.nextLine();
+            if (producto.equals("fin")) {
+                break;
+            }
+            System.out.println("Cantidad: ");
+            float cantidad = Float.parseFloat(sc.nextLine());
 
-            if (!producto.equals("fin")) {
-                System.out.print("Cantidad: ");
-                float cantidad = Float.parseFloat(sc.nextLine());
-
-                productosComprados.add(producto);
-                cantidades.add(cantidad);
+            if (productosJuntos.containsKey(producto)) {
+                float cantidadAnterior = productosJuntos.get(producto);
+                productosJuntos.put(producto, cantidadAnterior + cantidad);
+            } else {
+                productosJuntos.put(producto, cantidad);
             }
         }
 
         // Mostrar ticket
         float total = 0;
 
-        for (int i = 0; i < productosComprados.size(); i++) {
-            String prod = productosComprados.get(i);
-            float cant = cantidades.get(i);
+        System.out.println("\n===== TICKET DE COMPRA =====");
+        System.out.printf("%-12s %-10s %-10s %-10s\n", "Producto", "Cant.", "Precio", "Subtotal");
+        System.out.println("---------------------------------------------");
+
+        for (Map.Entry<String, Float> product : productosJuntos.entrySet()) {
+            String prod = product.getKey();
+            float cant = product.getValue();
             float precio = contar.get(prod);
             float subtotal = precio * cant;
             total += subtotal;
+
+            System.out.printf("%-12s %-10.2f %-10.2f %-10.2f\n", prod, cant, precio, subtotal);
         }
 
-        System.out.println("TOTAL: " + total);
+        System.out.println("---------------------------------------------");
+        System.out.printf("Subtotal: %.2f\n", total);
+        System.out.println("---------------------------------------------");
+        System.out.printf("Subtotal: %.2f\n", total);
+
+        System.out.println("introduce un descuento: ");
+        String descuento = sc.nextLine();
+
+        if (descuento.equals("ECODTO"))
+            total = total - (total * 0.1f);
+
+        System.out.printf("TOTAL: %.2f\n", total);
 
         sc.close();
     }
