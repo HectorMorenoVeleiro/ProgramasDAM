@@ -1,5 +1,6 @@
 package mapas;
 
+import java.util.HashMap;
 import java.util.Random;
 
 public class EuroCoin {
@@ -22,7 +23,18 @@ public class EuroCoin {
      * 10 céntimos – cara
      */
 
-    // atributes
+    public static HashMap<String, Float> contar = new HashMap<String, Float>() {
+        {
+            put("1 centimo", 0.01f);
+            put("2 centimos", 0.02f);
+            put("5 centimos", 0.05f);
+            put("10 centimos", 0.10f);
+            put("20 centimos", 0.20f);
+            put("50 centimos", 0.50f);
+            put("1 euro", 1.00f);
+            put("2 euros", 2.00f);
+        }
+    };
 
     static String[] valores = { "1 centimo", "2 centimos", "5 centimos", "10 centimos", "20 centimos", "50 centimos",
             "1 euro", "2 euros" };

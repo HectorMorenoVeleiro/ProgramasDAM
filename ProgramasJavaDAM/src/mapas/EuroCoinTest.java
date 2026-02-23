@@ -26,5 +26,13 @@ public class EuroCoinTest {
         for (EuroCoin moneda : monedas) // muestras el condenido del array monedas
             System.out.println(moneda.getValor() + " - " + moneda.getPosicion());
 
+        float total = 0f;
+        double suma = 0;
+
+        for (int i = 0; i < 20; i++) {
+            EuroCoin euro = monedas.get(i);
+            System.out.println(euro);
+        }
+
     }
 }
