@@ -42,10 +42,16 @@ public class Ecologico {
     static String productos[] = { "avena", "garbanzos", "tomate", "jengibre", "guinoa", "guisantes" };
 
     String producto;
+    float cantidad;
 
     Ecologico() {
         Random r = new Random();
         this.producto = productos[r.nextInt(6)];
+    }
+
+    Ecologico(String producto, float cantidad) {
+        this.producto = producto;
+        this.cantidad = cantidad;
     }
 
     public static HashMap<String, Float> getContar() {
