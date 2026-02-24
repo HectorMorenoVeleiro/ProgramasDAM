@@ -24,8 +24,8 @@ public class Ejercicio16 {
             return;
 
         try (BufferedWriter bw = new BufferedWriter(new FileWriter(Archivo))) {
-            String linea;
-            while ((linea = bw.readLine()) != null) {
+            String linea = " ";
+            while (linea/* bw.newLine()) != null */.equals(" ")) {
                 String[] partes = linea.split(":");
                 if (partes.length == 2) {
                     mapa.put(partes[0], partes[1]);
