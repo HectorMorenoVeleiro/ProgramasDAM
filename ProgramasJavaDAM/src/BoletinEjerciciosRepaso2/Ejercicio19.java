@@ -4,6 +4,7 @@ import java.util.Arrays;
 import java.util.Scanner;
 
 public class Ejercicio19 {
+
     // 19. Dadas 6 notas, escribir la cantidad de alumnos aprobados, condicionados
     // (=4) y suspensos.
 
