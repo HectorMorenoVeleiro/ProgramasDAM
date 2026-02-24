@@ -1,6 +1,10 @@
 package mapas;
 
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileWriter;
 import java.util.HashMap;
+import java.util.Map;
 import java.util.Scanner;
 
 public class Ejercicio16 {
@@ -13,7 +17,20 @@ public class Ejercicio16 {
     // Estos datos deberán estar almacenados en un diccionario. Los datos sobre
     // capitales que vaya aprendiendo el programa se deben almacenar en el mismo
     // diccionario. El usuario sale del programa escribiendo la palabra “salir”.
-    //
+    /*
+     * public static void guardarEnArchivo(HashMap<String, String> mapa) {
+     * File Archivo = new File("capitales.txt");
+     * if (!Archivo.exists())
+     * return;
+     * 
+     * try (BufferedWriter bw = new BufferedWriter(new FileWriter("capitales.txt")))
+     * {
+     * for (Map.Entry<String, String> entrada : mapa.entrySet()) {
+     * bw.write(entrada.getKey() + ":" + entrada.getValue());
+     * }
+     * }
+     * }
+     */
 
     public static void main(String[] args) {
         Scanner s = new Scanner(System.in);
