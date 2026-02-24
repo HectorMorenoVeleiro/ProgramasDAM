@@ -18,21 +18,23 @@ public class Ejercicio16 {
     // capitales que vaya aprendiendo el programa se deben almacenar en el mismo
     // diccionario. El usuario sale del programa escribiendo la palabra “salir”.
 
-    public static void guardarEnArchivo(HashMap<String, String> mapa) {
-        File Archivo = new File("capitales.txt");
-        if (!Archivo.exists())
-            return;
-
-        try (BufferedWriter bw = new BufferedWriter(new FileWriter(Archivo))) {
-            String linea = " ";
-            while (linea/* bw.newLine()) != null */.equals(" ")) {
-                String[] partes = linea.split(":");
-                if (partes.length == 2) {
-                    mapa.put(partes[0], partes[1]);
-                }
-            }
-        }
-    }
+    /*
+     * public static void guardarEnArchivo(HashMap<String, String> mapa) {
+     * File Archivo = new File("capitales.txt");
+     * if (!Archivo.exists())
+     * return;
+     * 
+     * try (BufferedWriter bw = new BufferedWriter(new FileWriter(Archivo))) {
+     * String linea = " ";
+     * while (linea bw.newLine()) != null .equals(" ")) {
+     * String[] partes = linea.split(":");
+     * if (partes.length == 2) {
+     * mapa.put(partes[0], partes[1]);
+     * }
+     * }
+     * }
+     * }
+     */
 
     public static void main(String[] args) {
         Scanner s = new Scanner(System.in);
