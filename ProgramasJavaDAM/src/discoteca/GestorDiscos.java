@@ -6,8 +6,18 @@ public class GestorDiscos {
 
     public static Scanner sc = new Scanner(System.in); // implementas Scanner -->
     public static Disco[] discos = new Disco[100]; // Array de discos -->
+    public static int conteoDiscos = 0;
 
     /* METODOS */
+
+    // getter y setter para el conteo de discos
+    public static int getConteoDiscos() {
+        return conteoDiscos;
+    } // getConteoDiscos
+
+    public static void setConteoDiscos(int conteoDiscos) {
+        GestorDiscos.conteoDiscos = conteoDiscos;
+    } // setConteoDiscos
 
     // crear la coleción de discos -->
     public static void crearColeccion() {
@@ -25,6 +35,15 @@ public class GestorDiscos {
         discos[2] = new Disco(
                 "TYUI89", "Supersubmarina", "Viento de cara", "pop rock", 42);
     } // mockDiscos
+
+    public static void listarDiscos() {
+        for (Disco d : GestorDiscos.discos) { // muestreo
+            if (!d.getCodigo().equals("LIBRE")) {
+                System.out.println(d);
+                setConteoDiscos(getConteoDiscos() + 1);
+            }
+        }
+    }
 
     // metodo para añadir discos -->
     public static void addDisco() {
@@ -47,9 +66,12 @@ public class GestorDiscos {
         String generoIn = sc.nextLine();
         System.out.print("Duración: ");
         Integer duracionIn = Integer.parseInt(sc.nextLine());
-        // TODO: encuentra una forma de saber la primera posicion vacia
-        discos[primeraLibre] = new Disco(codigoIn, autorIn, tituloIn,
-                generoIn, duracionIn);
-    } // addDisco
 
+        for (int i = 0; i < discos.length; i++) {
+            if (discos[i].getCodigo().equals("LIBRE")) {
+                discos[i] = new Disco(codigoIn, autorIn, tituloIn, generoIn, duracionIn);
+                break;
+            } // if
+        } // fori
+    } // addDisco
 } // class

@@ -32,12 +32,7 @@ public class Menu {
                     System.out.println("""
                             \n   LISTADO
                                 =========""");
-                    for (Disco d : GestorDiscos.discos) { // muestreo
-                        // TODO: añade un contador de discos
-                        if (!d.getCodigo().equals("LIBRE")) {
-                            System.out.println(d);
-                        }
-                    }
+                    GestorDiscos.listarDiscos();
                     break;
                 case 2: // caso crear disco -->
                     System.out.println("""
