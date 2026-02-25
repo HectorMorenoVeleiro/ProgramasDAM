@@ -47,36 +47,37 @@ public class Disco {
     // getters y setters -->
     public String getCodigo() {
         return codigo;
-    }
+    } // getCodigo
 
     public void setCodigo(String codigo) {
         this.codigo = codigo;
-    }
+    } // setCodigo
 
     public String getAutor() {
         return autor;
-    }
+    } // getAutor
 
     public void setAutor(String autor) {
         this.autor = autor;
-    }
+    } // setAutor
 
     public String getGenero() {
         return genero;
-    }
+    } // getGenero
 
     public void setGenero(String genero) {
         this.genero = genero;
-    }
+    } // setGenero
 
     public String getTitulo() {
         return titulo;
-    }
+    } // getTitulo
 
     public void setTitulo(String titulo) {
         this.titulo = titulo;
-    }
+    } // setTitulo
 
+    // toString -->
     public String toString() {
         String cadena = "";
         cadena += "\nCódigo: " + this.codigo;
@@ -86,5 +87,5 @@ public class Disco {
         cadena += "\nDuración: " + this.duracion;
         cadena += rayita;
         return cadena;
-    }
-}
+    } // toString
+} // class

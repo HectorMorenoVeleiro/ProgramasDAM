@@ -33,6 +33,7 @@ public class Menu {
                             \n   LISTADO
                                 =========""");
                     for (Disco d : GestorDiscos.discos) { // muestreo
+                        // TODO: añade un contador de discos
                         if (!d.getCodigo().equals("LIBRE")) {
                             System.out.println(d);
                         }
@@ -42,7 +43,7 @@ public class Menu {
                     System.out.println("""
                             \n   NUEVO DISCO
                                 =============""");
-                    // TODO: método para añadir un disco
+                    GestorDiscos.addDisco();
                     break;
                 case 3: // caso modificar disco -->
                     System.out.println("""
