@@ -85,7 +85,7 @@ public class GestorDiscos {
 
     public static void modificarDiscos() {
         boolean salir = true;
-        while (true && salir) {
+        while (salir) {
             System.out.print("Introduce el código del código que quieras modificar --> ");
             String introduceCodigo = sc.nextLine();
             int decision = 0;
