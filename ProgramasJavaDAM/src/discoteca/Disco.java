@@ -10,7 +10,7 @@ import java.util.Random;
 
 public class Disco {
 
-    Random rd = new Random(); // creamos un random para crear el codigo aleatoriamente ->
+    Random rd = new Random(); // creamos un random para crear el codigo aleatoriamente -->
 
     // atributos -->
     private String codigo = "LIBRE";
@@ -58,14 +58,16 @@ public class Disco {
     } // setCodigo
 
     public String getCodigoRandom() { // setter del código para el caso de no ser pasado -->
-        // TODO: donde implementes este método, debes incluir
-        // TODO: la condición de restricción para que no
-        // TODO: se repita el codigo
         String charCode = "";
-        for (int i = 0; i < 4; i++) {
-            charCode += (char) (rd.nextInt('A', 'Z' + 1));
-        } // for
-        charCode += rd.nextInt(10, 99);
+        for (Disco disco : GestorDiscos.discos) {
+            for (int i = 0; i < 4; i++) {
+                charCode += (char) (rd.nextInt('A', 'Z' + 1));
+            } // for
+            charCode += rd.nextInt(10, 99);
+            if (disco.codigo.equals(charCode)) {
+                return getCodigoRandom();
+            } // if
+        } // foreach
         return charCode;
     } // getCodigoRandom
 
