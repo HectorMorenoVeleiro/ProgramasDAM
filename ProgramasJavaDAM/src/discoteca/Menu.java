@@ -21,8 +21,8 @@ public class Menu {
                         2. Nuevo disco ->
                         3. Modificar ->
                         4. Borrar ->
-                        5. Salir ->
-                        6. Cargar discos random -->
+                        5. Cargar discos random -->
+                        6. Salir ->
 
                         ========================
 
@@ -54,16 +54,17 @@ public class Menu {
                                 ========""");
                     GestorDiscos.borrarDiscos();
                     break;
-                case 6: // cargar discos random
+                case 5: // cargar discos random
                     System.out.println("""
                             \n   CARGANDO DISCOS
                                 =================
                             """);
                     GestorDiscos.mockDiscos(); // carga discos
+                    break;
                 default: // caso ninguna de las anteriores -->
                     System.out.println("....abandono gestión de discos....");
                     break;
             } // switch
-        } while (opcion != 5); // do-while
+        } while (opcion != 6); // do-while
     } // menu
 } // class
