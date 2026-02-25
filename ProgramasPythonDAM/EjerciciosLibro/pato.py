@@ -20,7 +20,7 @@ from abc import ABC, abstractmethod
 
 
 class Sensor(ABC):
-    def __init__(self, edificio):
+    def __init__(self, edificio):  # Aprende que es el "self"
         self.edificio = edificio
 
     @abstractmethod
