@@ -84,7 +84,8 @@ public class GestorDiscos {
     } // darValorInt
 
     public static void modificarDiscos() {
-        while (true) {
+        boolean salir = true;
+        while (true && salir) {
             System.out.print("Introduce el código del código que quieras modificar --> ");
             String introduceCodigo = sc.nextLine();
             int decision = 0;
@@ -132,6 +133,7 @@ public class GestorDiscos {
                                 break;
                             case 5:
                                 System.out.println("....saliendo....");
+                                salir = false;
                                 break;
                             default:
                                 System.out.println("....decisión mal introducida....");
