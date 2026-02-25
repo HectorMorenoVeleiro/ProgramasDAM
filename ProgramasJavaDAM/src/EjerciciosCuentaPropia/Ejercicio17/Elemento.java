@@ -1,6 +1,7 @@
 package ejercicioscuentapropia.Ejercicio17;
 
-import java.util.HashMap;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Map;
 import java.util.Random;
 
@@ -18,33 +19,59 @@ public class Elemento {
      * pueden deducir del main.
      */
 
-    Map<String, Double> nombre_precios = new HashMap<String, Double>() {
-        {
-            put("Tarjeta SD 64Gb", 19.95);
-            put("Canon EOS 2000D", 449.00);
-            put("Samsung Galaxy Tab", 597.00);
-            put("Tarjeta SD 64GB", 19.95);
-        }
-    };
+    private static final Random rd = new Random();
 
-    int index = 0;
+    private static final Map<String, Double> nombre_precios = Map.of(
+            "Tarjeta SD 64Gb", 19.95,
+            "Canon EOS 2000D", 449.00,
+            "Samsung Galaxy Tab", 199.00);
 
-    Map<Integer, Map.Entry<String, Double>> index_nombre_precios = new HashMap<Integer, Map.Entry<String, Double>>() {
-        {
-            nombre_precios.entrySet().forEach(nmbr -> index_nombre_precios.put(index++, nmbr));
-        }
-    };
+    private static final List<String> nombres = new ArrayList<>(nombre_precios.keySet());
 
-    String nombre;
-    int unidades;
-    double PVP; // (Precio de Venta al Publico en €)
+    private String nombre;
+    private int cantidad;
+    private double PVP;
 
-    Elemento(String nombre, int unidades, double PVP, Random rd) {
-        this.nombre = (nombre_precios.containsKey(nombre)) ? nombre
-                : index_nombre_precios.get(rd.nextInt(index_nombre_precios.size())).getKey();
-        this.unidades = unidades;
-
-        this.PVP = PVP;
-
+    // Constructor aleatorio
+    public Elemento() {
+        this.nombre = nombres.get(rd.nextInt(nombres.size()));
+        this.PVP = nombre_precios.get(this.nombre);
+        this.cantidad = rd.nextInt(1, 10);
     }
+
+    // Constructor con nombre
+    public Elemento(String nombre, int cantidad) {
+        this.nombre = nombre_precios.containsKey(nombre)
+                ? nombre
+                : nombres.get(rd.nextInt(nombres.size()));
+
+        this.PVP = nombre_precios.get(this.nombre);
+        this.cantidad = cantidad;
+    }
+
+    // getters y setters...
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public int getCantidad() {
+        return cantidad;
+    }
+
+    public void setCantidad(int cantidad) {
+        this.cantidad = cantidad;
+    }
+
+    public double getPVP() {
+        return PVP;
+    }
+
+    public void setPVP(double pVP) {
+        PVP = pVP;
+    }
+
 }

@@ -1,5 +1,8 @@
 package ejercicioscuentapropia.Ejercicio17;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Carrito {
 
     /*
@@ -14,8 +17,36 @@ public class Carrito {
      * pueden deducir del main.
      */
 
-    public Carrito agrega(Object elemento) {
-        return;
+    List<Elemento> lista = new ArrayList<Elemento>();
+
+    // Agrega Elementos
+    public void agrega(Elemento obj) {
+        this.lista.add(obj);
     }
 
+    // Muestra numero elementos
+    public int numeroDeElementos() {
+        return lista.size();
+    }
+
+    // Muestra el precio
+    public double importeTotal() {
+        double sumatorio = 0;
+        for (Elemento elemento : lista) {
+            sumatorio += (elemento.getPVP() * elemento.getCantidad());
+        }
+        return sumatorio;
+    }
+
+    // toString que pasa lo pedido
+    @Override
+    public String toString() {
+        String listaCarrito = "";
+        for (Elemento elemento : lista) {
+            listaCarrito += elemento.getNombre() + " PVP: " + elemento.getPVP() + " Unidades: "
+                    + elemento.getCantidad()
+                    + " Subtotal: " + (elemento.getPVP() * elemento.getCantidad()) + "\n";
+        }
+        return listaCarrito;
+    }
 }
