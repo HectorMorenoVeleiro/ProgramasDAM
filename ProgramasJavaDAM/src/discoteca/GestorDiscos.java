@@ -106,6 +106,9 @@ public class GestorDiscos {
                             case 4:
                                 discos[i].setDuracion(darValorInt("Cual vas a querer que sea la duración? ->"));
                                 break;
+                            case 5:
+                                System.out.println("....saliendo....");
+                                break;
                             default:
                                 System.out.println("....decisión mal introducida....");
                                 continue;

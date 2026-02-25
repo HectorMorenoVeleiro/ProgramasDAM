@@ -61,8 +61,11 @@ public class Menu {
                             """);
                     GestorDiscos.mockDiscos(); // carga discos
                     break;
+                case 6:
+                    System.out.println("....saliendo....");
+                    break;
                 default: // caso ninguna de las anteriores -->
-                    System.out.println("....abandono gestión de discos....");
+                    System.out.println("....mal introducido....");
                     break;
             } // switch
         } while (opcion != 6); // do-while
