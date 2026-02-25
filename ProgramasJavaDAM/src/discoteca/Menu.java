@@ -19,7 +19,7 @@ public class Menu {
 
         int opcion = 0; // opción a determinar -->
         do { // inicialización del do-while -->
-            System.out.print("""
+            System.out.print("\n" + """
                     \n   COLECCIÓN DE DISCOS ->>
                         ========================
 
@@ -39,50 +39,48 @@ public class Menu {
 
             switch (opcion) { // switch para cada caso (case) -->
                 case 1: // caso mostrar discos -->
-                    System.out.println("""
+                    System.out.println("\n" + """
                              LISTADO
                             =========""");
                     GestorDiscos.listarDiscos();
                     break;
                 case 2: // caso crear disco -->
-                    System.out.println("""
+                    System.out.println("\n" + """
                              NUEVO DISCO
                             =============""");
                     GestorDiscos.addDisco();
                     break;
                 case 3: // caso modificar disco -->
-                    System.out.println("""
+                    System.out.println("\n" + """
                              MODIFICAR
                             ===========""");
                     GestorDiscos.modificarDiscos();
                     break;
                 case 4: // caso borrar disco -->
-                    System.out.println("""
+                    System.out.println("\n" + """
                              BORRAR
                             ========""");
                     GestorDiscos.borrarDiscos();
                     break;
                 case 5: // cargar discos random
-                    System.out.println("""
+                    System.out.println("\n" + """
                                  CARGANDO DISCOS
                                 =================
                             """);
                     GestorDiscos.mockDiscos(); // carga discos
                     break;
                 case 6: // guardar coleccion
-                    System.out.println("""
+                    System.out.println("\n" + """
                                  GUARDANDO COLECCION
                                 =====================
                             """);
-                    // TODO: metodo para guardar toda la coleccion
                     GestorDiscos.guardarColeccionDesdeAlmacenamiento();
                     break;
                 case 7: // cargar coleccion
-                    System.out.println("""
+                    System.out.println("\n" + """
                                  CARGANDO COLECCION
                                 =====================
                             """);
-                    // TODO: metodo para cargar la coleccion
                     GestorDiscos.cargarColeccionDesdeAlmacenamiento();
                     break;
                 case 10:

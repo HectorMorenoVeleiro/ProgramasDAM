@@ -16,9 +16,16 @@ public class GestorDiscos {
 
     /* METODOS */
 
-    // getter y setter para el conteo de discos
+    // getter y setter para el conteo de discos -->
     public static int getConteoDiscos() {
-        return conteoDiscos;
+        int total = 0;
+        for (Disco d : discos) {
+            // Si el objeto existe y su código no es LIBRE, es un disco real
+            if (d != null && d.getCodigo() != null && !d.getCodigo().equals("LIBRE")) {
+                total++;
+            }
+        }
+        return total;
     } // getConteoDiscos
 
     public static void setConteoDiscos(int conteoDiscos) {
@@ -40,8 +47,7 @@ public class GestorDiscos {
                 "FGHQ64", "Metallica", "Black album", "hard rock", 46);
         discos[2] = new Disco(
                 "TYUI89", "Supersubmarina", "Viento de cara", "pop rock", 42);
-        System.out.println("Se han cargado 3 discos de prueba");
-        setConteoDiscos(getConteoDiscos() + 3);
+        System.out.println("Se han cargado " + (getConteoDiscos()) + " discos de prueba");
     } // mockDiscos
 
     public static void listarDiscos() {
@@ -159,21 +165,43 @@ public class GestorDiscos {
 
     // metodo para añadir discos -->
     public static void addDisco() {
-        System.out.println("Por favor, introduzca los datos del disco.");
-        String codigoIn = darValorString("Codigo: ");
-        String autorIn = darValorString("Autor: ");
-        String tituloIn = darValorString("Titulo: ");
-        String generoIn = darValorString("Genero: ");
-        int duracionIn = darValorInt("Duración: ");
-
-        // buscamos donde esta libre el array de discos -->
-        for (int i = 0; i < discos.length; i++) {
-            if (discos[i].getCodigo().equals("LIBRE")) { // if para comparar con equals
-                discos[i] = new Disco(codigoIn, autorIn, tituloIn, generoIn, duracionIn);
-                setConteoDiscos(getConteoDiscos() + 1); // añades el disco al contador
-                break;
-            } // if
-        } // fori
+        int decision;
+        if (getConteoDiscos() >= discos.length) {
+            System.out.println("no se puede crear otro disco");
+            while (true) {
+                System.out.println("""
+                         quieres ir a borrar algun disco? -->
+                        =====================================
+                            1. si
+                            2. no
+                        =====================================
+                         -> introduce tu respuesta:
+                        """);
+                do {
+                    decision = Integer.parseInt(sc.nextLine());
+                    if (decision == 1) {
+                        borrarDiscos();
+                        addDisco();
+                    } else if (decision != 2)
+                        System.out.println("error, vuelva a introducir la decision");
+                } while (decision != 1 || decision != 2); // do-while
+            } // while-true
+        } else {
+            System.out.println("Por favor, introduzca los datos del disco.");
+            String codigoIn = darValorString("Codigo: ");
+            String autorIn = darValorString("Autor: ");
+            String tituloIn = darValorString("Titulo: ");
+            String generoIn = darValorString("Genero: ");
+            int duracionIn = darValorInt("Duración: ");
+            // buscamos donde esta libre el array de discos -->
+            for (int i = 0; i < discos.length; i++) {
+                if (discos[i].getCodigo().equals("LIBRE")) { // if para comparar con equals
+                    discos[i] = new Disco(codigoIn, autorIn, tituloIn, generoIn, duracionIn);
+                    setConteoDiscos(getConteoDiscos() + 1); // añades el disco al contador
+                    break;
+                } // if
+            } // fori
+        } // if-else
     } // addDisco
 
     public static void borrarDiscos() {
@@ -225,26 +253,27 @@ public class GestorDiscos {
                 } // else
             } // if
         } // while-true
-
     } // borrarDiscos
 
     public static void cargarColeccionDesdeAlmacenamiento() {
         File fichero = new File("coleccion.obj");
 
-        // verificamos si el archivo existe antes de intentar leerlo
+        // verificamos si el archivo existe antes de intentar leerlo -->
         if (!fichero.exists()) {
             System.out.println("No hay archivo de guardado previo. Creando colección nueva...");
             crearColeccion();
+            mockDiscos();
             return;
         } // if
 
+        // try-catch -->
         try (ObjectInputStream ois = new ObjectInputStream(new FileInputStream(fichero))) {
-            // leemos el objeto y hacemos el casting a Disco[]
+            // leemos el objeto y hacemos el casting a Disco[] -->
             discos = (Disco[]) ois.readObject();
             System.out.println("Coleccion cargada con exito.");
         } catch (IOException | ClassNotFoundException e) {
             System.out.println("Error al cargar la coleccion: " + e.getMessage());
-            // si resulta que algo falla,al menos inicializamos para que no sea null
+            // si resulta que algo falla,al menos inicializamos para que no sea null -->
             crearColeccion();
         } // try-catch
     } // cargarColeccionDesdeAlmacenamiento
