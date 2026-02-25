@@ -65,7 +65,7 @@ public class Disco {
         for (int i = 0; i < 4; i++) {
             charCode += (char) (rd.nextInt('A', 'Z' + 1));
         } // for
-        charCode += rd.nextInt(0, 99);
+        charCode += rd.nextInt(10, 99);
         return charCode;
     } // getCodigoRandom
 

@@ -34,6 +34,8 @@ public class GestorDiscos {
                 "FGHQ64", "Metallica", "Black album", "hard rock", 46);
         discos[2] = new Disco(
                 "TYUI89", "Supersubmarina", "Viento de cara", "pop rock", 42);
+        System.out.println("Se han cargado 3 discos de prueba");
+        setConteoDiscos(getConteoDiscos() + 3);
     } // mockDiscos
 
     public static void listarDiscos() {
@@ -42,6 +44,7 @@ public class GestorDiscos {
                 System.out.println(d);
             } // if
         } // fori
+        System.out.println("Ahora mismo hay " + getConteoDiscos() + " discos");
     } // listarDiscos
 
     public static String darValorString(String mensaje) {
@@ -55,6 +58,18 @@ public class GestorDiscos {
             } // try-catch
         } // while-true
     } // darValorString
+
+    public static int darValorInt(String mensaje) {
+        while (true) {
+            try {
+                System.out.println(mensaje);
+                int nuevoValor = Integer.parseInt(sc.nextLine());
+                return nuevoValor;
+            } catch (Exception e) {
+                System.out.println("...ERROR, repita el valor...\n" + e);
+            }
+        }
+    }
 
     public static void modificarDiscos() {
         while (true) {
@@ -89,15 +104,14 @@ public class GestorDiscos {
                                 discos[i].setGenero(darValorString("Cual vas a querer que sea el genero? ->"));
                                 break;
                             case 4:
-                                System.out.println("Cual vas a querer que sea la siguiente duración? ->");
-                                int nuevaDuracion = Integer.parseInt(sc.nextLine());
-                                discos[i].setDuracion(nuevaDuracion);
+                                discos[i].setDuracion(darValorInt("Cual vas a querer que sea la duración? ->"));
                                 break;
                             default:
                                 System.out.println("....decisión mal introducida....");
                                 continue;
                         } // switch
                     } // while
+                    break;
                 } // if
             } // foreach
             if (!encontrado) {
@@ -148,6 +162,7 @@ public class GestorDiscos {
                         System.out.println("....volviendo al menu....");
                         break;
                     } // if-elseif
+                    break;
                 } // if
             } // fori
             if (!encontrado) {
@@ -175,21 +190,12 @@ public class GestorDiscos {
 
     // metodo para añadir discos -->
     public static void addDisco() {
-        // *
-        // TODO: generate method
-        // TODO: quizá hay que repetirlo -->
-
         System.out.println("Por favor, introduzca los datos del disco.");
-        System.out.print("Código: ");
-        String codigoIn = sc.nextLine();
-        System.out.print("Autor: ");
-        String autorIn = sc.nextLine();
-        System.out.print("Título: ");
-        String tituloIn = sc.nextLine();
-        System.out.print("Género: ");
-        String generoIn = sc.nextLine();
-        System.out.print("Duración: ");
-        Integer duracionIn = Integer.parseInt(sc.nextLine());
+        String codigoIn = darValorString("Codigo: ");
+        String autorIn = darValorString("Autor: ");
+        String tituloIn = darValorString("Titulo: ");
+        String generoIn = darValorString("Genero: ");
+        int duracionIn = darValorInt("Duración: ");
 
         for (int i = 0; i < discos.length; i++) {
             if (discos[i].getCodigo().equals("LIBRE")) {
