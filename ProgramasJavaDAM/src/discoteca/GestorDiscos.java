@@ -1,65 +1,26 @@
 package discoteca;
 
-import java.util.Scanner;
-
 public class GestorDiscos {
 
-    private Scanner sc = new Scanner(System.in);
-    public static Disco[] discos = new Disco[100];
+    public static Disco[] discos = new Disco[100]; // Array de discos
 
     /* METODOS */
 
-    public void menu() { // menú para el programa -->
-        int opcion = 0; // opción a determinar -->
-        do { // inicialización del do-while -->
-            System.out.print("""
-                    \n   COLECCIÓN DE DISCOS ->>
-                        ========================
+    // crear la coleción de discos -->
+    public static void crearColeccion() {
+        for (int i = 0; i < discos.length; i++) { // fori para cada disco
+            discos[i] = new Disco(); // crear nuevo disco
+        } // for
+    } // crearColección
 
-                        1. Listado ->
-                        2. Nuevo disco ->
-                        3. Modificar ->
-                        4. Borrar ->
-                        5. Salir ->
-
-                        ========================
-
-                        introduzca una opción --> """); // visualización del menú -->
-            opcion = Integer.parseInt(sc.nextLine()); // selección de la opción por Scanner -->
-
-            switch (opcion) { // switch para cada caso (case) -->
-                case 1: // caso mostrar discos -->
-                    System.out.println("""
-                            \n   LISTADO
-                                =========""");
-                    // TODO: método para listar los discos
-                    for (Disco d : discos) {
-
-                    }
-                    break;
-                case 2: // caso crear disco -->
-                    System.out.println("""
-                            \n   NUEVO DISCO
-                                =============""");
-                    // TODO: método para añadir un disco
-                    break;
-                case 3: // caso modificar disco -->
-                    System.out.println("""
-                            \n   MODIFICAR
-                                ===========""");
-                    // TODO: método para modificar un disco existente (que tenga codigo numerico)
-                    break;
-                case 4: // caso borrar disco -->
-                    System.out.println("""
-                            \n   BORRAR
-                                ========""");
-                    // TODO: método para borrar un disco
-                    break;
-                default: // caso ninguna de las anteriores -->
-                    System.out.println("....abandono gestión de discos....");
-                    break;
-            } // switch
-        } while (opcion != 5); // do-while
-    } // menu
+    // muestreo de datos(test) -->
+    public static void mockDiscos() {
+        discos[0] = new Disco(
+                "GASA41", "Wim Mertens", "Maximazing the Audience", "instrumental", 50);
+        discos[1] = new Disco(
+                "FGHQ64", "Metallica", "Black album", "hard rock", 46);
+        discos[2] = new Disco(
+                "TYUI89", "Supersubmarina", "Viento de cara", "pop rock", 42);
+    } // mockDiscos
 
 } // class

@@ -20,7 +20,6 @@ public class Disco {
 
     // constructor por defecto -->
     public Disco() {
-        this.codigo = null;
         this.autor = null;
         this.titulo = null;
         this.genero = null;
@@ -79,7 +78,7 @@ public class Disco {
     }
 
     public String toString() {
-        String cadena = rayita;
+        String cadena = "";
         cadena += "\nCódigo: " + this.codigo;
         cadena += "\nAutor: " + this.autor;
         cadena += "\nTítulo: " + this.titulo;
