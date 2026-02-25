@@ -40,21 +40,145 @@ public class GestorDiscos {
         for (Disco d : GestorDiscos.discos) { // muestreo
             if (!d.getCodigo().equals("LIBRE")) {
                 System.out.println(d);
-                setConteoDiscos(getConteoDiscos() + 1);
-            }
-        }
-    }
+            } // if
+        } // fori
+    } // listarDiscos
+
+    public static String darValorString(String mensaje) {
+        while (true) {
+            try {
+                System.out.println(mensaje);
+                String nuevoValor = sc.nextLine();
+                return nuevoValor;
+            } catch (Exception e) {
+                System.out.println("...ERROR, repita el valor...\n" + e);
+            } // try-catch
+        } // while-true
+    } // darValorString
+
+    public static void modificarDiscos() {
+        while (true) {
+            System.out.print("Introduce el código del código que quieras modificar --> ");
+            String introduceCodigo = sc.nextLine();
+            int decision = 0;
+            boolean encontrado = false;
+            for (int i = 0; i < discos.length; i++) {
+                if (discos[i].getCodigo().equals(introduceCodigo)) {
+                    encontrado = true;
+                    while (decision != 5) {
+                        System.out.println("""
+                                 Que valor vas a querer modificar ?? -->
+                                ========================================
+                                    1. autor
+                                    2. titulo
+                                    3. genero
+                                    4. duración
+                                    5. salir
+                                ========================================
+                                 Introduce tu respuesta -->
+                                """);
+                        decision = Integer.parseInt(sc.nextLine());
+                        switch (decision) {
+                            case 1:
+                                discos[i].setAutor(darValorString("Cual vas a querer que sea el autor? ->"));
+                                break;
+                            case 2:
+                                discos[i].setTitulo(darValorString("Cual vas a querer que sea el titulo? ->"));
+                                break;
+                            case 3:
+                                discos[i].setGenero(darValorString("Cual vas a querer que sea el genero? ->"));
+                                break;
+                            case 4:
+                                System.out.println("Cual vas a querer que sea la siguiente duración? ->");
+                                int nuevaDuracion = Integer.parseInt(sc.nextLine());
+                                discos[i].setDuracion(nuevaDuracion);
+                                break;
+                            default:
+                                System.out.println("....decisión mal introducida....");
+                                continue;
+                        } // switch
+                    } // while
+                } // if
+            } // foreach
+            if (!encontrado) {
+                System.out.println("""
+                        ....Lo sentimos, el código que ha introducido es incorrecto....
+                        ===============================================================
+                            1. volver a introducir el código
+                            2. volver al menú
+                        ===============================================================
+                            -> introduzca su respuesta:
+                        """);
+                decision = Integer.parseInt(sc.nextLine());
+                if (decision == 2)
+                    break;
+                else if (decision == 1)
+                    continue;
+                else {
+                    System.out.println("condición incorrecta, saliendo...");
+                    break;
+                } // else
+            } // if
+        } // while-true
+    } // modificarDiscos
+
+    public static void borrarDiscos() {
+        while (true) {
+            System.out.print("Introduce el código del código que quieras borrar --> ");
+            String introduceCodigo = sc.nextLine();
+            int decision = 0;
+            boolean encontrado = false;
+            for (int i = 0; i < discos.length; i++) {
+                if (discos[i].getCodigo().equals(introduceCodigo)) {
+                    encontrado = true;
+                    System.out.println("""
+                                 Estas seguro de que quieres borrarlo ?? -->
+                                =============================================
+                                    1. si, lo estoy
+                                    2. no. no lo estoy
+                                =============================================
+                                    -> introduzca su respuesta:
+                            """);
+                    decision = Integer.parseInt(sc.nextLine());
+                    if (decision == 1) {
+                        discos[i] = new Disco();
+                        setConteoDiscos(getConteoDiscos() - 1);
+                        break;
+                    } else if (decision == 2) {
+                        System.out.println("....volviendo al menu....");
+                        break;
+                    } // if-elseif
+                } // if
+            } // fori
+            if (!encontrado) {
+                System.out.println("""
+                        ....Lo sentimos, el código que ha introducido es incorrecto....
+                        ===============================================================
+                            1. volver a introducir el código
+                            2. volver al menú
+                        ===============================================================
+                            -> introduzca su respuesta:
+                        """);
+                decision = Integer.parseInt(sc.nextLine());
+                if (decision == 2)
+                    break;
+                else if (decision == 1)
+                    continue;
+                else {
+                    System.out.println("condición incorrecta, saliendo...");
+                    break;
+                } // else
+            } // if
+        } // while-true
+
+    } // borrarDiscos
 
     // metodo para añadir discos -->
     public static void addDisco() {
         // *
         // TODO: generate method
-        // TODO: hay que pedir los datos del disco
-        // TODO: hay que crear un disco nuevo
-        // TODO: se añadirá a la colección
-        // */
-
         // TODO: quizá hay que repetirlo -->
+
         System.out.println("Por favor, introduzca los datos del disco.");
         System.out.print("Código: ");
         String codigoIn = sc.nextLine();
@@ -70,6 +194,7 @@ public class GestorDiscos {
         for (int i = 0; i < discos.length; i++) {
             if (discos[i].getCodigo().equals("LIBRE")) {
                 discos[i] = new Disco(codigoIn, autorIn, tituloIn, generoIn, duracionIn);
+                setConteoDiscos(getConteoDiscos() + 1);
                 break;
             } // if
         } // fori

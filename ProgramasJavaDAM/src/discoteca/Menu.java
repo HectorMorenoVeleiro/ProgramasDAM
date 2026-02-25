@@ -10,6 +10,7 @@ public class Menu {
 
     // menú para el programa -->
     public static void menu() {
+        GestorDiscos.crearColeccion(); // creas una colección de discos primero -->
         int opcion = 0; // opción a determinar -->
         do { // inicialización del do-while -->
             System.out.print("""
@@ -21,6 +22,7 @@ public class Menu {
                         3. Modificar ->
                         4. Borrar ->
                         5. Salir ->
+                        6. Cargar discos random -->
 
                         ========================
 
@@ -44,14 +46,20 @@ public class Menu {
                     System.out.println("""
                             \n   MODIFICAR
                                 ===========""");
-                    // TODO: método para modificar un disco existente (que tenga codigo numerico)
+                    GestorDiscos.modificarDiscos();
                     break;
                 case 4: // caso borrar disco -->
                     System.out.println("""
                             \n   BORRAR
                                 ========""");
-                    // TODO: método para borrar un disco
+                    GestorDiscos.borrarDiscos();
                     break;
+                case 6: // cargar discos random
+                    System.out.println("""
+                            \n   CARGANDO DISCOS
+                                =================
+                            """);
+                    GestorDiscos.mockDiscos(); // carga discos
                 default: // caso ninguna de las anteriores -->
                     System.out.println("....abandono gestión de discos....");
                     break;

@@ -1,5 +1,7 @@
 package discoteca;
 
+import java.util.Random;
+
 /*
     Disco.java
     Definición de la clase Disco
@@ -7,6 +9,8 @@ package discoteca;
 */
 
 public class Disco {
+
+    Random rd = new Random();
 
     // atributos -->
     private String codigo = "LIBRE";
@@ -24,7 +28,7 @@ public class Disco {
         this.titulo = null;
         this.genero = null;
         this.duracion = 0;
-    }
+    } // Disco
 
     // constructor con todos los parámetros -->
     public Disco(String codigoIn, String autorIn, String tituloIn, String generoIn, int duracionIn) {
@@ -33,16 +37,16 @@ public class Disco {
         this.titulo = tituloIn;
         this.genero = generoIn;
         this.duracion = duracionIn;
-    }
+    } // Disco
 
     // constructor sin código -->
     public Disco(String autorIn, String tituloIn, String generoIn, int duracionIn) {
-        // TODO: ya veremos como implementar el código
+        this.codigo = getCodigoRandom();
         this.autor = autorIn;
         this.titulo = tituloIn;
         this.genero = generoIn;
         this.duracion = duracionIn;
-    }
+    } // Disco
 
     // getters y setters -->
     public String getCodigo() {
@@ -52,6 +56,18 @@ public class Disco {
     public void setCodigo(String codigo) {
         this.codigo = codigo;
     } // setCodigo
+
+    public String getCodigoRandom() { // setter del código para el caso de no ser pasado -->
+        // TODO: donde implementes este método, debes incluir
+        // TODO: la condición de restricción para que no
+        // TODO: se repita el codigo
+        String charCode = "";
+        for (int i = 0; i < 4; i++) {
+            charCode += (char) (rd.nextInt('A', 'Z' + 1));
+        } // for
+        charCode += rd.nextInt(0, 99);
+        return charCode;
+    } // getCodigoRandom
 
     public String getAutor() {
         return autor;
@@ -77,6 +93,14 @@ public class Disco {
         this.titulo = titulo;
     } // setTitulo
 
+    public int getDuracion() {
+        return duracion;
+    } // getDuracion
+
+    public void setDuracion(int duracion) {
+        this.duracion = duracion;
+    } // setDuracion
+
     // toString -->
     public String toString() {
         String cadena = "";
@@ -88,4 +112,5 @@ public class Disco {
         cadena += rayita;
         return cadena;
     } // toString
+
 } // class
