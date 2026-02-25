@@ -165,43 +165,41 @@ public class GestorDiscos {
 
     // metodo para añadir discos -->
     public static void addDisco() {
-        int decision;
+        // 1. Comprobamos si hay hueco usando el getter dinámico
         if (getConteoDiscos() >= discos.length) {
-            System.out.println("no se puede crear otro disco");
-            while (true) {
-                System.out.println("""
-                         quieres ir a borrar algun disco? -->
-                        =====================================
-                            1. si
-                            2. no
-                        =====================================
-                         -> introduce tu respuesta:
-                        """);
-                do {
-                    decision = Integer.parseInt(sc.nextLine());
-                    if (decision == 1) {
-                        borrarDiscos();
-                        addDisco();
-                    } else if (decision != 2)
-                        System.out.println("error, vuelva a introducir la decision");
-                } while (decision != 1 || decision != 2); // do-while
-            } // while-true
-        } else {
-            System.out.println("Por favor, introduzca los datos del disco.");
-            String codigoIn = darValorString("Codigo: ");
-            String autorIn = darValorString("Autor: ");
-            String tituloIn = darValorString("Titulo: ");
-            String generoIn = darValorString("Genero: ");
-            int duracionIn = darValorInt("Duración: ");
-            // buscamos donde esta libre el array de discos -->
-            for (int i = 0; i < discos.length; i++) {
-                if (discos[i].getCodigo().equals("LIBRE")) { // if para comparar con equals
-                    discos[i] = new Disco(codigoIn, autorIn, tituloIn, generoIn, duracionIn);
-                    setConteoDiscos(getConteoDiscos() + 1); // añades el disco al contador
-                    break;
-                } // if
-            } // fori
-        } // if-else
+            System.out.println("No se puede añadir: (100/100) discos.");
+
+            int decision = darValorInt("""
+                     ¿Quieres ir a borrar algún disco?
+                    ==================================
+                        1. Sí
+                        2. No
+                    ==================================
+                     -> introduce la respuesta:
+                    """);
+
+            if (decision == 1) {
+                borrarDiscos();
+            } // if
+            return; // Salimos del método para evitar errores
+        } // if
+
+        // 2. Si hay hueco, pedimos los datos
+        System.out.println("\n--- INTRODUCIR NUEVO DISCO ---");
+        String codigoIn = darValorString("Código: ");
+        String autorIn = darValorString("Autor: ");
+        String tituloIn = darValorString("Título: ");
+        String generoIn = darValorString("Género: ");
+        int duracionIn = darValorInt("Duración: ");
+
+        // 3. Buscamos el primer hueco "LIBRE"
+        for (int i = 0; i < discos.length; i++) {
+            if (discos[i].getCodigo().equals("LIBRE")) {
+                discos[i] = new Disco(codigoIn, autorIn, tituloIn, generoIn, duracionIn);
+                System.out.println("Disco añadido correctamente.");
+                break;
+            } // if
+        } // fori
     } // addDisco
 
     public static void borrarDiscos() {
