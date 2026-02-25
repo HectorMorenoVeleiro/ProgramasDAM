@@ -7,8 +7,8 @@
 #   · Ciudad
 #   · Edificio
 #   · Sensor (abstract) (
-#       sensor_temperatura
-#       sensor_consumo_enegia
+#       sensor_temperatura,
+#       sensor_consumo_enegia,
 #       sensor_movimiento
 #   )
 #   · Controlador_central

@@ -2,9 +2,8 @@ package mapas.mejora_clase;
 
 import java.util.Map;
 
-/**
- * Genera y muestra el ticket de compra.
- */
+// Genera y muestra el ticket de compra.
+
 public class Ticket {
 
     public static void imprimir(Carrito carrito, String codigoDescuento) {
