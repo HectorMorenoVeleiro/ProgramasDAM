@@ -1,5 +1,11 @@
 package discoteca;
 
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
 import java.util.Scanner;
 
 public class GestorDiscos {
@@ -95,15 +101,27 @@ public class GestorDiscos {
                         decision = Integer.parseInt(sc.nextLine());
                         switch (decision) {
                             case 1:
+                                System.out.println("""
+                                         CAMBIANDO AUTOR
+                                        =================""");
                                 discos[i].setAutor(darValorString("Cual vas a querer que sea el autor? ->"));
                                 break;
                             case 2:
+                                System.out.println("""
+                                         CAMBIANDO TITULO
+                                        ==================""");
                                 discos[i].setTitulo(darValorString("Cual vas a querer que sea el titulo? ->"));
                                 break;
                             case 3:
+                                System.out.println("""
+                                         CAMBIANDO GENERO
+                                        ==================""");
                                 discos[i].setGenero(darValorString("Cual vas a querer que sea el genero? ->"));
                                 break;
                             case 4:
+                                System.out.println("""
+                                         CAMBIANDO DURACION
+                                        ====================""");
                                 discos[i].setDuracion(darValorInt("Cual vas a querer que sea la duración? ->"));
                                 break;
                             case 5:
@@ -172,13 +190,13 @@ public class GestorDiscos {
                 System.out.println("""
                         ....Lo sentimos, el código que ha introducido es incorrecto....
                         ===============================================================
-                            1. volver a introducir el código
+                        1. volver a introducir el código
                             2. volver al menú
                         ===============================================================
                             -> introduzca su respuesta:
                         """);
                 decision = Integer.parseInt(sc.nextLine());
-                if (decision == 2)
+                if (decision == 2) // gestionas la posicion
                     break;
                 else if (decision == 1)
                     continue;
@@ -200,12 +218,46 @@ public class GestorDiscos {
         String generoIn = darValorString("Genero: ");
         int duracionIn = darValorInt("Duración: ");
 
+        // buscamos donde esta libre el array de discos -->
         for (int i = 0; i < discos.length; i++) {
-            if (discos[i].getCodigo().equals("LIBRE")) {
+            if (discos[i].getCodigo().equals("LIBRE")) { // if para comparar con equals
                 discos[i] = new Disco(codigoIn, autorIn, tituloIn, generoIn, duracionIn);
-                setConteoDiscos(getConteoDiscos() + 1);
+                setConteoDiscos(getConteoDiscos() + 1); // añades el disco al contador
                 break;
             } // if
         } // fori
     } // addDisco
+
+    public static void cargarColeccionDesdeAlmacenamiento() {
+        File fichero = new File("coleccion.obj");
+
+        // verificamos si el archivo existe antes de intentar leerlo
+        if (!fichero.exists()) {
+            System.out.println("No hay archivo de guardado previo. Creando colección nueva...");
+            crearColeccion();
+            return;
+        } // if
+
+        try (ObjectInputStream ois = new ObjectInputStream(new FileInputStream(fichero))) {
+            // leemos el objeto y hacemos el casting a Disco[]
+            discos = (Disco[]) ois.readObject();
+            System.out.println("Coleccion cargada con exito.");
+        } catch (IOException | ClassNotFoundException e) {
+            System.out.println("Error al cargar la coleccion: " + e.getMessage());
+            // si resulta que algo falla,al menos inicializamos para que no sea null
+            crearColeccion();
+        } // try-catch
+    } // cargarColeccionDesdeAlmacenamiento
+
+    public static void guardarColeccionDesdeAlmacenamiento() {
+        // Usamos try.with.resources para que el archivo se cierre solo -->
+        try (ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream("coleccion.obj"))) {
+            // Guardamos el array completo de un solo golpe -->
+            oos.writeObject(discos);
+            System.out.println("Coleccion guardada correctamente en coleccion.obj");
+        } catch (IOException e) { // catcheamos el posible error -->
+            System.out.println("ERROR de guardado de colección: " + e.getMessage());
+        } // trycatch
+    } // guardarColeccionDesdeAlmacenamiento
+
 } // class

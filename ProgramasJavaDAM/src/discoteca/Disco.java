@@ -1,5 +1,6 @@
 package discoteca;
 
+import java.io.Serializable; // se implementa para poder guardar objetos 
 import java.util.Random;
 
 /*
@@ -8,7 +9,7 @@ import java.util.Random;
     @author Luis josé Sánchez 
 */
 
-public class Disco {
+public class Disco implements Serializable {
 
     Random rd = new Random(); // creamos un random para crear el codigo aleatoriamente -->
 
