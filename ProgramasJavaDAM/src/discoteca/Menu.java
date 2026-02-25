@@ -14,12 +14,13 @@ public class Menu {
         if (GestorDiscos.discos.length == 0) {
             GestorDiscos.crearColeccion(); // creas una colección de discos primero -->
         } /* if */ else { // cargar colección desde almacenamiento
-            GestorDiscos.cargarColeccionDesdeAlmacenamiento();
+            GestorArchivoDiscos.cargarColeccionDesdeAlmacenamiento();
         } // else
-
-        int opcion = 0; // opción a determinar -->
-        do { // inicialización del do-while -->
-            System.out.print("\n" + """
+        int opcion; // opción a determinar -->
+        do {
+            // inicialización del do-while -->
+            // selección de la opción por Scanner y visualizacion del menu -->
+            opcion = GestorDiscos.darValorInt("\n" + """
                     \n   COLECCIÓN DE DISCOS ->>
                         ========================
 
@@ -34,8 +35,7 @@ public class Menu {
 
                         ========================
 
-                        introduzca una opción -->"""); // visualización del menú -->
-            opcion = Integer.parseInt(sc.nextLine()); // selección de la opción por Scanner -->
+                        introduzca una opción -->""");
 
             switch (opcion) { // switch para cada caso (case) -->
                 case 1: // caso mostrar discos -->
@@ -74,18 +74,18 @@ public class Menu {
                                  GUARDANDO COLECCION
                                 =====================
                             """);
-                    GestorDiscos.guardarColeccionDesdeAlmacenamiento();
+                    GestorArchivoDiscos.guardarColeccionDesdeAlmacenamiento();
                     break;
                 case 7: // cargar coleccion
                     System.out.println("\n" + """
                                  CARGANDO COLECCION
                                 =====================
                             """);
-                    GestorDiscos.cargarColeccionDesdeAlmacenamiento();
+                    GestorArchivoDiscos.cargarColeccionDesdeAlmacenamiento();
                     break;
                 case 10:
                     System.out.println("....saliendo....");
-                    GestorDiscos.guardarColeccionDesdeAlmacenamiento();
+                    GestorArchivoDiscos.guardarColeccionDesdeAlmacenamiento();
                     break;
                 default: // caso ninguna de las anteriores -->
                     System.out.println("....mal introducido....");
