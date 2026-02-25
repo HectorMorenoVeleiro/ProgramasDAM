@@ -67,9 +67,9 @@ public class GestorDiscos {
                 return nuevoValor;
             } catch (Exception e) {
                 System.out.println("...ERROR, repita el valor...\n" + e);
-            }
-        }
-    }
+            } // try-catch
+        } // while-true
+    } // darValorInt
 
     public static void modificarDiscos() {
         while (true) {

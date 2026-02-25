@@ -10,7 +10,7 @@ import java.util.Random;
 
 public class Disco {
 
-    Random rd = new Random();
+    Random rd = new Random(); // creamos un random para crear el codigo aleatoriamente ->
 
     // atributos -->
     private String codigo = "LIBRE";
