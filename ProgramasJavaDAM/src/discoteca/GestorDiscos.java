@@ -89,7 +89,7 @@ public class GestorDiscos {
                 if (discos[i].getCodigo().equals(introduceCodigo)) {
                     encontrado = true;
                     while (decision != 5) {
-                        System.out.println("""
+                        decision = darValorInt("""
                                  Que valor vas a querer modificar ?? -->
                                 ========================================
                                     1. autor
@@ -100,7 +100,6 @@ public class GestorDiscos {
                                 ========================================
                                  Introduce tu respuesta -->
                                 """);
-                        decision = Integer.parseInt(sc.nextLine());
                         switch (decision) {
                             case 1:
                                 System.out.println("""
