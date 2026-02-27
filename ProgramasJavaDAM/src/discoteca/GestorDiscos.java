@@ -138,7 +138,7 @@ public class GestorDiscos {
                 } // if
             } // foreach
             if (!encontrado) {
-                System.out.println("""
+                decision = darValorInt("""
                             ....Lo sentimos, el código que ha introducido es incorrecto....
                             ===============================================================
                                 1. volver a introducir el código
@@ -146,7 +146,6 @@ public class GestorDiscos {
                             ===============================================================
                             -> introduzca su respuesta:
                         """);
-                decision = Integer.parseInt(sc.nextLine());
                 if (decision == 2)
                     break;
                 else if (decision == 1)
@@ -207,7 +206,7 @@ public class GestorDiscos {
             for (int i = 0; i < discos.length; i++) {
                 if (discos[i].getCodigo().equals(introduceCodigo)) {
                     encontrado = true;
-                    System.out.println("""
+                    decision = darValorInt("""
                                  Estas seguro de que quieres borrarlo ?? -->
                                 =============================================
                                     1. si, lo estoy
@@ -215,7 +214,6 @@ public class GestorDiscos {
                                 =============================================
                                     -> introduzca su respuesta:
                             """);
-                    decision = Integer.parseInt(sc.nextLine());
                     if (decision == 1) {
                         discos[i] = new Disco();
                         setConteoDiscos(getConteoDiscos() - 1);
@@ -228,7 +226,7 @@ public class GestorDiscos {
                 } // if
             } // fori
             if (!encontrado) {
-                System.out.println("""
+                decision = darValorInt("""
                         ....Lo sentimos, el código que ha introducido es incorrecto....
                         ===============================================================
                         1. volver a introducir el código
@@ -236,7 +234,6 @@ public class GestorDiscos {
                         ===============================================================
                             -> introduzca su respuesta:
                         """);
-                decision = Integer.parseInt(sc.nextLine());
                 if (decision == 2) // gestionas la posicion
                     break;
                 else if (decision == 1)
