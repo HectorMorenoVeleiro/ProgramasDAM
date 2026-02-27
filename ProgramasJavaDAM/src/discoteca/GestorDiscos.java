@@ -124,25 +124,25 @@ public class GestorDiscos {
                                 System.out.println("""
                                          CAMBIANDO AUTOR
                                         =================""");
-                                discos[i].setAutor(darValorString("Cual vas a querer que sea el autor? ->"));
+                                discos[i].setAutor(darValorString("Cual vas a querer que sea el autor? -->"));
                                 break;
                             case 2:
                                 System.out.println("""
                                          CAMBIANDO TITULO
                                         ==================""");
-                                discos[i].setTitulo(darValorString("Cual vas a querer que sea el titulo? ->"));
+                                discos[i].setTitulo(darValorString("Cual vas a querer que sea el titulo? -->"));
                                 break;
                             case 3:
                                 System.out.println("""
                                          CAMBIANDO GENERO
                                         ==================""");
-                                discos[i].setGenero(darValorString("Cual vas a querer que sea el genero? ->"));
+                                discos[i].setGenero(darValorString("Cual vas a querer que sea el genero? -->"));
                                 break;
                             case 4:
                                 System.out.println("""
                                          CAMBIANDO DURACION
                                         ====================""");
-                                discos[i].setDuracion(darValorInt("Cual vas a querer que sea la duración? ->"));
+                                discos[i].setDuracion(darValorInt("Cual vas a querer que sea la duración? -->"));
                                 break;
                             case 5:
                                 System.out.println("....saliendo....");
