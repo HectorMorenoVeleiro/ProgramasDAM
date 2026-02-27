@@ -78,6 +78,25 @@ public class GestorDiscos {
         } // while-true
     } // darValorInt
 
+    /*
+     * CODIGO PARA BUSCAR CODIGO (yo ya lo tengo implementado en mis metodos asi que
+     * no importa mucho) -->
+     *
+     * public static int buscarCodigo(){
+     * --int posh = -1;
+     * --boolean noEncontrado = true;
+     * --System.out.println("Introduzca código existente -->");
+     * --String code = sc.nextLine();
+     * --do {
+     * ----posh++;
+     * ----if (discos[posh].getCodigo().equals(code) {
+     * ----no_encontrado = false;
+     * ----return posh;
+     * --} while (no_encontrado && posh < PLAZAS) // = true
+     * --return -1;
+     * } // buscarCodigo
+     */
+
     public static void modificarDiscos() {
         boolean salir = true;
         while (salir) {
