@@ -5,7 +5,8 @@ import java.util.Scanner;
 public class GestorDiscos {
 
     public static Scanner sc = new Scanner(System.in); // implementas Scanner -->
-    public static Disco[] discos = new Disco[100]; // Array de discos -->
+    public static final int PLAZAS = 100;
+    public static Disco[] discos = new Disco[PLAZAS]; // Array de discos -->
     public static int conteoDiscos = 0;
 
     /* METODOS */
