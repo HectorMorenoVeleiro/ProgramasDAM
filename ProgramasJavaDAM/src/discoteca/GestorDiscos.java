@@ -107,6 +107,17 @@ public class GestorDiscos {
             for (int i = 0; i < discos.length; i++) {
                 if (discos[i].getCodigo().equals(introduceCodigo)) {
                     encontrado = true;
+                    System.out.printf("""
+                             Muestreo del disco -->
+                            ========================
+                             ·Codigo    -> %s
+                             ·Autor     -> %s
+                             ·Título    -> %s
+                             ·Género    -> %s
+                             ·Duración  -> %d
+
+                            """, discos[i].getCodigo(), discos[i].getAutor(), discos[i].getTitulo(),
+                            discos[i].getGenero(), discos[i].getDuracion());
                     while (decision != 5) {
                         decision = darValorInt("""
                                  Que valor vas a querer modificar ?? -->
@@ -248,7 +259,7 @@ public class GestorDiscos {
                 decision = darValorInt("""
                         ....Lo sentimos, el código que ha introducido es incorrecto....
                         ===============================================================
-                        1. volver a introducir el código
+                            1. volver a introducir el código
                             2. volver al menú
                         ===============================================================
                             -> introduzca su respuesta:
