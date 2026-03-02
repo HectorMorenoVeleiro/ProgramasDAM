@@ -18,8 +18,7 @@ public class Menu {
             // selección de la opción por Scanner y visualizacion del menu -->
             opcion = GestorDiscos.darValorInt("\n" + """
                     \n   COLECCIÓN DE DISCOS ->>
-                        ========================
-
+                        =========================
                             1.  Listado ->
                             2.  Nuevo disco ->
                             3.  Modificar ->
@@ -28,8 +27,7 @@ public class Menu {
                             6.  Guardar coleccion -->
                             7.  Cargar coleccion -->
                             10. Salir ->
-
-                        ========================
+                        =========================
 
                         introduzca una opción -->""");
 
