@@ -28,7 +28,6 @@ public class Menu {
                             7.  Cargar coleccion -->
                             10. Salir ->
                         =========================
-
                         introduzca una opción -->""");
 
             switch (opcion) { // switch para cada caso (case) -->

@@ -116,4 +116,6 @@ public class Disco implements Serializable {
         return cadena;
     } // toString
 
+    // Hay que hacerlo con ArrayList --> new class
+
 } // class
