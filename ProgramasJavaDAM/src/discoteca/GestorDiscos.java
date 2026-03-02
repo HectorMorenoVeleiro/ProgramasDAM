@@ -115,7 +115,7 @@ public class GestorDiscos {
                              ·Título    -> %s
                              ·Género    -> %s
                              ·Duración  -> %d
-
+                            ========================
                             """, discos[i].getCodigo(), discos[i].getAutor(), discos[i].getTitulo(),
                             discos[i].getGenero(), discos[i].getDuracion());
                     while (decision != 5) {
