@@ -133,25 +133,25 @@ public class GestorDiscos {
                         switch (decision) {
                             case 1:
                                 System.out.println("""
-                                         CAMBIANDO AUTOR
+                                        CAMBIANDO AUTOR
                                         =================""");
                                 discos[i].setAutor(darValorString("Cual vas a querer que sea el autor? -->"));
                                 break;
                             case 2:
                                 System.out.println("""
-                                         CAMBIANDO TITULO
+                                        CAMBIANDO TITULO
                                         ==================""");
                                 discos[i].setTitulo(darValorString("Cual vas a querer que sea el titulo? -->"));
                                 break;
                             case 3:
                                 System.out.println("""
-                                         CAMBIANDO GENERO
+                                        CAMBIANDO GENERO
                                         ==================""");
                                 discos[i].setGenero(darValorString("Cual vas a querer que sea el genero? -->"));
                                 break;
                             case 4:
                                 System.out.println("""
-                                         CAMBIANDO DURACION
+                                        CAMBIANDO DURACION
                                         ====================""");
                                 discos[i].setDuracion(darValorInt("Cual vas a querer que sea la duración? -->"));
                                 break;
