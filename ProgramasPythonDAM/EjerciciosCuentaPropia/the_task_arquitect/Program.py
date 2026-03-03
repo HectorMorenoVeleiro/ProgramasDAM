@@ -83,11 +83,9 @@ class TaskManager:
                 return [Task(**t) for t in data]
         except FileNotFoundError:
             return []
-        
-    def main():
-        manager = TaskManager()
-        
-        while
+
+    def main(self):
+        self.manager = TaskManager()
 
 
 # Ejemplo de ejecución sugerido
