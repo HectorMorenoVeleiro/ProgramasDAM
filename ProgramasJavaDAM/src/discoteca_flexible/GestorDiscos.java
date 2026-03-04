@@ -10,6 +10,11 @@ public class GestorDiscos implements Serializable {
     public static Scanner sc = new Scanner(System.in);
     public static List<Disco> discos = new ArrayList<Disco>();
 
+    // TODO: Añadir un metodo comparator para ordenar la lista en base a lo que te
+    // TODO: salga
+    // TODO: Aprender a usarlo pq copiar lo del profesor me sirve de nada y menos
+    // TODO: Comparator = Comparator.comparing(Disco:get());
+
     public static int getConteoDiscos() {
         return discos.size();
     } // getConteoDiscos
@@ -22,7 +27,7 @@ public class GestorDiscos implements Serializable {
                     "FGHQ64", "Metallica", "Black album", "hard rock", 46));
             discos.add(new Disco(
                     "TYUI89", "Supersubmarina", "Viento de cara", "pop rock", 42));
-        }
+        } // if
     } // mockDiscos
 
     public static void listarDiscos() {
@@ -91,20 +96,20 @@ public class GestorDiscos implements Serializable {
                 while (decision != 5) {
                     decision = darValorInt("""
                              Que valor vas a querer modificar ?? -->
-                            ========================================
+                            =======================================
                                 1. autor
                                 2. titulo
                                 3. genero
                                 4. duración
                                 5. salir
-                            ========================================
+                            =======================================
                              Introduce tu respuesta -->
                             """);
                     switch (decision) {
                         case 1:
                             System.out.println("""
                                      CAMBIANDO AUTOR
-                                    =================""");
+                                    ==================""");
                             disco.setAutor(darValorString("Cual vas a querer que sea el autor? -->"));
                             break;
                         case 2:
@@ -122,7 +127,7 @@ public class GestorDiscos implements Serializable {
                         case 4:
                             System.out.println("""
                                      CAMBIANDO DURACION
-                                    ====================""");
+                                    =====================""");
                             disco.setDuracion(darValorInt("Cual vas a querer que sea la duración? -->"));
                             break;
                         case 5:
