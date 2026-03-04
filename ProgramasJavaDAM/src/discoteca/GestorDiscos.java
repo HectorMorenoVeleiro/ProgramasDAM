@@ -97,6 +97,13 @@ public class GestorDiscos {
      * } // buscarCodigo
      */
 
+    /* --------------------------------------------------------- */
+
+    /*
+     * over-extended method that could be reduced in
+     * 0 effort aparrently ->
+     */
+
     public static void modificarDiscos() {
         boolean salir = true;
         while (salir) {
@@ -121,20 +128,20 @@ public class GestorDiscos {
                     while (decision != 5) {
                         decision = darValorInt("""
                                  Que valor vas a querer modificar ?? -->
-                                ========================================
+                                =======================================
                                     1. autor
                                     2. titulo
                                     3. genero
                                     4. duración
                                     5. salir
-                                ========================================
+                                =======================================
                                  Introduce tu respuesta -->
                                 """);
                         switch (decision) {
                             case 1:
                                 System.out.println("""
                                         CAMBIANDO AUTOR
-                                        =================""");
+                                        ==================""");
                                 discos[i].setAutor(darValorString("Cual vas a querer que sea el autor? -->"));
                                 break;
                             case 2:
@@ -152,7 +159,7 @@ public class GestorDiscos {
                             case 4:
                                 System.out.println("""
                                         CAMBIANDO DURACION
-                                        ====================""");
+                                        ==================""");
                                 discos[i].setDuracion(darValorInt("Cual vas a querer que sea la duración? -->"));
                                 break;
                             case 5:
@@ -196,10 +203,10 @@ public class GestorDiscos {
 
             int decision = darValorInt("""
                      ¿Quieres ir a borrar algún disco?
-                    ==================================
+                    =================================
                         1. Sí
                         2. No
-                    ==================================
+                    =================================
                      -> introduce la respuesta:
                     """);
 

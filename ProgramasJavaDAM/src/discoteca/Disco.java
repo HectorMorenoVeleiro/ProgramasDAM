@@ -1,6 +1,7 @@
 package discoteca;
 
-import java.io.Serializable; // se implementa para poder guardar objetos 
+// se implementa Serializable para poder guardar objetos
+import java.io.Serializable;
 import java.util.Random;
 
 /*
@@ -11,7 +12,8 @@ import java.util.Random;
 
 public class Disco implements Serializable {
 
-    Random rd = new Random(); // creamos un random para crear el codigo aleatoriamente -->
+    // creamos un random para crear el codigo aleatoriamente -->
+    Random rd = new Random();
 
     // atributos -->
     private String codigo = "LIBRE";
@@ -32,7 +34,12 @@ public class Disco implements Serializable {
     } // Disco
 
     // constructor con todos los parámetros -->
-    public Disco(String codigoIn, String autorIn, String tituloIn, String generoIn, int duracionIn) {
+    public Disco(
+            String codigoIn,
+            String autorIn,
+            String tituloIn,
+            String generoIn,
+            int duracionIn) {
         this.codigo = codigoIn;
         this.autor = autorIn;
         this.titulo = tituloIn;
@@ -41,7 +48,11 @@ public class Disco implements Serializable {
     } // Disco
 
     // constructor sin código -->
-    public Disco(String autorIn, String tituloIn, String generoIn, int duracionIn) {
+    public Disco(
+            String autorIn,
+            String tituloIn,
+            String generoIn,
+            int duracionIn) {
         this.codigo = getCodigoRandom();
         this.autor = autorIn;
         this.titulo = tituloIn;
@@ -58,11 +69,13 @@ public class Disco implements Serializable {
         this.codigo = codigo;
     } // setCodigo
 
-    public String getCodigoRandom() { // setter del código para el caso de no ser pasado -->
+    // setter del código para el caso de no ser pasado -->
+    public String getCodigoRandom() {
         String charCode = "";
         for (Disco disco : GestorDiscos.discos) {
             for (int i = 0; i < 4; i++) {
-                charCode += (char) (rd.nextInt('A', 'Z' + 1));
+                charCode += (char) (rd.nextInt(
+                        'A', 'Z' + 1));
             } // for
             charCode += rd.nextInt(10, 99);
             if (disco.codigo.equals(charCode)) {

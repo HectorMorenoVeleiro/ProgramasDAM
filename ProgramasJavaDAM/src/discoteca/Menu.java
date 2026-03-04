@@ -8,7 +8,8 @@ public class Menu {
     public static void menu() {
         // empezar
         if (GestorDiscos.discos.length == 0) {
-            GestorDiscos.crearColeccion(); // creas una colección de discos primero -->
+            // creas una colección de discos primero -->
+            GestorDiscos.crearColeccion();
         } /* if */ else { // cargar colección desde almacenamiento
             GestorArchivoDiscos.cargarColeccionDesdeAlmacenamiento();
         } // else
