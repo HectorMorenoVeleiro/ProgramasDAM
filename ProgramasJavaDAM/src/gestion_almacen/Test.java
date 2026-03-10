@@ -6,12 +6,12 @@ public class Test {
 
     static Almacen almacen = new Almacen();
     static Scanner entrada = new Scanner(System.in);
-    private static Menu menu = new Menu("----MENÚ GESTISIMAL----", new String[] { "Listado", "Alta", "Baja",
+    private static Menu menu = new Menu(" --> MENÚ GESTISIMAL <-- ", new String[] { "Listado", "Alta", "Baja",
             "Modificación", "Entada de mercancía", "Salida de mercancía", "Salir" });
 
     public static void main(String[] args) throws Exception {
 
-        // almacenDePrueba();
+        almacenDePrueba();
         do {
             switch ((menu.gestionar())) {
                 case 1:
