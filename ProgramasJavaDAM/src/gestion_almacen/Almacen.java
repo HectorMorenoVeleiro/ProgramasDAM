@@ -12,16 +12,6 @@ public class Almacen {
     // MI ALMACEN es un arraylist de articulos???
     private ArrayList<Articulo> arraylist = new ArrayList<Articulo>();
 
-    /**
-     * Añadir un articulo
-     * 
-     * @param codigo
-     * @param descripcion
-     * @param precioCompra
-     * @param precioVenta
-     * @param stock
-     * @throws Exception
-     */
     public void annadir(String descripcion, double precioCompra, double precioVenta, int stock) throws Exception {
         Articulo articulo = new Articulo(descripcion, precioCompra, precioVenta, stock);
         if (!(arraylist.contains(articulo)))
@@ -38,14 +28,14 @@ public class Almacen {
      *               Código del artículo a eliminar
      * @return true si se ha eliminado. false en otro caso.
      */
-    public boolean baja(int codigo) throws CodigoNoValidoException {
-        Articulo provisional = new Articulo(codigo);
-        if (!arraylist.contains(provisional)) {
-            throw new CodigoNoValidoException("El codigo " + codigo + " no existe en el almacen");
+    public boolean baja(int codigo) throws CodigoNoValidoException, PrecioCompraNegativoException, StockNegativoException, PrecioVentaNegativoException {
+
+        for (int i = 0; i < arraylist.size(); i++) {
+            if(arraylist.get(i).getCodigo() == codigo )
+                return arraylist.remove(arraylist.get(i));
         }
-        return arraylist.remove(provisional); // Si el código que introducimos en el test es igual al código
-                                              // del
-                                              // artículo que hay en la lista se realiza el borrado.
+        throw new CodigoNoValidoException("El codigo " + codigo + " no existe en el almacen");
+
     }
 
     /**
@@ -83,23 +73,22 @@ public class Almacen {
      * @return
      * @throws ArticuloNoExisteException
      */
+
     public Articulo get(int codigo) throws ArticuloNoExisteException {
         try {
-            return arraylist.get(arraylist.indexOf(new Articulo(codigo))); // Con get lo que se hace es extraer el
-                                                                           // código del
-            // artículo.
+            for (Articulo articulo : arraylist) {
+                if (articulo.getCodigo() == codigo) {
+                    return articulo;
+                }
+            }
         } catch (IndexOutOfBoundsException e) {
-            throw new ArticuloNoExisteException("El código del artículo no existe en el almacén.");// Si el código no lo
-                                                                                                   // devuelve el
-                                                                                                   // indexOf es
-                                                                                                   // que no existe y
-                                                                                                   // salta la
-                                                                                                   // excepción.
+            throw new ArticuloNoExisteException("El código del artículo no existe en el almacén.");
         }
+        return null;
     }
 
     /**
-     * Método incrementar, que aumenta las unidades de stock de un artículo.
+     * Metodo incrementar, que aumenta las unidades de stock de un artículo.
      * 
      * @param codigo
      * @param cantidad
@@ -107,8 +96,11 @@ public class Almacen {
      * @throws StockNegativoException
      */
     public void incrementar(int codigo, int cantidad) throws StockNegativoException, CantidadNegativaException {
-        Articulo articulo = arraylist.get(arraylist.indexOf(new Articulo(codigo)));
-        articulo.incrementaStock(cantidad);
+        for (Articulo articulo : arraylist) {
+            if (articulo.getCodigo() == codigo) {
+                articulo.incrementaStock(cantidad);
+            }
+        }
     }
 
     /**
@@ -120,8 +112,10 @@ public class Almacen {
      * @throws StockNegativoException
      */
     public void decrementar(int codigo, int cantidad) throws StockNegativoException, CantidadNegativaException {
-        Articulo articulo = arraylist.get(arraylist.indexOf(new Articulo(codigo)));
-        articulo.decrementaStock(cantidad);
-
+        for (Articulo articulo : arraylist) {
+            if (articulo.getCodigo() == codigo) {
+                articulo.decrementaStock(cantidad);
+            }
+        }
     }
 }
