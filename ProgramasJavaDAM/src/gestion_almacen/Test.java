@@ -11,8 +11,6 @@ public class Test {
 
     public static void main(String[] args) throws Exception {
 
-        int opcion;
-
         // almacenDePrueba();
         do {
             switch ((menu.gestionar())) {
@@ -74,7 +72,8 @@ public class Test {
         }
     }
 
-    private static void baja() throws CodigoNoValidoException, NoEsEnteroException {
+    private static void baja() throws CodigoNoValidoException, NoEsEnteroException, PrecioCompraNegativoException,
+            StockNegativoException, PrecioVentaNegativoException {
         try {
             int codigo = Teclado.leerEntero("Introduce el códido del artículo a eliminar.");
             if (almacen.baja(codigo))
@@ -123,7 +122,6 @@ public class Test {
             System.err.println("No se ha podido incrementar el stock del artículo." + e.getMessage() + "\n");
         }
     }
-
 
     private static void salidaAlmacen() throws NoEsEnteroException, CantidadNegativaException {
         try {
