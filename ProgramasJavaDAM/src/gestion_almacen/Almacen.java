@@ -13,7 +13,7 @@ public class Almacen {
     private ArrayList<Articulo> arraylist = new ArrayList<Articulo>();
 
     public void annadir(String descripcion, double precioCompra, double precioVenta, int stock) throws Exception {
-        Articulo articulo = new Articulo(descripcion, precioCompra, precioVenta, stock);
+        Articulo articulo = new Articulo(stock);
         if (!(arraylist.contains(articulo)))
             arraylist.add(articulo);
         else
@@ -28,10 +28,11 @@ public class Almacen {
      *               Código del artículo a eliminar
      * @return true si se ha eliminado. false en otro caso.
      */
-    public boolean baja(int codigo) throws CodigoNoValidoException, PrecioCompraNegativoException, StockNegativoException, PrecioVentaNegativoException {
+    public boolean baja(int codigo) throws CodigoNoValidoException, PrecioCompraNegativoException,
+            StockNegativoException, PrecioVentaNegativoException {
 
         for (int i = 0; i < arraylist.size(); i++) {
-            if(arraylist.get(i).getCodigo() == codigo )
+            if (arraylist.get(i).getCodigo() == codigo)
                 return arraylist.remove(arraylist.get(i));
         }
         throw new CodigoNoValidoException("El codigo " + codigo + " no existe en el almacen");
