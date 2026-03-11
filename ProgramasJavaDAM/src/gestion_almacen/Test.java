@@ -62,12 +62,10 @@ public class Test {
             double precioVenta = Teclado.leerDecimal("Introduzca el precio de venta del artículo:");
             int stock = Teclado.leerEntero("Introduzca el stock del artículo:");
 
-            almacen.annadir(descripcion, precioCompra, precioVenta, stock); // Con almacen.annadir usamos el metodo
-                                                                            // creado en
-                                                                            // Almacen.
+            almacen.annadir(descripcion, precioCompra, precioVenta, stock);
             System.out.println("Artículo añadido.");
         } catch (Exception e) {
-            System.err.println("No se ha podido dar de alta al artículo. " + e.getMessage());// Si hay un error salta la
+            System.err.println("No se ha podido dar de alta al artículo. " + e.getMessage());
             entrada.nextLine();
         }
     }
