@@ -14,25 +14,21 @@ public class Ejercicio5A {
 
         Scanner sc = new Scanner(System.in);
 
-        String cadena1, cadena2, cadFinal;
-        int length = 0, lengthMax = 0;
+        String cadena1, cadena2, cadFinal = "";
+        int lengthMin = 0, lengthMax = 0;
 
         System.out.println("Introduce una cadena de caracteres: ");
         cadena1 = sc.nextLine();
         System.out.println("Introduce otra cadena de caracteres: ");
         cadena2 = sc.nextLine();
 
-        cadFinal = "";
-
-        length = (cadena1.length() > cadena2.length()) ? cadena1.length() : cadena2.length();
+        lengthMin = (cadena1.length() > cadena2.length()) ? cadena1.length() : cadena2.length();
         lengthMax = (cadena1.length() > cadena2.length()) ? cadena1.length() : cadena2.length();
 
-        for (int i = 0; i < length; i++) {
-            cadFinal += cadena1.toCharArray()[i];
-            cadFinal += cadena2.toCharArray()[i];
-        } // fori
+        for (int i = 0; i < lengthMin; i++)
+            cadFinal += cadena1.toCharArray()[i] + cadena2.toCharArray()[i];
 
-        cadFinal += cadena1.substring(length, lengthMax);
+        cadFinal += cadena1.substring(lengthMin, lengthMax);
 
         System.out.println(cadFinal);
 
