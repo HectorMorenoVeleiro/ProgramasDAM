@@ -2,7 +2,9 @@ package gestion_almacen;
 
 import java.io.IOException;
 
-public class Menu {
+public class Menu { // clase para gestionar el Menu -->
+
+    // atributos
     String titulo = null;
     String opciones[] = null;
     int numOpciones = 0;

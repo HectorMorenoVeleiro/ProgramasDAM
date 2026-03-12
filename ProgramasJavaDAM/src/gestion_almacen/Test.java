@@ -18,7 +18,7 @@ public class Test {
                     System.out.println(almacen);
                     break;
                 case 2:
-                    annadir();
+                    add();
                     break;
                 case 3:
                     baja();
@@ -43,17 +43,17 @@ public class Test {
 
     private static void almacenDePrueba() {
         try {
-            almacen.annadir("1", 11, 11, 11);
-            almacen.annadir("1", 22, 22, 22);
-            almacen.annadir("33", 11, 11, 33);
-            almacen.annadir("44", 11, 11, 44);
-            almacen.annadir("55", 11, 11, 55);
+            almacen.add("1", 11, 11, 11);
+            almacen.add("1", 22, 22, 22);
+            almacen.add("33", 11, 11, 33);
+            almacen.add("44", 11, 11, 44);
+            almacen.add("55", 11, 11, 55);
         } catch (Exception e) {
             System.out.println("ESTO NO DEBE APARECERRRRRRRRRRRRRRRRR");
         }
     }
 
-    private static void annadir() throws Exception {
+    private static void add() throws Exception {
 
         try {
             System.out.println("--AÑADIR ARTÍCULO--");
@@ -62,7 +62,7 @@ public class Test {
             double precioVenta = Teclado.leerDecimal("Introduzca el precio de venta del artículo:");
             int stock = Teclado.leerEntero("Introduzca el stock del artículo:");
 
-            almacen.annadir(descripcion, precioCompra, precioVenta, stock);
+            almacen.add(descripcion, precioCompra, precioVenta, stock);
             System.out.println("Artículo añadido.");
         } catch (Exception e) {
             System.err.println("No se ha podido dar de alta al artículo. " + e.getMessage());
@@ -74,7 +74,7 @@ public class Test {
             StockNegativoException, PrecioVentaNegativoException {
         try {
             int codigo = Teclado.leerEntero("Introduce el códido del artículo a eliminar.");
-            if (almacen.baja(codigo))
+            if (almacen.delete(codigo))
                 System.out.println("Artículo eliminado.");
             else
                 System.err.println(
