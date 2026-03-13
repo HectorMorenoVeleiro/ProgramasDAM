@@ -1,5 +1,7 @@
 package cuatro;
 
+import java.util.Random;
+
 public class Ejercicio3Repaso {
     /*
      * Genera un array de 50 posiciones FLOTANTES que tomaran valores entre -100 y
@@ -11,10 +13,14 @@ public class Ejercicio3Repaso {
      */
 
     public static void main(String[] args) {
-        float p = 4.01f;
-        int h;
-        h = (int) ((float) p);
-        System.out.println(h);
+
+        // creamos un random para aleatorizar -->
+        Random rd = new Random();
+
+        // lo primero crear un array de 50 posiciones -->
+        float[] flotantes = new float[50];
+
+        // ordenamiento de flotantes -->
 
     }
 }
