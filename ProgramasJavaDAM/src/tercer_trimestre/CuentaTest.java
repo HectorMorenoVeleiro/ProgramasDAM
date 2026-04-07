@@ -18,5 +18,14 @@ public class CuentaTest {
         CuentaCorriente dos = new CuentaCorriente(566.34f, 1f);
         System.out.println(dos);
 
+        dos.retirar(45f);
+        System.out.println(dos);
+
+        CuentaAhorro tres = new CuentaAhorro(12345f, 2.2f);
+        System.out.println(tres);
+
+        tres.consignar(1300f);
+        System.out.println(tres);
+
     }
 }
