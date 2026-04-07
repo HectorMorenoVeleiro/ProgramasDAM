@@ -29,18 +29,21 @@ public class CuentaAhorro extends Cuenta {
     // EXERCICE METHOD
 
     // metodo consignar:
+    @Override
     public void consignar(float cantidad) {
         if (isActiva())
             super.consignar(cantidad);
     }
 
     // metodo retirar:
+    @Override
     public void retirar(float cantidad) {
         if (isActiva())
             super.retirar(cantidad);
     }
 
     // metodo extracto mensual
+    @Override
     public void extractoMensual() {
         if (super.getNumeroRetiros() > 4)
             super.setComisionMensual(comisionMensual + 1000);

@@ -21,6 +21,7 @@ public class CuentaCorriente extends Cuenta {
     }
 
     // metodo retirar:
+    @Override
     public void retirar(float cantidad) {
         if (cantidad > super.getSaldo()) {
             setSobregiro(getSobregiro() + (cantidad - super.getSaldo()));
@@ -30,6 +31,7 @@ public class CuentaCorriente extends Cuenta {
     }
 
     // metodo consignar:
+    @Override
     public void consignar(float cantidad) {
         if (getSobregiro() > 0)
             setSobregiro(getSobregiro() - cantidad);
@@ -37,6 +39,7 @@ public class CuentaCorriente extends Cuenta {
     }
 
     // metodo extracto mensual
+    @Override
     public void extractoMensual() {
         super.extractoMensual();
     }
