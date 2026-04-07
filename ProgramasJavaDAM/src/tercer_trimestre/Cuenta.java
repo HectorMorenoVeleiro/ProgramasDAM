@@ -60,7 +60,6 @@ public class Cuenta {
     }
 
     // Imprimir: muestra en pantalla los valores de los atributos.
-    @Override
     public void consignar(float cantidad) {
         saldo = saldo + cantidad;
         /* Se actualiza el saldo con la cantidad consignada */
