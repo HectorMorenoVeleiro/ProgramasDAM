@@ -49,7 +49,6 @@ public class CuentaCorriente extends Cuenta {
         else if (cantidad >= this.getSobregiro())
             // si queda menos lo metemos como saldo -->
             this.sobregiro -= cantidad;
-
     }
 
     // metodo extracto mensual
