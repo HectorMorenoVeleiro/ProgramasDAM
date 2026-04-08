@@ -46,7 +46,7 @@ public class CuentaAhorro extends Cuenta {
     @Override
     public void extractoMensual() {
         if (super.getNumeroRetiros() > 4)
-            super.setComisionMensual(comisionMensual + 1000);
+            super.setComisionMensual(1000f * (getNumeroRetiros() - 4));
         super.extractoMensual();
     }
 
