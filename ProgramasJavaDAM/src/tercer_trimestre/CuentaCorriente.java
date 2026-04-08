@@ -23,19 +23,35 @@ public class CuentaCorriente extends Cuenta {
     // metodo retirar:
     @Override
     public void retirar(float cantidad) {
-        if (cantidad > super.getSaldo()) {
-            setSobregiro(getSobregiro() + (cantidad - super.getSaldo()));
-            cantidad = super.getSaldo();
+        float sobrante = this.getSaldo() - cantidad;
+
+        // if cantidad > saldo queda como sobregiro
+        setNumeroRetiros(getNumeroRetiros() + 1);
+
+        // condicion if-else:
+        if (sobrante >= 0) {
+            // normal
+            this.setSaldo(getSaldo() - cantidad);
+        } else {
+            setSobregiro(-sobrante);
+            setSaldo(0);
+            System.out.println("la cantidad a retirar excede saldo actual");
+            System.out.println("dicho exceso quedara como sobregiro: " + this.getSobregiro());
         }
-        super.retirar(cantidad);
     }
 
     // metodo consignar:
+    // si no hay sobregiro todo funciona como en la clase cuenta:
     @Override
     public void consignar(float cantidad) {
-        if (getSobregiro() > 0)
-            setSobregiro(getSobregiro() - cantidad);
-        super.consignar(cantidad);
+        if (this.getSobregiro() == 0) {
+            super.consignar(cantidad);
+        } else if (cantidad >= this.getSobregiro()) {
+            // si queda menos lo metemos como saldo -->
+            setSaldo(cantidad - this.getSobregiro());
+            setSobregiro(0);
+            setNumeroConsignaciones(getNumeroConsignaciones() + 1);
+        }
     }
 
     // metodo extracto mensual
