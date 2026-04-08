@@ -44,14 +44,12 @@ public class CuentaCorriente extends Cuenta {
     // si no hay sobregiro todo funciona como en la clase cuenta:
     @Override
     public void consignar(float cantidad) {
-        if (this.getSobregiro() == 0) {
+        if (this.getSobregiro() == 0)
             super.consignar(cantidad);
-        } else if (cantidad >= this.getSobregiro()) {
+        else if (cantidad >= this.getSobregiro())
             // si queda menos lo metemos como saldo -->
-            setSaldo(cantidad - this.getSobregiro());
-            setSobregiro(0);
-            setNumeroConsignaciones(getNumeroConsignaciones() + 1);
-        }
+            this.sobregiro -= cantidad;
+
     }
 
     // metodo extracto mensual
@@ -67,5 +65,4 @@ public class CuentaCorriente extends Cuenta {
         String extToString = super.toString();
         return extToString + "\nCuentaCorriente [sobregiro= " + sobregiro + "]";
     }
-
 }
