@@ -26,7 +26,7 @@ public class CuentaAhorro extends Cuenta {
         this.activa = activa;
     }
 
-    // EXERCICE METHOD
+    // EXERCICE METHOD:
 
     // metodo consignar:
     @Override
