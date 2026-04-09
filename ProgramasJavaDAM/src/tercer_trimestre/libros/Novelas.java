@@ -28,6 +28,7 @@ public class Novelas extends Libro {
     // toString
     @Override
     public String toString() {
-        return "";
+        String str = super.toString();
+        return "NOVELA: " + str + "\nTipo: " + getTipo();
     }
 }

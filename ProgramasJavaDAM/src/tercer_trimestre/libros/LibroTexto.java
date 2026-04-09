@@ -24,7 +24,7 @@ public class LibroTexto extends Libro {
     @Override
     public String toString() {
         String str = super.toString();
-        return "LIBRO TEXTO \n " + str + " \nCurso: " + curso;
+        return "LIBRO TEXTO \n " + str + " \nCurso: " + getCurso();
     }
 
 }

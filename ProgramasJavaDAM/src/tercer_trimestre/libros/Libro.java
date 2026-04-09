@@ -12,7 +12,7 @@ public class Libro {
     // atributes
     protected String titulo;
     protected String autor;
-    protected double precio;
+    protected double precio = 0d;
 
     // default ctr
     public Libro() {

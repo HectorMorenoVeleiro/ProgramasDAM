@@ -23,6 +23,7 @@ public class LibroTextoUNC extends LibroTexto {
     // toString
     @Override
     public String toString() {
-        return "";
+        String str = super.toString();
+        return "LIBRO TEXTO U: " + str + "\nFacultad: " + getFacultad();
     }
 }
