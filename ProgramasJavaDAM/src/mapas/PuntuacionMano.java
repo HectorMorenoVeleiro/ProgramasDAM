@@ -23,7 +23,6 @@ public class PuntuacionMano {
         for (CartaBaraja carta : mano) {
             System.out.println(carta);
             // TODO: "carta.getValor() doesn't work how it should do" ->
-            total += CartaBaraja.puntos.get(carta.getValor());
         }
         System.out.println("tienes " + total + " puntos");
     }
