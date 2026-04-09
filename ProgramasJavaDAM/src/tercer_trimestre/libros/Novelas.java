@@ -1,4 +1,4 @@
-package tercer_trimestre;
+package tercer_trimestre.libros;
 
 public class Novelas extends Libro {
 

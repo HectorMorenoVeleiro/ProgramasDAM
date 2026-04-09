@@ -1,6 +1,6 @@
-package tercer_trimestre;
+package tercer_trimestre.libros;
 
-import tercer_trimestre.Novelas.tipoNovela;
+import tercer_trimestre.libros.Novelas.tipoNovela;
 
 public class LibrosTest {
 
