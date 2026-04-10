@@ -14,8 +14,12 @@ public class Libro {
     protected String autor;
     protected double precio = 0d;
 
-    // default ctr
-    public Libro() {
+    // mejora para implementar biblioteca
+    protected boolean prestado;
+
+    // get
+    public boolean isPrestado() {
+        return this.prestado;
     }
 
     // ctr titulo + autor
@@ -49,9 +53,21 @@ public class Libro {
         this.precio = precio;
     }
 
+    // TODO: Condiciones de repeticion de prestar+devolver
+
     // prestar
+    public void prestar() {
+        System.out.println("ACABAS DE PRESTAR");
+        System.out.println(this.toString());
+        this.prestado = true;
+    }
 
     // devolver
+    public void devolver() {
+        System.out.println("NOS ACABAN DE DEVOLVER");
+        System.out.println(this.toString());
+        this.prestado = false;
+    }
 
     // toString
     @Override
