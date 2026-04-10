@@ -1,7 +1,13 @@
 package tercer_trimestre.inmuebles;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class Inmueble {
 
+    public static final Map<String, Double> VALOR_METRO_CUADRADO = new HashMap<>();
+
+    // atributos
     protected int ID; // identifica direccion
     protected int area;
     protected String direccion;
