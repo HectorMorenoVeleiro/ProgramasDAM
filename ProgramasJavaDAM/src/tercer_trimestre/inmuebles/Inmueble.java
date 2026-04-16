@@ -5,21 +5,34 @@ import java.util.Map;
 
 public class Inmueble {
 
+    // inicialize map
     public static final Map<String, Double> VALOR_METRO_CUADRADO = new HashMap<>();
 
-    // atributos
+    // filled map hole
+    public static final void poblar() {
+        VALOR_METRO_CUADRADO.put("Casa rural", 1500.0);
+        VALOR_METRO_CUADRADO.put("Casa en conjunto cerrado", 2500.0);
+        VALOR_METRO_CUADRADO.put("Casa independiente", 3000.0);
+        VALOR_METRO_CUADRADO.put("Apartaestudio", 1500.0);
+        VALOR_METRO_CUADRADO.put("Apartamento familiar", 2000.0);
+        VALOR_METRO_CUADRADO.put("Local comercial", 3000.0);
+        VALOR_METRO_CUADRADO.put("Oficina", 3500.0);
+    }
+
+    // atributes
     protected int ID; // identifica direccion
     protected int area;
     protected String direccion;
     protected double precioVenta = 0d; // no precio hasta llegar a objeto de tabla subida
 
-    // ctr inmueble
+    // ctr
     public Inmueble(int ID, int area, String direccion) {
         this.ID = ID;
         this.area = area;
         this.direccion = direccion;
     }
 
+    // getters_setters
     public int getID() {
         return ID;
     }
@@ -52,15 +65,15 @@ public class Inmueble {
         this.precioVenta = precioVenta;
     }
 
-    /* metodos propios */
+    /* own methods */
 
-    // precio de la venta
-    public double calcularPrecioVenta(double valorAreaUnitario) {
-        setPrecioVenta(getArea() * valorAreaUnitario);
+    // sales prices
+    // no atribute, overwrites by herency
+    protected double calcularPrecioVenta() {
         return getPrecioVenta();
     }
 
-    // imprimir
+    // print atributes
     public void imprimir() {
         System.out.println("ID inmo = " + getID());
         System.out.println("Area = " + getArea());

@@ -1,33 +1,32 @@
 package tercer_trimestre.inmuebles;
 
-public class Casa extends InmuebleVivienda {
+public class Casa extends Vivienda {
 
-    protected int numeroPisos;
+    // atributes
+    protected int numPisos;
 
-    public Casa(int ID, int area, String direccion, int numeroHabitaciones, int numeroBaños,
-            int numeroPisos) {
-        super(ID, area, direccion, numeroHabitaciones, numeroBaños);
-        this.numeroPisos = numeroPisos;
+    // ctr
+    public Casa(int ID, int area, String direccion, int numHab, int numBan,
+            int numPisos) {
+        super(ID, area, direccion, numHab, numBan);
+        this.numPisos = numPisos;
     }
 
-    public int getNumeroPisos() {
-        return numeroPisos;
+    // getters_setters
+    public int getNumPisos() {
+        return numPisos;
     }
 
-    public void setNumeroPisos(int numeroPisos) {
-        this.numeroPisos = numeroPisos;
+    public void setNumPisos(int numPisos) {
+        this.numPisos = numPisos;
     }
 
-    /* imprimir */
+    // calcularPrecioVenta == can be aplicated --HEREDATED-- (not return 0 anymore)
 
-    // imprimir
+    // print
     public void imprimir() {
         super.imprimir();
-    }
-
-    @Override
-    public String toString() {
-        return "Casa [numeroPisos=" + numeroPisos + "]";
+        System.out.println("Numero de pisos: " + numPisos);
     }
 
 }
