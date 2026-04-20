@@ -6,6 +6,8 @@ public class Mascota {
     protected String nombre;
     protected String color;
     protected int edad;
+    protected double precio;
+    protected final double precioBase = 335.56d;
 
     // ctr completo
     public Mascota(String nombre, String color, int edad) {
@@ -40,6 +42,19 @@ public class Mascota {
         this.edad = edad;
     }
 
+    public double getPrecio() {
+        return precio;
+    }
+
+    public void setPrecio(double precio) {
+        this.precio = precio;
+    }
+
+    public double calcularPrecioVentaFinal() {
+        setPrecio(precioBase);
+        return getPrecio();
+    }
+
     // sonido
     public void sonido() {
         System.out.println("Las mascotas hacen ruido");
@@ -48,7 +63,7 @@ public class Mascota {
     // toString
     @Override
     public String toString() {
-        return "Mascota [nombre=" + nombre + ", color=" + color + ", edad=" + edad + "]";
+        return "Mascota [nombre=" + nombre + ", color=" + color + ", edad=" + edad + ", precio=" + precio + "]";
     }
 
 }

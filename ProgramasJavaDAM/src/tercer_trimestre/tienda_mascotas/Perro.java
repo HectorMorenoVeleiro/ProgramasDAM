@@ -31,6 +31,12 @@ public class Perro extends Mascota {
     }
 
     @Override
+    public double calcularPrecioVentaFinal() {
+        setPrecio(precioBase + (precioBase * 0.2d));
+        return getPrecio();
+    }
+
+    @Override
     public void sonido() {
         // recordatorio metodo clase padre
         super.sonido();

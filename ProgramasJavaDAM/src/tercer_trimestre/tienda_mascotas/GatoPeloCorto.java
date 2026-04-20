@@ -24,6 +24,13 @@ public class GatoPeloCorto extends Gato {
     }
 
     @Override
+    public double calcularPrecioVentaFinal() {
+        super.calcularPrecioVentaFinal();
+        setPrecio(getPrecio() + getPrecio() * 0.5d);
+        return getPrecio();
+    }
+
+    @Override
     public void sonido() {
         super.sonido();
     }

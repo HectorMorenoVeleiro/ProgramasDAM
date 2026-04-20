@@ -29,11 +29,13 @@ public class tienda_mascotasTest1 {
 
         for (Perro perro : canes) {
             perro.sonido();
+            perro.calcularPrecioVentaFinal();
             System.out.println(perro.toString());
         }
 
         for (Gato gato : cates) {
             gato.sonido();
+            gato.calcularPrecioVentaFinal();
             System.out.println(gato.toString());
         }
     }

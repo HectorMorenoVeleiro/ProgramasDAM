@@ -24,6 +24,13 @@ public class PerroPequeno extends Perro {
     }
 
     @Override
+    public double calcularPrecioVentaFinal() {
+        super.calcularPrecioVentaFinal();
+        setPrecio(getPrecio() + getPrecio() * 0.7d);
+        return getPrecio();
+    }
+
+    @Override
     public void sonido() {
         super.sonido();
     }
