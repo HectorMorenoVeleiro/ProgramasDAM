@@ -19,6 +19,10 @@ public class PerroGrande extends Perro {
         return tipo;
     }
 
+    public void perro() {
+
+    }
+
     public void setTipo(razaG tipo) {
         this.tipo = tipo;
     }
