@@ -37,6 +37,12 @@ public class Futbolista extends SeleccionFutbol {
         System.out.println("juega partido");
     }
 
+    @Override
+    public void Viajar() {
+        super.Viajar();
+        System.out.println("El futbolista viaja en clase turista (retoque)");
+    }
+
     public void entrenar() {
         System.out.println("entrena");
     }

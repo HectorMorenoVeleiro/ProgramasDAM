@@ -32,6 +32,12 @@ public class Entrenador extends SeleccionFutbol {
     }
 
     @Override
+    public void Viajar() {
+        super.Viajar();
+        System.out.println("el entrenador viaja en clase business (retoque)");
+    }
+
+    @Override
     public String toString() {
         return super.toString() + "\nEntrenador [idFederacion= " + getIdFederacion() + "]";
     }

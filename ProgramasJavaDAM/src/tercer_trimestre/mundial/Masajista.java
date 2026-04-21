@@ -37,6 +37,12 @@ public class Masajista extends SeleccionFutbol {
     }
 
     @Override
+    public void Viajar() {
+        super.Viajar();
+        System.out.println("el masajista viaja en la bodega (retoque)");
+    }
+
+    @Override
     public String toString() {
         return super.toString() + "\nMasajista [titulacion= " + getTitulacion() + " aniosExperiencia= "
                 + getAniosExperiencia() + "]";
