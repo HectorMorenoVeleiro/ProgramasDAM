@@ -52,11 +52,11 @@ public class SeleccionFutbol {
 
     // metodos propios
     public void Concentrarse() {
-        System.out.println("METODO CONCENTRARSE (clase seleccion futbol");
+        System.out.println("METODO CONCENTRARSE (clase seleccion futbol)");
     }
 
     public void Viajar() {
-        System.out.println("METODO VIAJAR (clase seleccion futbol");
+        System.out.println("METODO VIAJAR (clase seleccion futbol)");
     }
 
     @Override
