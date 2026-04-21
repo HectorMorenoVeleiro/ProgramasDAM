@@ -16,7 +16,6 @@ public class Masajista extends SeleccionFutbol {
     }
 
     // getter y setter
-
     public String getTitulacion() {
         return Titulacion;
     }
@@ -34,5 +33,12 @@ public class Masajista extends SeleccionFutbol {
     }
 
     public void darMasaje() {
+        System.out.println("giving a masaje todo crazy");
+    }
+
+    @Override
+    public String toString() {
+        return super.toString() + "\nMasajista [titulacion= " + getTitulacion() + " aniosExperiencia= "
+                + getAniosExperiencia() + "]";
     }
 }

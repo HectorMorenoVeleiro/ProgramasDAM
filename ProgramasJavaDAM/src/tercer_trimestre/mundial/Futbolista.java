@@ -40,4 +40,9 @@ public class Futbolista extends SeleccionFutbol {
     public void entrenar() {
         System.out.println("entrena");
     }
+
+    @Override
+    public String toString() {
+        return super.toString() + "\nFutbolista [dorsal= " + getDorsal() + " demarcacion= " + getDemarcacion() + "]";
+    }
 }

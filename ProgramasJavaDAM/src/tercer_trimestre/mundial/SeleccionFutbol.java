@@ -50,11 +50,18 @@ public class SeleccionFutbol {
         Edad = edad;
     }
 
+    // metodos propios
     public void Concentrarse() {
         System.out.println("METODO CONCENTRARSE (clase seleccion futbol");
     }
 
     public void Viajar() {
         System.out.println("METODO VIAJAR (clase seleccion futbol");
+    }
+
+    @Override
+    public String toString() {
+        return "SeleccionFutbol --> " + "\n[\n\tid= " + getId() + "\n\tnombre= " + getNombre() + "\n\tapellidos= "
+                + getApellidos() + "\n\tedad= " + getEdad() + "\n]";
     }
 }

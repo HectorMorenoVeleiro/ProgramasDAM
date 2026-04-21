@@ -22,10 +22,18 @@ public class Entrenador extends SeleccionFutbol {
         this.idFederacion = idFederacion;
     }
 
+    // metodos propios
     public void dirigirPartido() {
+        System.out.println("el objeto entrenador dirige un partido...");
     }
 
     public void dirigirEntreno() {
+        System.out.println("el objeto entrenador dirige un entrenamiento...");
+    }
+
+    @Override
+    public String toString() {
+        return super.toString() + "\nEntrenador [idFederacion= " + getIdFederacion() + "]";
     }
 
 }

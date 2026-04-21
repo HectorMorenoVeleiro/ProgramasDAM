@@ -29,7 +29,7 @@ public class CasaUrbanizacion extends CasaUrbana {
     @Override
     protected double calcularPrecioVenta() {
         // return precioVenta = area * valor del MAP
-        return getPrecioVenta() = getArea() * ;
+        return 1d;
     }
 
 }
