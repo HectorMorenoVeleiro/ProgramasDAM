@@ -15,8 +15,6 @@ public class Ciclista {
         this.nombre = nombre;
     }
 
-    // abstract String imprimirTipo(); // velo, crono y escala
-
     /**
      * Simula tiempo que tarda ciclista en completar una etapa
      * 
@@ -24,6 +22,7 @@ public class Ciclista {
      * 
      * @param tiempoMaximo El tiempo maximo posible
      */
+
     public void correrEtapa(int tiempoMinimo, int tiempoMaximo) {
         Random random = new Random();
 
@@ -56,7 +55,7 @@ public class Ciclista {
         this.nombre = nombre;
     }
 
-    protected int getPosicionGen(int posicionGen) {
+    protected int getPosicionGen() {
         return posicionGen;
     }
 
