@@ -40,17 +40,16 @@ public class Velocista extends Ciclista {
         return "Es un velocista";
     }
 
-    /*
-     * PODRIAMOS CAMBIAR LA FORMA EN QUE CORRE LA ETAPA Y CALCULA LOS TIEMPOS?????
-     */
     public void correrEtapa(int tiempoMinimo, int tiempoMaximo) {
         Random random = new Random();
 
-        int tiempoDeEstaEtapa = random.nextInt((tiempoMaximo - tiempoMinimo) + 1) + tiempoMinimo;
+        int tiempoEtapa = (random.nextInt((tiempoMaximo - tiempoMinimo) + 1) + tiempoMinimo)
+                - ((7 * (int) potenciaPromedio) + (5 * (int) velocidadPromedio));
 
-        this.tiempo = tiempoDeEstaEtapa;
+        this.tiempo = tiempoEtapa;
+        this.tiempoAcumulado += tiempoEtapa;
 
-        this.tiempoAcumulado += tiempoDeEstaEtapa;
+        System.out.println(nombre + " ha terminado la etapa en: " + tiempoEtapa + " segundos");
 
     }
 

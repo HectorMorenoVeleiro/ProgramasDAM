@@ -1,5 +1,7 @@
 package tercer_trimestre.bucle;
 
+import java.util.Random;
+
 public class ContraRelojista extends Ciclista {
 
     // Atributo que define la velocidad máxima de un contrarrelojista
@@ -27,29 +29,17 @@ public class ContraRelojista extends Ciclista {
         return "Es un constraRelojista";
     }
 
-    /*
-     * PODRIAMOS CAMBIAR LA FORMA EN QUE CORRE LA ETAPA Y CALCULA LOS TIEMPOS?????
-     * 
-     * @Override
-     * public void correrEtapa(int tiempoMinimo, int tiempoMaximo) {
-     * Random random = new Random();
-     * 
-     * // Generamos un número aleatorio entre el mínimo y el máximo inclusive
-     * // La fórmula es: random.nextInt((max - min) + 1) + min
-     * int tiempoDeEstaEtapa = random.nextInt((tiempoMaximo - tiempoMinimo) + 1) +
-     * tiempoMinimo;
-     * 
-     * // 1. Seteamos el tiempo parcial de la etapa actual
-     * this.tiempo = tiempoDeEstaEtapa;
-     * 
-     * // 2. Acumulamos el tiempo en el total del ciclista
-     * this.tiempoAcumulado += tiempoDeEstaEtapa;
-     * 
-     * System.out.println(nombre + " ha terminado la etapa en: " + tiempoDeEstaEtapa
-     * + " segundos.");
-     * 
-     * 
-     * }
-     */
+    @Override
+    public void correrEtapa(int tiempoMinimo, int tiempoMaximo) {
+        Random random = new Random();
+
+        int tiempoEtapa = (random.nextInt((tiempoMaximo - tiempoMinimo) + 1) + tiempoMinimo)
+                - (10 * (int) velocidadMaxima);
+
+        this.tiempo = tiempoEtapa;
+        this.tiempoAcumulado += tiempoEtapa;
+
+        System.out.println(nombre + " ha terminado la etapa en: " + tiempoEtapa + " segundos");
+    }
 
 }
