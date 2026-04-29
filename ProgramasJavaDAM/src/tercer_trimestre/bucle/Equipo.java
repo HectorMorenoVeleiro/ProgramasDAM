@@ -41,4 +41,6 @@ public class Equipo {
         this.tiempoAcumulado = tiempoAcumulado;
     }
 
+    // chungui chungui
+
 }
