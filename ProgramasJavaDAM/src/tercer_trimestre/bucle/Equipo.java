@@ -7,6 +7,7 @@ public class Equipo {
     private String nombre;
     private String pais;
     ArrayList<Ciclista> listaCiclistas;
+    private int tiempoAcumulado;
 
     // ctr clase
     public Equipo(String nombre, String pais) {
@@ -30,6 +31,14 @@ public class Equipo {
 
     public void setPais(String pais) {
         this.pais = pais;
+    }
+
+    public int getTiempoAcumulado() {
+        return tiempoAcumulado;
+    }
+
+    public void setTiempoAcumulado(int tiempoAcumulado) {
+        this.tiempoAcumulado = tiempoAcumulado;
     }
 
 }
