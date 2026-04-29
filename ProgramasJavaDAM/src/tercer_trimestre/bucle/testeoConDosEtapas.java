@@ -65,7 +65,7 @@ public class testeoConDosEtapas {
         // simularEtapaYMostrar(peloton, 1);
         numeroEtapa += 1;
 
-        // A /Cada ciclista corre la etapa (entre 3000 y 5000 segundos)
+        // A / Cada ciclista corre la etapa (entre 3000 y 5000 segundos)
         for (Ciclista c : peloton2) {
             // correr etapa asigna el tiempo parcial Y Actualiza el acumulado
             c.correrEtapa(3000, 5000); // tu decides los valores en segundos
