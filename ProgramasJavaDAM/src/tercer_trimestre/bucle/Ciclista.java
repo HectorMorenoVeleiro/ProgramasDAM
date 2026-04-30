@@ -39,11 +39,11 @@ public class Ciclista {
         System.out.println(nombre + " ha terminado la etapa en: " + tiempoDeEstaEtapa + " segundos.");
     }
 
-    protected int getdorsal() {
+    protected int getDorsal() {
         return dorsal;
     }
 
-    protected void setdorsal(int dorsal) {
+    protected void setDorsal(int dorsal) {
         this.dorsal = dorsal;
     }
 
