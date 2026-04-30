@@ -1,6 +1,7 @@
 package tercer_trimestre.bucle;
 
 import java.util.ArrayList;
+import java.util.Scanner;
 
 public class Equipo {
 
@@ -41,6 +42,26 @@ public class Equipo {
         this.tiempoAcumulado = tiempoAcumulado;
     }
 
-    // chungui chungui
+    void añadirCiclista(Ciclista ciclista) {
+        listaCiclistas.add(ciclista);
+    }
 
+    public void listarEquipo() {
+        for (int i = 0; i < listaCiclistas.size(); i++) {
+            Ciclista c = (Ciclista) listaCiclistas.get(i);
+        }
+    }
+
+    void buscarCiclista() {
+        Scanner sc = new Scanner(System.in);/* */
+        String nombreCiclista = sc.nextLine();
+        for (int i = 0; i < listaCiclistas.size(); i++) {
+            Ciclista c = (Ciclista) listaCiclistas.get(i);
+            if (c.getNombre().equals(nombreCiclista)) {
+                System.out.println(c.getNombre() + "-" + c.getdorsal());
+            } else {
+                System.out.println("no esta en el Equipo...");
+            }
+        }
+    }
 }
