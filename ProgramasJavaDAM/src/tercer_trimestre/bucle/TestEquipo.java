@@ -68,7 +68,7 @@ public class TestEquipo {
         System.out.println("╚══════════════════════════════╝");
 
         for (Equipo equipo : equipos) {
-            System.out.println("\n▶ EQUIPO: " + equipo.getNombre());
+            System.out.println("\n--> EQUIPO: " + equipo.getNombre());
             System.out.println("  Ciclistas:");
             for (Ciclista ciclista : equipo.listaCiclistas) {
                 ciclista.imprimir();
