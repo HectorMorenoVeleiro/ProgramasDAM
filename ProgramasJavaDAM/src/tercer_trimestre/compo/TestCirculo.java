@@ -26,9 +26,23 @@ public class TestCirculo {
         System.out.println("-- En el circulo dos el centro esta en el punto: " + circ2.getPunto() + "...");
         System.out.println();
 
-        System.out.println("============================");
+        System.out.println("==========TRIANGULO=========");
 
+        System.out.println();
         // crear 3 puntos para construir un triangulo
+        Triangulo tri = new Triangulo(1, 2, 1, 2, 1, 2);
+        tri.imprimir();
+        System.out.println();
+
+        System.out.println("============RECTA===========");
+
+        System.out.println();
+        // test Recta
+        Recta rct = new Recta(1, 2, 1, 2);
+        rct.imprimir();
+        System.out.println();
+
+        System.out.println("============================");
 
     }
 }

@@ -14,7 +14,7 @@ public class Triangulo {
 
     void imprimir() {
         for (Punto punto : puntos) {
-            System.out.println(punto.toString());
+            System.out.println(punto.x + " " + punto.y);
         }
     }
 
