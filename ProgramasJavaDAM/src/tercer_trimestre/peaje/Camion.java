@@ -28,6 +28,18 @@ public class Camion extends Vehiculo {
     }
 
     /**
+     * Metodo que establece el numero de ejes (get y set)
+     */
+
+    public int getNumeroEjes() {
+        return this.numeroEjes;
+    }
+
+    public void getNumeroEjes(int numeroEjes) {
+        this.numeroEjes = numeroEjes;
+    }
+
+    /**
      * Método que establece el valor del peaje para un camión
      * 
      * @param Parámetro que define el valor del peaje para un camión

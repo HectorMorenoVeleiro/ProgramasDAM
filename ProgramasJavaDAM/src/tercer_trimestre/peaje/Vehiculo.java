@@ -10,4 +10,8 @@ public abstract class Vehiculo {
         this.placa = placa;
     }
 
+    void imprimir() {
+        System.out.println("[Placa: " + this.placa + "]");
+    }
+
 }
