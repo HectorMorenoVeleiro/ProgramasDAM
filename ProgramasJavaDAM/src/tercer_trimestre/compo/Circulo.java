@@ -23,6 +23,15 @@ public class Circulo {
         this.radio = radio;
     }
 
+    // circulo necesita getPunto y setPunto
+    Punto getPunto() {
+        return centro;
+    }
+
+    void setPunto(Punto centro) {
+        this.centro = centro;
+    }
+
     void imprimir() {
         System.out.println("El centro del círculo es la coordenada (" + centro.getX() + "," + centro.getY()
                 + ") y tiene un radio = " + radio);
