@@ -1,7 +1,6 @@
 package tercer_trimestre.peaje;
 
 import java.util.ArrayList;
-import java.util.Vector;
 
 public class Peaje {
 
