@@ -1,11 +1,14 @@
 package tercer_trimestre.peaje;
 
+import java.util.ArrayList;
+
 public class Persona {
 
     String nombre;
     String apellidos;
     String DNI;
     String fechaNacimiento;
+    ArrayList<Vehiculo> vehiculos = new ArrayList<>();
 
     Persona(String nombre, String apellidos, String DNI, String fechaNacimiento) {
         this.nombre = nombre;
@@ -47,11 +50,13 @@ public class Persona {
     }
 
     public void asignarVehiculo(Vehiculo vehiculo) {
-
+        vehiculos.add(vehiculo);
     }
 
     public void desasignarVehiculo(Vehiculo vehiculo) {
-
+        if (!vehiculos.isEmpty()) {
+            vehiculos.remove(vehiculo);
+        }
     }
 
 }

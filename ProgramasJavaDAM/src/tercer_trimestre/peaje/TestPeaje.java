@@ -131,5 +131,10 @@ public class TestPeaje {
         peaje.setDepartamento("Cundinamarca");
         System.out.println("Nuevo nombre: " + peaje.getNombre());
         System.out.println("Nuevo departamento: " + peaje.getDepartamento());
+
+        // ─────────────────────────────────────────────────────────────────────
+        // PRUEBA DE PERSONA
+        // ─────────────────────────────────────────────────────────────────────
+
     }
 }
