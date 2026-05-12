@@ -7,6 +7,11 @@ public class Recta {
     double pendiente;
     double longitud;
 
+    Recta(Punto punto1, Punto punto2) {
+        this.p1 = punto1;
+        this.p2 = punto2;
+    }
+
     Recta(int x1, int y1, int x2, int y2) {
         this.p1 = new Punto(x1, y1);
         this.p2 = new Punto(x2, y2);
