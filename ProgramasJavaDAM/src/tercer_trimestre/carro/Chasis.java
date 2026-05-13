@@ -2,9 +2,9 @@ package tercer_trimestre.carro;
 
 public class Chasis {
 
-    tipoChasis claseChasis;
+    tipoChasis tipo;
 
-    Chasis(tipoChasis claseChasis) {
-        this.claseChasis = claseChasis;
+    Chasis(tipoChasis tipo) {
+        this.tipo = tipo;
     }
 }
