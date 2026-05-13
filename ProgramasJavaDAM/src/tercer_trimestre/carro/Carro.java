@@ -31,7 +31,7 @@ public class Carro {
         System.out.println("Datos del Carro");
         System.out.println("Motor - Cilindros = " + motor.volumen);
         System.out.println("Chasis - Tipo = " + chasis.tipo);
-        System.out.println("Carrocería - Tipo = " + carroceria.tipo + "	Color = " + carroceria.color);
+        System.out.println("Carrocería - Tipo = " + carroceria.tipo + "	\nColor = " + carroceria.color);
         System.out.println("Llantas - Cantidad = " + llantas.length);
         for (int i = 0; i < llantas.length; i++)
             llantas[i].imprimir(); // Imprime los datos de cada llanta
