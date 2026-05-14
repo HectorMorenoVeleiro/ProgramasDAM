@@ -1,43 +1,56 @@
 package tercer_trimestre.charlin;
 
 public class LineaPedido {
+    private Productos producto;
+    private int cantidad = 0;
+    private double subTotal = 0;
+    private int id = 0;
 
-    String ID;
-    double cantidadProduct;
-    double precioUnit;
-
-    LineaPedido(String ID, double cantidadProduct, double precioUnit) {
-        this.ID = ID;
-        this.cantidadProduct = cantidadProduct;
-        this.precioUnit = precioUnit;
+    public LineaPedido(int id, int cantidad, Productos producto) {
+        this.id = id;
+        this.cantidad = cantidad;
+        this.producto = producto;
+        subTotal = producto.getPrecio() * cantidad;
     }
 
-    public String getID() {
-        return ID;
+    public int getId() {
+        return id;
     }
 
-    public void setID(String iD) {
-        ID = iD;
+    public void setId(int id) {
+        this.id = id;
     }
 
-    public double getCantidadProduct() {
-        return cantidadProduct;
+    public int getCantidad() {
+        return cantidad;
     }
 
-    public void setCantidadProduct(double cantidadProduct) {
-        this.cantidadProduct = cantidadProduct;
+    public void setCantidad(int cantidad) {
+        this.cantidad = cantidad;
     }
 
-    public double getPrecioUnit() {
-        return precioUnit;
+    public Productos getProducto() {
+        return producto;
     }
 
-    public void setPrecioUnit(double precioUnit) {
-        this.precioUnit = precioUnit;
+    public void setProducto(Productos producto) {
+        this.producto = producto;
     }
 
-    public void calcSubtotal() {
-
+    public double getSubTotal() {
+        return subTotal;
     }
 
+    public void setSubTotal(double subTotal) {
+        this.subTotal = subTotal;
+    }
+
+    public void imprimir() {
+        System.out.println("LineaPedido{" +
+                "\nid=" + id +
+                ", \nproducto=" + producto +
+                ", \ncantidad=" + cantidad +
+                ", \nsubTotal=" + subTotal +
+                "\n}");
+    }
 }
