@@ -49,6 +49,7 @@ public class Departamento {
      */
     public void agregarMunicipio(Municipio municipio) {
         municipios.add(municipio);
+        setNombre(this.nombre);
     }
 
     /**

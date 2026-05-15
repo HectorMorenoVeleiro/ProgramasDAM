@@ -118,6 +118,10 @@ public class Municipio {
         System.out.println("Temperatura promedio (C) = " +
                 getTemperaturaMedia());
         System.out.println("Altitud (metros) = " + getAltitud());
+        setNombre(this.nombre);
+        setAltitud(this.altitud);
+        setPoblación(this.población);
+        setTemperaturaMedia(this.temperaturaMedia);
 
     }
 }
