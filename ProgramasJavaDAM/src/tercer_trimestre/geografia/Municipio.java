@@ -1,4 +1,4 @@
-package tercer_trimestre.geografia;
+tercer_trimestre.geografia;
 
 public class Municipio {
     // Atributo que define el nombre del municipio
