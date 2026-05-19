@@ -31,7 +31,7 @@ public class VentanaPrincipal extends JFrame implements
             campoDirección;
 
     // ---- botones ----------------------------------------------
-    private JButton añadir, eliminar, borrarLista;
+    private JButton añadir, eliminar, borrarLista, guardar, cargar;
 
     // ---- lista personas ---------------------------------------
     private JList<String> listaNombres;
@@ -131,6 +131,16 @@ public class VentanaPrincipal extends JFrame implements
         añadir.setBounds(105, 150, 80, 23); // Posición y tamaño del botón
         añadir.addActionListener(this); // Evento para capturar el clic en este botón
 
+        // --- CONFIGURACION DEL BOTON 'CARGARLISTA'
+        cargar = new JButton();
+        cargar.setText("CARGAR LISTA");
+        cargar.setBounds(29, 339, 199, 23);
+
+        // --- CONFIGURACION DEL BOTON 'GUARDARLISTA'
+        guardar = new JButton();
+        guardar.setText("GUARDAR LISTA");
+        guardar.setBounds(29, 330, 199, 23);
+
         // --- CONFIGURACIÓN DEL BOTÓN 'ELIMINAR' ---
         eliminar = new JButton(); // Creación del botón Eliminar
         eliminar.setText("Eliminar"); // Asignación del texto al botón
@@ -165,6 +175,8 @@ public class VentanaPrincipal extends JFrame implements
         contenedor.add(eliminar);
         contenedor.add(borrarLista);
         contenedor.add(scrollLista); // Se añade el JScrollPane (que ya contiene la lista)
+        contenedor.add(guardar);
+        contenedor.add(cargar);
     }
 
     /**
