@@ -4,8 +4,8 @@ public class Persona {
 
     String nombre; // Atributo que identifica el nombre de una persona
     String apellidos; /* Atributo que identifica los apellidos de una persona */
-    String teléfono; // Atributo que identifica el teléfono de una persona
-    String dirección; /* Atributo que identifica la dirección de una persona */
+    String telefono; // Atributo que identifica el telefono de una persona
+    String direccion; /* Atributo que identifica la dirección de una persona */
 
     /**
      * Constructor de la clase Persona
@@ -13,17 +13,27 @@ public class Persona {
      * @param nombre    Parámetro que define el nombre de una persona
      * @param apellidos Parámetro que define los apellidos de una
      *                  personaInterfaz gráfica de usuario 477
-     * @param teléfono  Parámetro que define el teléfono de una persona
-     * @param dirección Parámetro que define la dirección de una
+     * @param telefono  Parámetro que define el telefono de una persona
+     * @param direccion Parámetro que define la direccion de una
      *                  persona
      */
-    public Persona(String nombre, String apellidos, String teléfono, String dirección) {
+    public Persona(String nombre, String apellidos, String telefono, String direccion) {
         this.nombre = nombre;
         this.apellidos = apellidos;
-        this.teléfono = teléfono;
-        this.dirección = dirección;
+        this.telefono = telefono;
+        this.direccion = direccion;
     }
 
+    /**
+     * Getters y Setters para la clase Persona
+     * 
+     * @param nombre
+     * @param apellidos
+     * @param telefono
+     * @param direccion
+     * 
+     * @return
+     */
     public String getNombre() {
         return nombre;
     }
@@ -40,26 +50,26 @@ public class Persona {
         this.apellidos = apellidos;
     }
 
-    public String getTeléfono() {
-        return teléfono;
+    public String getTelefono() {
+        return telefono;
     }
 
-    public void setTeléfono(String teléfono) {
-        this.teléfono = teléfono;
+    public void setTelefono(String telefono) {
+        this.telefono = telefono;
     }
 
-    public String getDirección() {
-        return dirección;
+    public String getDireccion() {
+        return direccion;
     }
 
-    public void setDirección(String dirección) {
-        this.dirección = dirección;
+    public void setDireccion(String direccion) {
+        this.direccion = direccion;
     }
 
     @Override
     public String toString() {
-        return "Persona [nombre=" + nombre + ", apellidos=" + apellidos + ", teléfono=" + teléfono + ", dirección="
-                + dirección + "]";
+        return "Persona [nombre=" + nombre + ", apellidos=" + apellidos + ", telefono=" + telefono + ", direccion="
+                + direccion + "]";
     }
 
 }
