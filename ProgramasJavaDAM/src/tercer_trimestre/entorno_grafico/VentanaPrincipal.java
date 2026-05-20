@@ -185,25 +185,20 @@ public class VentanaPrincipal extends JFrame implements
      */
     @Override
     public void actionPerformed(ActionEvent evento) {
-
-        // --- EVENTO: BOTÓN AÑADIR ---
-        // Comprueba si el objeto que originó el evento es el botón 'añadir'
-        if (evento.getSource() == añadir) {
-            añadirPersona(); // Llama al método para registrar una nueva persona
+        if (evento.getSource() == añadir) { // al pulsar el boton añadir
+            añadirPersona(); // se invoca añadir persona
         }
-
-        // --- EVENTO: BOTÓN ELIMINAR ---
-        // Comprueba si el objeto que originó el evento es el botón 'eliminar'
-        if (evento.getSource() == eliminar) {
-            // Obtiene el índice de la fila seleccionada en la JList y lo pasa al método de
-            // eliminación
-            eliminarNombre(listaNombres.getSelectedIndex());
+        if (evento.getSource() == eliminar) { // al pulsar el boton eliminar
+            eliminarNombre(listaNombres.getSelectedIndex()); // se invoca el metodo eliminar
         }
-
-        // --- EVENTO: BOTÓN BORRAR LISTA ---
-        // Comprueba si el objeto que originó el evento es el botón 'borrarLista'
-        if (evento.getSource() == borrarLista) {
-            borrarLista(); // Llama al método para vaciar por completo la lista de la interfaz
+        if (evento.getSource() == borrarLista) { // al pusar el boton borrar lista
+            borrarLista(); // se invoca borrar lista
+        }
+        if (evento.getSource() == cargar) {
+            cargarColeccion();
+        }
+        if (evento.getSource() == guardar) {
+            guardarColeccion();
         }
     }
 
@@ -267,6 +262,21 @@ public class VentanaPrincipal extends JFrame implements
                     "Error",
                     JOptionPane.ERROR_MESSAGE);
         }
+    }
+
+    private void cargarColeccion() {
+        lista.cargarDesdeFichero8();
+        modelo.clear();
+
+        for (Persona persona : lista.listaPersonas) {
+            String elemento = persona.nombre + "-" + persona.apellidos + "-" + persona.direccion + "-"
+                    + persona.telefono;
+            modelo.addElement(elemento);
+        }
+    }
+
+    private void guardarColeccion() {
+        lista.guardarEnFichero();
     }
 
     /**
