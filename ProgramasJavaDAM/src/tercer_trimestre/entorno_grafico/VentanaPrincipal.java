@@ -195,10 +195,24 @@ public class VentanaPrincipal extends JFrame implements
             borrarLista(); // se invoca borrar lista
         }
         if (evento.getSource() == cargar) {
-            cargarColeccion();
+            lista.cargarDesdeFichero8();
+
+            modelo.clear();
+
+            for (Persona persona : lista.listaPersonas) {
+                String elemento = persona.getNombre() + "->" + persona.getApellidos() + "->" + persona.getTelefono()
+                        + "->" + persona.getDireccion();
+                modelo.addElement(elemento);
+            }
+
+            listaNombres.setModel(modelo);
+            JOptionPane.showMessageDialog(this, "Lista cargada con exito desde lista.dat", "Cargar",
+                    JOptionPane.INFORMATION_MESSAGE);
         }
         if (evento.getSource() == guardar) {
-            guardarColeccion();
+            lista.guardarEnFichero();
+            JOptionPane.showMessageDialog(this, "Lista guardada con exito desde lista.dat", "Guardar",
+                    JOptionPane.INFORMATION_MESSAGE);
         }
     }
 
